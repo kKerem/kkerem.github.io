@@ -1,0 +1,120 @@
+---
+layout: default
+---
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+<link rel="stylesheet" href="./theme/css/atom-one-dark-reasonable.min.css">
+<script>hljs.highlightAll();</script>
+
+<div class="d-md-block d-lg-none">
+    {% include components/project-meta.html %}
+</div>
+
+{{ content }}
+
+<script type="text/javascript">
+
+    $(document).ready(function() {
+        var slug = function(str) {
+            str = str.replace(/^\s+|\s+$/g, ''); // trim
+            str = str.toLowerCase();
+
+            // remove accents, swap ñ for n, etc
+            var from = "ãàáäâẽèéëêìíïîõòóöôùúüûñğçşüöı·/_,:;";
+            var to   = "aaaaaeeeeeiiiiooooouuuungcsuoi------";
+            for (var i = 0, l = from.length; i < l; i++) {
+                str = str.replace(new RegExp(from.charAt(i), 'g'), to.charAt(i));
+            }
+
+            str = str.replace(/[^a-z0-9 -]/g, '') // remove invalid chars
+                    .replace(/\s+/g, '-') // collapse whitespace and replace by -
+                    .replace(/-+/g, '-'); // collapse dashes
+
+            return str;
+        };
+
+        var tpl = 
+            "<li class='nav-item'>\
+                <a class='nav-link list-group-item list-group-item-action' href='#[idx]'><span class='p-2'>[name]</span></a>\
+            </li>"
+        var tpl_active = 
+            "<li class='nav-item'>\
+                <a class='nav-link list-group-item list-group-item-action active' href='#[idx]'><span class='p-2'>[name]</span></a>\
+            </li>"
+
+
+        var tpl2 = 
+            "<li class='nav-item nav-item2'>\
+                <a class='nav-link list-group-item list-group-item-action text-muted small' href='#[idx2]'><span class='p-2'>[name]</span></a>\
+            </li>"
+        var tpl2_active = 
+            "<li class='nav-item nav-item2'>\
+                <a class='nav-link list-group-item list-group-item-action active' href='#[idx2]'><span class='p-2'>[name]</span></a>\
+            </li>"
+
+        var say = 0
+        var temp = ""
+        $("h2,h3").each(function(idx, h2) {
+            if($(this).is('h3')) {
+                var name = $(this).text().trim()
+                console.log($('h3').length)
+                if($('h3').length == 0) {
+                    var dom_string = tpl2_active.replace("[name]", name).replace("[idx2]", slug(name))
+                }
+                else {
+                    var dom_string = tpl2.replace("[name]", name).replace("[idx2]", slug(name))
+                }
+                var header = $(dom_string)[0].innerHTML
+                $(this).attr("id", slug(name))
+                $(".header-list").append(header)
+            }
+            else {
+                var name = $(h2).text().trim()
+                if($(this).length == 0) {
+                    var dom_string = tpl_active.replace("[name]", name).replace("[idx]", slug(name))
+                }
+                else {
+                    var dom_string = tpl_active.replace("[name]", name).replace("[idx]", slug(name))
+                }
+                
+                var header = $(dom_string)
+                $(h2).attr("id", slug(name))
+                $(".header-list").append(header)
+            }
+        })
+        if($(this).is('h3')) {
+            temp += "</ol>"
+        }
+
+        navlist = [];
+    $("#collapseExample a").each(function(i) {
+        var thisLink = $(this);
+        var thisId = thisLink.attr('href');
+        var thisTarget = $(thisId);
+        navlist.push({
+            'anchor': thisLink,
+            'id': thisId,
+            'target': thisTarget
+        });
+        thisLink.on('click', function(e) {
+            e.preventDefault();
+            $('html, body').animate({
+                scrollTop: thisTarget.offset().top
+            }, 0);
+        });
+    });
+    $(window).on('scroll resize', function(e) {
+        $.each(navlist, function(e, elem) {
+            var placement = elem.target[0].getBoundingClientRect();
+            if( placement.top<window.innerHeight && placement.bottom>0 ) {
+                history.pushState({}, '', elem.id);
+                console.log('Hash: ' + elem.id);
+                return false;
+            };
+        });
+    });
+    })
+
+    
+</script>
