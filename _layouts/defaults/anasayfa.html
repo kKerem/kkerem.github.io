@@ -1,0 +1,61 @@
+---
+layout: default
+---
+
+<div class="border rounded p-3">
+    <div class="small mb-2">
+        <a href="https://github.com/kKerem" target="_blank" class="text-decoration-none text-muted">{{ site.title }}</a>
+         / 
+        README<span class="text-muted">.md</span>
+    </div>
+    {{ content }}
+</div>
+
+<h6 class="mt-5">Github Repositories <span class="badge rounded-pill bg-dark text-light rounded-circle ms-2" id="repocount"></span></h6>
+        <div class="row justify-content-between small" id="Repositories"></div>
+<script>
+    apirepo = `./repos.json`
+        
+    
+    $.getJSON(apirepo + '/repos', function (data) {
+        console.log(data.length)
+
+        $("#repocount").html(data.length)
+
+        function compare(a, b) {
+        if (a.updated_at > b.updated_at) {
+            return -1
+        }
+        if (a.updated_at < b.updated_at) {
+            return 1
+        }
+        return 0
+        }
+
+        var li = '<div class="col-12 col-md-6 my-3"><div class="rounded p-3 border">\
+            <i class="bi bi-journal-bookmark-fill pe-1"></i> <a href="[link]" class="text-decoration-none fw-semibold">[name]</a>\
+            <div class="description text-muted my-2">[description]</div>\
+            <div class="row small">\
+                <div class="col-3"><i class="bi bi-circle-fill pe-1 [language]"></i><span class="text-muted">[language_text]</span></div>\
+                <div class="col-auto"><i class="bi bi-star pe-1"></i><span class="text-muted">[star]</span></div>\
+                <div class="col-auto"><i class="bi bi-diagram-2 pe-1"></i><span class="text-muted">[fork]</span></div>\
+            </div>\
+        </div></div>'
+
+        data.sort(compare)
+        data.forEach(v => {
+            var exec = li.replace("[name]", v.name)
+                        .replace("[link]", v.url)
+                        .replace("[description]", v.description)
+                        .replace("[language]", v.language)
+                        .replace("[language_text]", v.language)
+                        .replace("[star]", v.stargazers_count)
+                        .replace("[fork]", v.forks)
+            $('#Repositories').append(exec)
+        })
+    })
+</script>
+
+
+
+

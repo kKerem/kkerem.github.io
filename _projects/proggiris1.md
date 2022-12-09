@@ -1,9 +1,12 @@
 ---
 title: Programlamaya Giriş I (Ruby)
 narrow: true
-permalink: programlamaya-giris-1.html
+permalink: dokumanlar/programlamaya-giris-1
 show_profile: false
+baslik: 2022 Güz Dönemi, <b>Vize</b>
 ---
+
+
 
 ## Değişken tanımı
 <p>Kaydedilmesi istenen tüm veriler(anlık hesaplamalar hariç) doğru bir isime sahip olmak zorundadır.</p>
@@ -308,19 +311,19 @@ end</code></pre>
 </div>
 
 
-### <code class="fw-bold">Else</code>(değil ise) ile iki sonuçlu sorgulama yapma
-    <p>
-        Birinci koşul sağlanamıyorsa <code>else</code> ile değilse sorgu sonucu yazdırılabilir.
-    </p>
-    <pre class="mb-0 mt-2"><code class="language-ruby d-block shadow-none">a= 3, b= 5
+### <code class="fw-bold">Else</code>(değil ise) Sorgusu
+<small>else ile iki sonuçlu sorgulama yapma</small>
 
-    if (a >= b )
-    puts true
-    else
-    puts false
-    end</code></pre>
-    Sonuç:
-    <pre><code class="language-ruby d-block shadow-none p-2">false</code></pre>
+<p>Birinci koşul sağlanamıyorsa <code>else</code> ile değilse sorgu sonucu yazdırılabilir.</p>
+<pre class="mb-0 mt-2"><code class="language-ruby d-block shadow-none">a= 3, b= 5
+
+if (a >= b )
+puts true
+else
+puts false
+end</code></pre>
+Sonuç:
+<pre><code class="language-ruby d-block shadow-none p-2">false</code></pre>
 
 
 

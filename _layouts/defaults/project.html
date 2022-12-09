@@ -4,14 +4,16 @@ layout: default
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
 <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
-<link rel="stylesheet" href="./theme/css/atom-one-dark-reasonable.min.css">
+<link rel="stylesheet" href="{{ site.baseurl }}/theme/css/atom-one-dark-reasonable.min.css">
 <script>hljs.highlightAll();</script>
 
 <div class="d-md-block d-lg-none">
     {% include components/project-meta.html %}
 </div>
 
+<div data-bs-spy="scroll" data-bs-target="#collapseExample" data-bs-offset="0" class="scrollspy-example" tabindex="0">
 {{ content }}
+</div>
 
 <script type="text/javascript">
 
@@ -38,45 +40,26 @@ layout: default
             "<li class='nav-item'>\
                 <a class='nav-link list-group-item list-group-item-action' href='#[idx]'><span class='p-2'>[name]</span></a>\
             </li>"
-        var tpl_active = 
-            "<li class='nav-item'>\
-                <a class='nav-link list-group-item list-group-item-action active' href='#[idx]'><span class='p-2'>[name]</span></a>\
-            </li>"
 
 
         var tpl2 = 
             "<li class='nav-item nav-item2'>\
                 <a class='nav-link list-group-item list-group-item-action text-muted small' href='#[idx2]'><span class='p-2'>[name]</span></a>\
             </li>"
-        var tpl2_active = 
-            "<li class='nav-item nav-item2'>\
-                <a class='nav-link list-group-item list-group-item-action active' href='#[idx2]'><span class='p-2'>[name]</span></a>\
-            </li>"
-
         var say = 0
         var temp = ""
         $("h2,h3").each(function(idx, h2) {
             if($(this).is('h3')) {
                 var name = $(this).text().trim()
                 console.log($('h3').length)
-                if($('h3').length == 0) {
-                    var dom_string = tpl2_active.replace("[name]", name).replace("[idx2]", slug(name))
-                }
-                else {
-                    var dom_string = tpl2.replace("[name]", name).replace("[idx2]", slug(name))
-                }
+                var dom_string = tpl2.replace("[name]", name).replace("[idx2]", slug(name))
                 var header = $(dom_string)[0].innerHTML
                 $(this).attr("id", slug(name))
                 $(".header-list").append(header)
             }
             else {
                 var name = $(h2).text().trim()
-                if($(this).length == 0) {
-                    var dom_string = tpl_active.replace("[name]", name).replace("[idx]", slug(name))
-                }
-                else {
-                    var dom_string = tpl_active.replace("[name]", name).replace("[idx]", slug(name))
-                }
+                var dom_string = tpl.replace("[name]", name).replace("[idx]", slug(name))
                 
                 var header = $(dom_string)
                 $(h2).attr("id", slug(name))
@@ -118,3 +101,54 @@ layout: default
 
     
 </script>
+
+<script type="text/javascript">
+    /*!
+     * IE10 viewport hack for Surface/desktop Windows 8 bug
+     * Copyright 2014-2017 The Bootstrap Authors
+     * Copyright 2014-2017 Twitter, Inc.
+     * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+     */
+    
+    // See the Getting Started docs for more information:
+    // https://getbootstrap.com/getting-started/#support-ie10-width
+    
+    (function () {
+        'use strict'
+    
+        if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+            var msViewportStyle = document.createElement('style')
+            msViewportStyle.appendChild(
+                document.createTextNode(
+                    '@-ms-viewport{width:auto!important}'
+                )
+            )
+            document.head.appendChild(msViewportStyle)
+        }
+    }())
+    </script>
+    <script>
+    $(document).ready(function() {
+    $('[data-toggle=offcanvas]').click(function() {
+    $('.row-offcanvas').toggleClass('active');
+    });
+    });
+    
+    function themeToggle() {
+    let element = document.body;
+    element.classList.toggle("dark");
+    
+    let theme = localStorage.getItem("theme");
+    if (theme && theme === "dark") {
+    localStorage.setItem("theme", "");
+    } else {
+    localStorage.setItem("theme", "dark");
+    }
+    
+    document.getElementById("theme").textContent = localStorage.getItem("theme");
+    
+    $('head').append('<meta http-equiv="X-UA-CompatibleFFF" content="IssE=Edge" />');
+    
+    }
+    
+    </script>

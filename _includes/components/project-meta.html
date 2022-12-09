@@ -1,16 +1,13 @@
-<div class="sticky-top space-before">
-    <div class="mb-3 space-before">
-        <div class="list-group">
-            <div class="card-title">
-                On This Page
-            </div>
+<div class="sticky-top space-before row-offcanvas row-offcanvas-left">
+    <div id="sidebar" class="mb-3 space-before sidebar-offcanvas">
+        <div class="list-group fixed-top">
+            <a class="ps-lg-0 list-group-item list-group-item-action text-muted" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                {{page.baslik}}
+            </a>
             <ol class="header-list" id="collapseExample">
             </ol>
             <div class="d-flex align-items-center mt-2">
-                <span class="icon grey mr-1">
-                    {% include entypo/arrow-left.svg %}
-                </span>
-                <a href="{{ site.baseurl }}{% link list/projects.md %}">Back to the contents</a>
+                <a href="{{ site.baseurl }}{% link list/projects.md %}" class="text-link text-decoration-none ms-3"><i class="bi bi-arrow-left-square pe-2"></i> Geri dön</a>
             </div>
         </div>
     </div>
