@@ -14,11 +14,10 @@ layout: default
 
 <div class="row justify-content-between small" id="Repositories"></div>
 <script>
-    apirepo = `https://api.github.com/users/kkerem/repos`
+    apirepo = `https://api.github.com/users/kkerem`
         
     
     $.getJSON(apirepo + '/repos', function (data) {
-        console.log(data.length)
 
         $("#repocount").html(data.length)
 

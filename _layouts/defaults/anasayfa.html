@@ -17,11 +17,10 @@ layout: default
             <a href="{{ site.url }}/repositories.html">View All</a>
         </div>
 <script>
-    apirepo = `https://api.github.com/users/kkerem/repos`
+    apirepo = `https://api.github.com/users/kkerem`
         
     
     $.getJSON(apirepo + '/repos', function (data) {
-        console.log(data.length)
 
         $("#repocount").html(data.length)
 
