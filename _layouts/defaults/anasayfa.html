@@ -17,7 +17,7 @@ layout: default
             <a href="{{ site.url }}/repositories.html">View All</a>
         </div>
 <script>
-    apirepo = `./repos.json`
+    apirepo = `https://api.github.com/users/kkerem/repos`
         
     
     $.getJSON(apirepo + '/repos', function (data) {
