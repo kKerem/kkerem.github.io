@@ -14,7 +14,7 @@ layout: default
 
 <div class="row justify-content-between small" id="Repositories"></div>
 <script>
-    apirepo = `./repos.json`
+    apirepo = `https://api.github.com/users/kkerem/repos`
         
     
     $.getJSON(apirepo + '/repos', function (data) {
