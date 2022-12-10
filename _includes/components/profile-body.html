@@ -1,10 +1,22 @@
-<p class="card-text">
+<div class="vcard small">
     {% for link in site.data.profile %}
-    <a href="{{link.href}}" class="d-flex align-items-center mb-1">
-        <span class="icon grey mr-2">
-            {% include {{link.icon}} %}
-        </span>
-        <span class="text-nowrap">{{link.caption}}</span>
-    </a>
+    {% if link.href %}
+        <a href="{{link.href}}" class="d-block align-items-center mb-1 text-dark text-decoration-none text-decoration-underline-hover">
+        {% else %}
+        <div class="d-block align-items-center mb-1 text-dark">
+    {% endif %}
+        <div class="row">
+            <div class="col-1 pe-0 text-center text-black-50">
+                {{link.icon}}
+            </div>
+            <div class="col">
+                {{link.caption}}
+            </div>
+        </div>
+    {% if link.href %}
+        </a>
+        {% else %}
+        </div>
+    {% endif %}
     {% endfor %}
-</p>
+</div>
