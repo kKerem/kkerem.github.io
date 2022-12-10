@@ -71,10 +71,11 @@ defaults:
       layout: defaults/list
 
 
-
+url: "https://kkerem.github.io" # the base hostname & protocol for your site
 plugins:
   - jekyll-date-localization
   - jekyll-last-modified-at
+  - jekyll-sitemap
 
 # Optional. The default date format, used if none is specified in the tag.
 last-modified-at:

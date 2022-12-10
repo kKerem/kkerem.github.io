@@ -1,0 +1,1 @@
+Sitemap: {{ page.priority_sitemap | absolute_url }}
