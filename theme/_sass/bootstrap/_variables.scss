@@ -36,7 +36,7 @@ $grays: (
 // fusv-enable
 
 // scss-docs-start color-variables
-$blue:    #0d6efd !default;
+$blue:    #1f75d8 !default;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #d63384 !default;
@@ -779,7 +779,7 @@ $btn-border-radius-lg:        $border-radius-lg !default;
 
 $btn-transition:              color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out !default;
 
-$btn-hover-bg-shade-amount:       15% !default;
+$btn-hover-bg-shade-amount:       2% !default;
 $btn-hover-bg-tint-amount:        15% !default;
 $btn-hover-border-shade-amount:   20% !default;
 $btn-hover-border-tint-amount:    10% !default;
@@ -1100,6 +1100,8 @@ $navbar-toggler-font-size:          $font-size-lg !default;
 $navbar-toggler-border-radius:      $btn-border-radius !default;
 $navbar-toggler-focus-width:        $btn-focus-width !default;
 $navbar-toggler-transition:         box-shadow .15s ease-in-out !default;
+
+$navbar-border-top-color:           $blue !default;
 
 $navbar-light-color:                rgba($black, .55) !default;
 $navbar-light-hover-color:          rgba($black, .7) !default;

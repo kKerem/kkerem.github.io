@@ -8,12 +8,19 @@ layout: default
 <script>hljs.highlightAll();</script>
 
 <div class="d-md-block d-lg-none">
-    {% include components/project-meta.html %}
+    {% include components/docs-meta.html %}
 </div>
 
 <div data-bs-spy="scroll" data-bs-target="#collapseExample" data-bs-offset="0" class="scrollspy-example" tabindex="0">
 {{ content }}
 </div>
+
+<div class="row text-muted mt-5 small">
+    <div class="col">Yayınlanma: <span class="fw-semibold">{{ page.date | localize: '%d %b, %Y', 'tr' }}</span></div>
+    <div class="col text-end">Son Düzenleme: <span class="fw-semibold">{{ page.last_modified_at | localize: '%d %b, %Y', 'tr' }}</span></div>
+</div>
+
+
 
 <script type="text/javascript">
 

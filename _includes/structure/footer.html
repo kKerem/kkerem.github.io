@@ -1,0 +1,63 @@
+
+<script src="{{ site.baseurl }}/theme/js/main.js"></script>
+
+<script>
+    const darkTheme = "dark";
+
+
+    const darkThemeSetUp = () => {
+        if (getCurrentTheme() === "dark") {
+            document.getElementById("toggleBtn").checked = true;
+            $(".switch").html('<i class="bi bi-sun-fill"></i>')
+        } else {
+            document.getElementById("toggleBtn").checked = false;
+            $(".switch").html('<i class="bi bi-moon-fill"></i>')
+        }
+    };
+
+    const getCurrentTheme = () =>
+        document.body.classList.contains(darkTheme) ? "dark" : "light";
+
+
+    //   Get user's theme preference from local storage
+    const selectedTheme = localStorage.getItem("selected-theme");
+    if (selectedTheme === "dark") {
+        document.body.classList[selectedTheme === "dark" ? "add" : "remove"](darkTheme);
+        darkThemeSetUp();
+    }
+
+    const themeButton = document.getElementById("toggleBtn");
+    themeButton.addEventListener("change", () => {
+        document.body.classList.toggle(darkTheme);
+        localStorage.setItem("selected-theme", getCurrentTheme());
+        darkThemeSetUp();
+
+        if (getCurrentTheme() == "dark") {
+            $('.navbar').removeClass('navbar-light').removeClass('bg-white').addClass('navbar-dark').addClass(
+                'bg-dark')
+        } else {
+            $('.navbar').addClass('navbar-light').addClass('bg-white').removeClass('navbar-dark').removeClass(
+                'bg-dark')
+        }
+
+    });
+
+    if (getCurrentTheme() == "dark") {
+        $('.navbar').removeClass('navbar-light').removeClass('bg-white').addClass('navbar-dark').addClass('bg-dark')
+    } else {
+        $('.navbar').addClass('navbar-light').addClass('bg-white').removeClass('navbar-dark').removeClass('bg-dark')
+    }
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll("a.nav-link.active").forEach(li => {
+            li.classList.remove("active");
+            li.attributes.removeNamedItem("aria-current");
+        });
+
+        document.querySelectorAll(`a[href="${location.pathname}"].nav-link`).forEach(a => {
+            a.classList.add("active");
+            a.setAttribute("aria-current", "page");
+        });
+    });
+</script>

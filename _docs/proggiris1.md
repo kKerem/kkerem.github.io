@@ -4,6 +4,7 @@ narrow: true
 permalink: dokumanlar/programlamaya-giris-1
 show_profile: false
 baslik: 2022 Güz Dönemi, <b>Vize</b>
+date: 23-11-2022
 ---
 
 

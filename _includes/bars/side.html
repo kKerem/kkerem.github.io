@@ -1,11 +1,7 @@
 {% if page.show_profile %}
-    <div class="card bg-light">
-        <div class="card-body text-center">
-            {{site.author.name}}
-            {% include components/profile-avatar.html %}
-            {% include components/profile-body.html %}
-        </div>
-    </div>
+    {{site.author.name}}
+    {% include components/profile-avatar.html %}
+    {% include components/profile-body.html %}
 {% endif %}
 
 {% if page.show_tags %}
@@ -16,8 +12,8 @@
     {% include components/all-skills.html %}
 {% endif %}
 
-{% if page.path contains '_projects' %}
-    {% include components/project-meta.html %}
+{% if page.path contains '_docs' %}
+    {% include components/docs-meta.html %}
 {% endif %}
 
 {% if page.path contains '_posts' %}

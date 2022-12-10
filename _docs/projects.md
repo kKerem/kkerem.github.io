@@ -1,5 +1,5 @@
 ---
-title: Documentation
+title: Documentatio2n
 narrow: true
 permalink: dokumanlar/xxx
 show_profile: true

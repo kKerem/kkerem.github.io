@@ -52,6 +52,7 @@ code.muted{
 b {font-weight: 600;}
 a.ext-decoration-none{text-decoration: none !important;}
 
+
 .dark{ 
     --background:#23272c;
     --text:#8798a8;
@@ -93,7 +94,7 @@ a.ext-decoration-none{text-decoration: none !important;}
     --bs-warning-rgb: 243, 156, 18;
     --bs-danger-rgb: 231, 76, 60;
     --bs-light-rgb: 158, 158, 158;
-    --bs-dark-rgb: 59, 59, 59;
+    --bs-dark-rgb: #23272c;
     --bs-white-rgb: 250, 250, 250;
     --bs-black-rgb: 17, 17, 17;
     --bs-body-color-rgb: 225, 225, 225;
@@ -443,4 +444,22 @@ blockquote {
 .XQuery { color: #5232e7; }
 .Zephir { color: #118f9e; }
 
-#repocount {}
+.checkbox-darkmode {display: none;}
+.switch-darkmode {cursor:pointer}
+.text-decoration-underline-hover:hover {text-decoration: underline !important;}
+
+.vcard i {color:#57606a}
+.vcard svg {fill:#57606a}
+
+body.dark .btn-light {
+  background-color: #21262d;
+  border-color: rgba(240, 246, 252, 0.1);
+  color:#c9d1d9
+}
+body.dark .btn-light:hover {
+  background-color: #30363d;
+  border-color: #8b949e;
+}
+
+body.dark .bg-dark {background-color: #23272c !important;}
+.toplamrepo {    font-size: .6rem;}

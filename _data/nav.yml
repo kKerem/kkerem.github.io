@@ -1,13 +1,16 @@
-- title: Home
-  href: index.html
+- title: Anasayfa
+  href: 
 
-- title: About
+- title: Repositories<span class="position-absolute top-5 toplamrepo start-100 translate-middle badge rounded-pill bg-primary" id="repos"></span>
+  href: repositories.html
+
+- title: Hakkımda
   href: about.html
 
-- title: Posts
+- title: Yazılar
   href: list/posts.html
 
-- title: Documentation
+- title: Dokümanlar
   href: dokumanlar
 
 

@@ -2,20 +2,17 @@
 layout: default
 ---
 
-<div class="border rounded p-3">
-    <div class="small mb-2">
-        <a href="https://github.com/kKerem" target="_blank" class="text-decoration-none text-muted">{{ site.title }}</a>
-         / 
-        README<span class="text-muted">.md</span>
-    </div>
-    {{ content }}
-</div>
+{% if page.title %}
+<h1 class="small">
+    All Repositories
+    <span href="asd" class="float-lg-end fw-normal text-muted">You can also view on <a href="https://github.com/kKerem?tab=repositories" target="_blank" class="text-decoration-none text-decoration-underline-hover">Github</a></span>
+</h1>
+{% endif %}
 
-<h6 class="mt-5">Recent repositories</h6>
-        <div class="row justify-content-between small" id="Repositories"></div>
-        <div class="text-center">
-            <a href="{{ site.url }}/repositories.html">View All</a>
-        </div>
+{{ content }}
+
+
+<div class="row justify-content-between small" id="Repositories"></div>
 <script>
     apirepo = `./repos.json`
         
@@ -45,15 +42,8 @@ layout: default
             </div>\
         </div></div>'
 
-        var say =0
         data.sort(compare)
-        data.every(v => {
-            say++
-            console.log(say)
-            if (say > 12) {
-                return false; 
-            }
-
+        data.forEach(v => {
             var exec = li.replace("[name]", v.name)
                         .replace("[link]", v.url)
                         .replace("[description]", v.description)
@@ -62,10 +52,10 @@ layout: default
                         .replace("[star]", v.stargazers_count)
                         .replace("[fork]", v.forks)
             $('#Repositories').append(exec)
-            return true;
         })
     })
 </script>
+
 
 
 

@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 
-{% include structure/head.html %}
+{% include structure/header.html %}
 
 <body data-bs-spy="scroll" data-bs-offset="30" data-bs-target="#collapseExample">
+
 
 {% include bars/nav.html %}
 
@@ -11,10 +12,17 @@
 
 {% capture col2 %}{% if page.narrow %}9{% else %}8{% endif %}{% endcapture %}
 
+
 <div class="container site-container" id="top">
     <div class="row">
-        <div class="d-none d-lg-block col-lg-4 col-xl-{{ col1 }} side">
-            {% include bars/side.html %}
+        <div class="d-none d-lg-block col-lg-4 col-xl-3 side">
+            <div class="sticky-top space-before row-offcanvas row-offcanvas-left">
+                <div id="sidebar" class="mb-3 space-before sidebar-offcanvas">
+                    <div class="list-group fixed-top">
+                        {% include bars/side.html %}
+                    </div>
+                </div>
+            </div>
         </div>
         <div class="col-md-12 col-lg-8 col-xl-{{ col2 }} pb-4 content">
             {{ content }}
@@ -25,6 +33,8 @@
     </div>
 </div>
 
+
+{% include structure/footer.html %}
 
 </body>
 

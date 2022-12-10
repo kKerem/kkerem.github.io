@@ -1,6 +1,6 @@
 # Outputting
 permalink: /:categories/:year/:month/:day/:title.html
-
+date_locale: tr
 # Conversion
 markdown:         kramdown
 
@@ -23,11 +23,11 @@ sass:
   sass_dir: theme/_sass
   style: compressed
 
-# Turn the projects into a collection.
+# Turn the docs into a collection.
 collections:
-  projects:
+  docs:
     output: true
-    title: Projects
+    title: Docs
     permalink: /:collection/:name.html
   portfolio:
     output: true
@@ -59,10 +59,10 @@ defaults:
       layout: defaults/portfolio
   -
     scope:
-      path: "_projects"
+      path: "_docs"
     values:
       show_profile: false
-      layout: defaults/project
+      layout: defaults/docs
   -
     scope:
       path: "list"
@@ -71,3 +71,11 @@ defaults:
       layout: defaults/list
 
 
+
+plugins:
+  - jekyll-date-localization
+  - jekyll-last-modified-at
+
+# Optional. The default date format, used if none is specified in the tag.
+last-modified-at:
+    date-format: '%d %b, %y'
