@@ -8,6 +8,10 @@ pre code{border-radius: .25rem; font-weight: 400;  box-shadow: 0 .5rem 1rem rgba
 .fz-16{font-size: 16px;}
 .fz-18{font-size: 18px;}
 .fz-20{font-size: 20px;}
+.fz-22{font-size: 22px;}
+.fz-24{font-size: 24px;}
+.fz-26{font-size: 26px;}
+.fz-28{font-size: 28px;}
 div[id^='section'] {
     margin:3rem 0;
     padding-bottom: 3rem;
@@ -463,3 +467,6 @@ body.dark .btn-light:hover {
 
 body.dark .bg-dark {background-color: #23272c !important;}
 .toplamrepo {    font-size: .6rem;}
+.readme img {max-width: 100%;}
+.tag:last-child .ayir{display: none;}
+.sticky-top .tag:first-child {padding-left: 0 !important;}

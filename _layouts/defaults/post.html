@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<h1 class="border border-top-0 border-right-0 border-left-0 mb-3 pb-2">{{ page.title }}</h1>
+<h1 class="text-center mb-3 pb-2 fz-24 fw-semibold">{{ page.title }}</h1>
 
 <div class="d-md-block d-lg-none">
     {% include components/post-meta.html %}
@@ -10,3 +10,7 @@ layout: default
 
 {{ content }}
 
+<div class="row text-muted mt-5 small">
+    <div class="col-12 col-md text-center text-md-start">Yayınlanma: <span class="fw-semibold">{{ page.date | localize: '%d %b, %Y', 'tr' }}</span></div>
+    <div class="col-12 col-md text-center text-md-end">Son Düzenleme: <span class="fw-semibold">{{ page.last_modified_at | localize: '%d %b, %Y', 'tr' }}</span></div>
+</div>

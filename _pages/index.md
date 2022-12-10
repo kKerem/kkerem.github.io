@@ -12,7 +12,7 @@ My name is Kerem. I'm a Software Engineer student and also working in Ukraine. I
 
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=kKerem&layout=compact)
 <br><br>
-#### Visitors
-![](https://komarev.com/ghpvc/?username=kKerem&color=1f75d8&style=flat&label=Profile+Views+)
+###### Visitors
+![](https://komarev.com/ghpvc/?username=kKerem&color=1f75d8&style=flat-square&label=Profile+Views+)
 
 

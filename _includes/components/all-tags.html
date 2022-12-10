@@ -2,12 +2,12 @@
 {% include components/profile-avatar.html %}
 {% include components/profile-body.html %}
 <hr>
-<div class="sticky-top space-before">
+<div>
     <div class="card-title">
         <h6 class="fw-normal text-muted">Filter by Tag</h6>
     </div>
     {% for tag in group_names %}
-        <a class="d-inline-block bg-white border rounded p-1 mr-1 mb-1 tag tag-{{ tag | slugify }}"
+        <a class="d-inline-block rounded small p-1 mr-1 mb-1 text-decoration-none tag tag-{{ tag | slugify }}"
             href="#{{tag | slugify}}">
             {{ tag }}
         </a>
