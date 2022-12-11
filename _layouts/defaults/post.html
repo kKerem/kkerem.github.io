@@ -1,8 +1,12 @@
 ---
-layout: default
+layout: default-post
 ---
 
-<h1 class="text-center mb-3 pb-2 fz-24 fw-semibold">{{ page.title }}</h1>
+<p class="meta mt-2 small">
+    <span class="text-secondary">Posted in {{ page.date | timeago }}</span>
+</p>
+
+<h1 class="mt-2 mt-lg-2 mb-4 mb-lg-4 fw-semibold fz-2rem">{{ page.title }}</h1>
 
 <div class="d-md-block d-lg-none">
     {% include components/post-meta.html %}
@@ -10,7 +14,19 @@ layout: default
 
 {{ content }}
 
-<div class="row text-muted mt-5 small">
-    <div class="col-12 col-md text-center text-md-start">Yayınlanma: <span class="fw-semibold">{{ page.date | localize: '%d %b, %Y', 'tr' }}</span></div>
-    <div class="col-12 col-md text-center text-md-end">Son Düzenleme: <span class="fw-semibold">{{ page.last_modified_at | localize: '%d %b, %Y', 'tr' }}</span></div>
+
+{% if post.tags != empty %}
+<div class="pr-1 text-muted mt-3 d-inline-block small">Tags:</div>
+{% endif %}
+{% for tag in page.tags %}
+<a class="d-inline-block rounded small me-1 text-decoration-none text-decoration-underline-hover tag tag-{{ tag | slugify }}"
+    href="{{ site.url }}/list/post.html#{{tag | slugify}}">
+    {{ tag }}
+</a>
+{% endfor %}
+
+
+<div class="row text-muted mt-3 small">
+    <div class="col-12 col-md text-center text-md-start">Published on {{ page.date | localize: '%d %b, %Y', 'en' }}</div>
+    <div class="col-12 col-md text-center text-md-end">Last edit on {{ page.last_modified_at | localize: '%d %b, %Y', 'en' }}</div>
 </div>

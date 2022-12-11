@@ -1,7 +1,7 @@
 - title: Anasayfa
   href: 
 
-- title: Repositories<span class="position-absolute top-5 toplamrepo start-100 translate-middle badge rounded-pill bg-primary" id="repos"></span>
+- title: Repositories<span class="position-absolute top-5 toplamrepo start-100 translate-middle badge rounded-pill bg-primary d-none d-lg-inline-block" id="repos"></span>
   href: repositories.html
 
 - title: Hakkımda

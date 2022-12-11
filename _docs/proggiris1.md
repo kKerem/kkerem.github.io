@@ -28,18 +28,18 @@ date: 23-11-2022
     Aksi halde değişken içeriği bir metin olarak değil başka bir içeriğin adı olarak yorumlanır.
 </p>
 <div class="row align-items-center justify-content-center">
-    <div class="col-3">
+    <div class="col-12 col-lg-3">
         <pre class="mb-0 mt-2"><code class="language-ruby d-block shadow-none">birinci_degisken = "kerem"</code></pre>
     </div>
-    <div class="col fw-semibol pt-2">
+    <div class="col fw-semibold pt-2">
         <i class="bi bi-check-circle-fill text-success p-2"></i>Sonuç<br><span class="small">kerem</span>
     </div>
 </div>
 <div class="row align-items-center justify-content-center">
-    <div class="col-3">
+    <div class="col-12 col-lg-3 mt-3 mt-md-0">
         <pre class="mb-0 mt-2"><code class="language-ruby d-block shadow-none">birinci_degisken = kerem</code></pre>
     </div>
-    <div class="col fw-semibol pt-2">
+    <div class="col fw-semibold pt-2">
         <i class="bi bi-x-circle-fill text-danger p-2"></i>Sonuç<br><span class="small text-muted">Metin olarak değil
             bir değişken adı olarak yorumladı ve <b>kerem</b> diye bir değişken olmadığı için hata verdi.</span>
     </div>
@@ -51,8 +51,8 @@ Aritmetik işlemlerde 2 farklı sonuç yorumlanır. <code class="fw-semibold">tr
     class="fw-semibold">false</code>(yanlış).<br><br>
 
 <div class="row">
-    <div class="col-4">
-        <center class="fw-semibold pb-1">Genel operatörler</center>
+    <div class="col-5 col-lg-4">
+        <center class="fw-semibold pb-1 my-2 my-lg-0">Genel operatörler</center>
         <table class="table table-bordered mb-0">
             <tr>
                 <td>+</td>
@@ -80,8 +80,8 @@ Aritmetik işlemlerde 2 farklı sonuç yorumlanır. <code class="fw-semibold">tr
             </tr>
         </table>
     </div>
-    <div class="col-4">
-        <center class="fw-semibold pb-1">Sorgu operatörleri</center>
+    <div class="col-7 col-lg-4">
+        <center class="fw-semibold pb-1 my-2 my-lg-0">Sorgu operatörleri</center>
         <table class="table table-bordered mb-0">
             <tr>
                 <td>&gt;</td>
@@ -109,8 +109,8 @@ Aritmetik işlemlerde 2 farklı sonuç yorumlanır. <code class="fw-semibold">tr
             </tr>
         </table>
     </div>
-    <div class="col-4">
-        <div class="row fw-semibold pb-1">
+    <div class="col-12 col-lg-4 mt-3 mt-md-0">
+        <div class="row fw-semibold pb-1 my-2 my-md-0">
             <div class="col text-center pe-5 me-4">Örnek sorgu</div>
             <div class="col-auto me-5">Sonuç</div>
         </div>
@@ -193,13 +193,13 @@ else
     puts "a değişkeni b değişkeninden küçüktür."
 end</code></pre>
         <div class="alert alert-info p-2 mt-3">
-            <div class="d-flex bd-highlight">
-                <div class="flex-grow-1 bd-highlight">
+            <div class="row">
+                <div class="col-12 col-md">
                     <i class="bi bi-info-circle-fill pe-2"></i>Birden fazla koşul varsa <code>else</code> daima en sonda
                     kullanılır.
                 </div>
-                <div class="bd-highlight">
-                    <a class="btn btn-link btn-sm m-0 p-0 ext-decoration-none" data-bs-toggle="collapse" href="#ornek-1"
+                <div class="col-12 col-md-auto text-md-end">
+                    <a class="btn btn-link btn-sm m-0 p-0 text-decoration-none d-inline-block" data-bs-toggle="collapse" href="#ornek-1"
                         role="button" aria-expanded="false" aria-controls="collapseExample">
                         <i class="bi bi-file-code-fill pe-2"></i>Örneği göster
                     </a>
@@ -243,13 +243,13 @@ end</code></pre>
 
         <div class="alert alert-info p-2 mt-3">
 
-            <div class="d-flex bd-highlight">
-                <div class="flex-grow-1 bd-highlight">
+            <div class="row">
+                <div class="col-12 col-md">
                     <i class="bi bi-info-circle-fill pe-2"></i><code>if</code> ve <code>else</code> <u>bir kez</u>
                     kullanılabilirken <code>elsif</code> istenildiği kadar kullanılabilir.
                 </div>
-                <div class="bd-highlight">
-                    <a class="btn btn-link btn-sm m-0 p-0 ext-decoration-none" data-bs-toggle="collapse" href="#ornek-2"
+                <div class="col-12 col-md-auto text-md-end">
+                    <a class="btn btn-link btn-sm m-0 p-0 text-decoration-none d-inline-block" data-bs-toggle="collapse" href="#ornek-2"
                         role="button" aria-expanded="false" aria-controls="collapseExample">
                         <i class="bi bi-file-code-fill pe-2"></i>Örneği göster
                     </a>

@@ -31,11 +31,11 @@ layout: default
         return 0
         }
 
-        var li = '<div class="col-12 col-md-6 my-3"><div class="rounded p-3 border">\
+        var li = '<div class="col-12 col-md-6 my-2 my-md-3"><div class="rounded p-3 border">\
             <i class="bi bi-journal-bookmark-fill pe-1"></i> <a href="[link]" class="text-decoration-none fw-semibold">[name]</a>\
             <div class="description text-muted my-2">[description]</div>\
             <div class="row small">\
-                <div class="col-3"><i class="bi bi-circle-fill pe-1 [language]"></i><span class="text-muted">[language_text]</span></div>\
+                <div class="col-4"><i class="bi bi-circle-fill pe-1 [language]"></i><span class="text-muted">[language_text]</span></div>\
                 <div class="col-auto"><i class="bi bi-star pe-1"></i><span class="text-muted">[star]</span></div>\
                 <div class="col-auto"><i class="bi bi-diagram-2 pe-1"></i><span class="text-muted">[fork]</span></div>\
             </div>\
@@ -44,7 +44,7 @@ layout: default
         data.sort(compare)
         data.forEach(v => {
             var exec = li.replace("[name]", v.name)
-                        .replace("[link]", v.url)
+                        .replace("[link]", v.html_url)
                         .replace("[description]", v.description)
                         .replace("[language]", v.language)
                         .replace("[language_text]", v.language)
