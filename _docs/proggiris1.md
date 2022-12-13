@@ -327,10 +327,3 @@ Sonuç:
 <pre><code class="language-ruby d-block shadow-none p-2">false</code></pre>
 
 
-
-
-
-
-## Test
-### Ic Test 2
-### Ic Test 31
