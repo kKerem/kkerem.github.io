@@ -28,7 +28,7 @@ date: 23-11-2022
     Aksi halde değişken içeriği bir metin olarak değil başka bir içeriğin adı olarak yorumlanır.
 </p>
 <div class="row align-items-center justify-content-center">
-    <div class="col-12 col-lg-3">
+    <div class="col-12 col-lg-12">
         <pre class="mb-0 mt-2"><code class="language-ruby d-block shadow-none">birinci_degisken = "kerem"</code></pre>
     </div>
     <div class="col fw-semibold pt-2">
@@ -36,7 +36,7 @@ date: 23-11-2022
     </div>
 </div>
 <div class="row align-items-center justify-content-center">
-    <div class="col-12 col-lg-3 mt-3 mt-md-0">
+    <div class="col-12 col-lg-12 mt-3 mt-md-0">
         <pre class="mb-0 mt-2"><code class="language-ruby d-block shadow-none">birinci_degisken = kerem</code></pre>
     </div>
     <div class="col fw-semibold pt-2">

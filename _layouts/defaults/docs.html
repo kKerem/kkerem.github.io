@@ -2,8 +2,23 @@
 layout: default
 ---
 
-<div class="d-md-block d-lg-none">
-    {% include components/docs-meta.html %}
+<button class="nav-link btn btn-primary position-fixed text-white offcanvasbutton small d-md-none" id="OpenMenu"><i class="bi bi-chevron-right"></i></button>
+
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">{{page.baslik}}</h5>
+        <button type="button" class="btn-close fs-2" data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-x"></i></button>
+    </div>
+    <div class="offcanvas-body">
+        <a class="ps-lg-0 list-group-item list-group-item-action text-muted d-none d-md-inline-block" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+            {{page.baslik}}
+        </a>
+        <ol class="header-list" id="collapseExample">
+        </ol>
+        <div class="d-flex align-items-center mt-2">
+            <a href="{{ site.baseurl }}{% link list/docs.md %}" class="text-link text-decoration-none ms-3"><i class="bi bi-arrow-left-square pe-2"></i> Geri dön</a>
+        </div>
+    </div>
 </div>
 
 <div data-bs-spy="scroll" data-bs-target="#collapseExample" data-bs-offset="0" class="scrollspy-example" tabindex="0">
@@ -40,13 +55,13 @@ layout: default
 
         var tpl = 
             "<li class='nav-item'>\
-                <a class='nav-link list-group-item list-group-item-action' href='#[idx]'><span class='p-2'>[name]</span></a>\
+                <a class='nav-link list-group-item list-group-item-action py-2' href='#[idx]'><span class='p-2'>[name]</span></a>\
             </li>"
 
 
         var tpl2 = 
             "<li class='nav-item nav-item2'>\
-                <a class='nav-link list-group-item list-group-item-action text-muted small' href='#[idx2]'><span class='p-2'>[name]</span></a>\
+                <a class='nav-link list-group-item list-group-item-action py-2 text-muted small' href='#[idx2]'><span class='p-2'>[name]</span></a>\
             </li>"
         var say = 0
         var temp = ""

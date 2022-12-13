@@ -109,6 +109,11 @@ a.ext-decoration-none{text-decoration: none !important;}
     --bs-table-border-color1: #393f47;
 }
 
+.dark .offcanvas {
+  background-color: var(--background) !important;
+}
+.dark .btn-close { color: var(--bs-body-color);background: none;height: auto;width: auto;}
+
 .dark .alert-danger {
     color: #ee8277;
     background-color: #74261e;
@@ -509,4 +514,10 @@ body.dark .card-title a:hover {
 .fz-2rem{font-size: 2rem;}
 .rounded-shape {
   border-radius: 32px;
+}
+
+@media (max-width: 768px) {
+  .offcanvasbutton {
+    left: -4px !important;
+  }
 }
