@@ -1,10 +1,12 @@
 ---
 layout: default
 ---
+<script>
+    $(".navbar-toggler").before('<button class="nav-link navbar-toggler p-2 offcanvasbutton d-lg-none col-auto justify-content-end align-self-center offset-md-6" id="OpenMenu"><i class="bi bi-three-dots-vertical"></i></button>')
+</script>
 
-<button class="nav-link btn btn-primary position-fixed text-white offcanvasbutton small d-md-none" id="OpenMenu"><i class="bi bi-chevron-right"></i></button>
 
-<div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="true" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
     <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="offcanvasExampleLabel">{{page.baslik}}</h5>
         <button type="button" class="btn-close fs-2" data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-x"></i></button>

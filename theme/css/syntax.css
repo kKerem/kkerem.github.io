@@ -112,7 +112,7 @@ a.ext-decoration-none{text-decoration: none !important;}
 .dark .offcanvas {
   background-color: var(--background) !important;
 }
-.dark .btn-close { color: var(--bs-body-color);background: none;height: auto;width: auto;}
+.btn-close { color: var(--bs-body-color);background: none;height: auto;width: auto;}
 
 .dark .alert-danger {
     color: #ee8277;
@@ -236,6 +236,9 @@ a.ext-decoration-none{text-decoration: none !important;}
     padding-top: 2rem;
     border-top: 0.4rem #f3f3f3 solid;
     border-top-style: double;
+}
+body.dark .scrollspy-example h3[id], body.dark .scrollspy-example h2[id] {
+    border-color: var(--bs-border-color);
 }
 p{margin: 0;}
 
@@ -516,8 +519,22 @@ body.dark .card-title a:hover {
   border-radius: 32px;
 }
 
-@media (max-width: 768px) {
-  .offcanvasbutton {
-    left: -4px !important;
+
+.offcanvas.offcanvas-start{width: 80%;}
+
+@media screen and (max-width: 767px) {
+  .scrollspy-example h2:first-of-type {
+    padding-top: 0 !important;
   }
 }
+@media screen and (max-width: 426px) {
+  .avbar-brand .col {
+    max-width: 283px;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+  }
+}
+
+.nolayout footer {border-top:none !important}
+img {max-width: 100%;}

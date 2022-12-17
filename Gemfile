@@ -11,6 +11,7 @@ group :jekyll_plugins do
   gem "jekyll-date-localization"
   gem 'jekyll-sitemap'
   gem 'jekyll-timeago', '~> 0.14.0'
+  gem 'jekyll-lazy-load-image', require: 'jekyll-lazy-load-image/auto-execution'
 end
 
 group :development do

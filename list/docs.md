@@ -1,7 +1,7 @@
 ---
 title: Documentation
 narrow: true
-permalink: dokumanlar
+permalink: dokumanlar.html
 show_profile: true
 ---
 
