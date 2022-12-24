@@ -3,6 +3,7 @@
     <p class="timestamp d-none">{{ post.date | timeago }}</p>
 
     {% picture {{post.images}} %}
+    
     <div class="grid__body">
         <div class="relative">
             <a class="grid__link" target="_blank" href="{{site.url}}/uploads/{{ post.images }}" data-thumb="{{site.url}}/uploads/{{ post.images }}" data-caption="

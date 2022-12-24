@@ -1,0 +1,18 @@
+current directory: C:/xampp/htdocs/github/kkerem.github.io/vendor/bundle/ruby/3.1.0/gems/racc-1.6.2/ext/racc/cparse
+C:/Ruby31-x64/bin/ruby.exe -I C:/Ruby31-x64/lib/ruby/3.1.0 extconf.rb
+checking for rb_block_call()... yes
+checking for rb_ary_subseq()... yes
+creating Makefile
+
+current directory: C:/xampp/htdocs/github/kkerem.github.io/vendor/bundle/ruby/3.1.0/gems/racc-1.6.2/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20221224-25508-ndg5u8 sitelibdir\=./.gem.20221224-25508-ndg5u8 clean
+
+current directory: C:/xampp/htdocs/github/kkerem.github.io/vendor/bundle/ruby/3.1.0/gems/racc-1.6.2/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20221224-25508-ndg5u8 sitelibdir\=./.gem.20221224-25508-ndg5u8
+generating cparse-x64-mingw-ucrt.def
+compiling cparse.c
+linking shared-object racc/cparse.so
+
+current directory: C:/xampp/htdocs/github/kkerem.github.io/vendor/bundle/ruby/3.1.0/gems/racc-1.6.2/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20221224-25508-ndg5u8 sitelibdir\=./.gem.20221224-25508-ndg5u8 install
+/usr/bin/install -c -m 0755 cparse.so ./.gem.20221224-25508-ndg5u8/racc
