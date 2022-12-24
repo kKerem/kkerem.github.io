@@ -3,3 +3,5 @@ _site
 .jekyll-cache
 .sass-cache
 .bundle
+vendor/bundle/ruby/3.1.0/bundler/gems/jekyll-thumbnails-1039967e05c7
+.gitignore
