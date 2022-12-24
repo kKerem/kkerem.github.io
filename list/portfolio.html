@@ -1,0 +1,172 @@
+---
+title: All portfolio by year
+show_tags: true
+permalink: portfolio.html
+layout: default-portfolio
+---
+{% include utilities/group-by-array.html collection=site.portfolio field="tags" %}
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"/>
+<script src="https://npmcdn.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+<script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+
+
+<div class="mt-3 text-muted">This page shows at least my web design projects that I have screenshots of. It mostly relies on HTML/CSS templates and WordPress themes. Some can be downloaded as files. Unfortunately, this collage mostly contains old projects and not many of the projects I’ve done recently.</div>
+
+{% for tag in group_names %}
+    <a class="d-inline-block rounded small p-1 mr-1 mb-1 text-decoration-none tag tag-{{ tag | slugify }}"
+        href="#{{tag | slugify}}">
+        {{ tag | slugify }}
+    </a>
+{% endfor %}
+
+
+<div class="row my-4 text-center">
+    <div class="col-2 d-none d-lg-block"> </div>
+    <div class="col-md-12 col-lg-8 align-self-lg-center">
+        <div id="filters" class="button-group">
+            <button class="btn btn-sm btn-link text-decoration is-checked" data-filter="*">Show all (<?php echo $toplam; ?>)</button>
+            {% for tag in group_names %}
+                <button class="btn btn-sm btn-link text-decoration" data-filter=".{{ tag | slugify }}">{{ tag }}</button>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="col-lg-2 align-self-lg-end text-right mt-3 mt-lg-0">
+        <div class="btn-group mr-md-1">
+            <button type="button " class="btn btn-sm dropdown-toggle portfolio_sort" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Sort <i class="fad fa-sort-alt pl-1"></i>
+            </button>
+            <div id="sorts" class="dropdown-menu dropdown-menu-right">
+                <button class="dropdown-item is-checked font-weight-bold small" data-sort-by="original-order">Newest<i class="fad fa-sort-amount-up-alt float-right pt-1 pl-2"></i></button>
+                <button class="dropdown-item font-weight-bold small" data-sort-by="timestamp">Oldest<i class="fad fa-sort-amount-down float-right pt-1 pl-2"></i></button>
+                <button class="dropdown-item font-weight-bold small" data-sort-by="name">Sort by A-Z<i class="fad fa-sort-alpha-down-alt float-right pt-1 pl-2"></i></button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+<div class="grid">
+    <div class="grid-sizer"></div>
+    {% for post in site.portfolio %}
+
+    {% include components/portfolio-card.html %}
+
+    {% endfor %}
+
+</div>
+
+
+
+
+
+
+</script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script><script src="https://npmcdn.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+<script>
+function getParameterByName(name, url = window.location.href) {
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
+var $grid = $('.grid').isotope({
+    itemSelector: '.element-item',
+    layoutMode: 'masonry',
+    stamp: '.item--static',
+    percentPosition: true,
+    resizesContainer: true,
+    resizable: true,
+    masonry: {
+            stagger: 100,
+            gutter: 10,
+    },
+getSortData: {
+    name: '.grid__title',
+    timestamp: '.timestamp',
+    number: '.number parseInt',
+    category: '[data-category]',
+    weight: function( itemElem ) {
+    var weight = $( itemElem ).find('.weight').text();
+    return parseFloat( weight.replace( /[\(\)]/g, '') );
+    }
+}
+});
+
+$grid.imagesLoaded().progress( function() {
+$grid.isotope('layout');
+});
+
+var filterFns = {
+numberGreaterThan50: function() {
+    var number = $(this).find('.number').text();
+    return parseInt( number, 10 ) > 50;
+},
+ium: function() {
+    var name = $(this).find('.name').text();
+    return name.match( /ium$/ );
+}
+};
+
+$('#filters').on( 'click', 'button', function() {
+var filterValue = $( this ).attr('data-filter');
+filterValue = filterFns[ filterValue ] || filterValue;
+
+var queryParams = new URLSearchParams(window.location.search);
+queryParams.set("filter", $( this ).attr('data-filter').replace('.','') );
+
+if($( this ).attr('data-filter') != "*") {
+    history.replaceState(null, null, "?"+queryParams.toString());
+}
+else {
+    history.replaceState(null, null, "?");
+}
+
+$grid.isotope({ filter: filterValue });
+});
+
+
+if( getParameterByName('filter') ) {
+    var filterValue = '.' + getParameterByName('filter');
+    filterValue = filterFns[ filterValue ] || filterValue;
+    $grid.isotope({ filter: filterValue });
+}
+
+$('#sorts').on( 'click', 'button', function() {
+var sortByValue = $(this).attr('data-sort-by');
+$grid.isotope({ sortBy: sortByValue });
+});
+
+$('.button-group').each( function( i, buttonGroup ) {
+var $buttonGroup = $( buttonGroup );
+$buttonGroup.on( 'click', 'button', function() {
+    $buttonGroup.find('.is-checked').removeClass('is-checked');
+    $( this ).addClass('is-checked');
+});
+});
+
+Fancybox.bind('[data-fancybox="gallery"]', {
+    Thumbs: false,
+Toolbar: {
+    display: [
+    { id: "prev", position: "center" },
+    { id: "counter", position: "center" },
+    { id: "next", position: "center" },
+    "zoom",
+    "slideshow",
+    "fullscreen",
+    "download",
+    "close",
+    ],
+},
+
+});
+
+
+console.log(getParameterByName('filter'));
+
+</script>

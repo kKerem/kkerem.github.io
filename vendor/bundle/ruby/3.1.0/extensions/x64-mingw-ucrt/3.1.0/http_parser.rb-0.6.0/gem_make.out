@@ -1,0 +1,17 @@
+current directory: C:/xampp/htdocs/github/kkerem.github.io/vendor/bundle/ruby/3.1.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+C:/Ruby31-x64/bin/ruby.exe -I C:/Ruby31-x64/lib/ruby/3.1.0 extconf.rb
+creating Makefile
+
+current directory: C:/xampp/htdocs/github/kkerem.github.io/vendor/bundle/ruby/3.1.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+make DESTDIR\= sitearchdir\=./.gem.20221218-11172-xcyia2 sitelibdir\=./.gem.20221218-11172-xcyia2 clean
+
+current directory: C:/xampp/htdocs/github/kkerem.github.io/vendor/bundle/ruby/3.1.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+make DESTDIR\= sitearchdir\=./.gem.20221218-11172-xcyia2 sitelibdir\=./.gem.20221218-11172-xcyia2
+generating ruby_http_parser-x64-mingw-ucrt.def
+compiling ruby_http_parser.c
+compiling ryah_http_parser.c
+linking shared-object ruby_http_parser.so
+
+current directory: C:/xampp/htdocs/github/kkerem.github.io/vendor/bundle/ruby/3.1.0/gems/http_parser.rb-0.6.0/ext/ruby_http_parser
+make DESTDIR\= sitearchdir\=./.gem.20221218-11172-xcyia2 sitelibdir\=./.gem.20221218-11172-xcyia2 install
+/usr/bin/install -c -m 0755 ruby_http_parser.so ./.gem.20221218-11172-xcyia2

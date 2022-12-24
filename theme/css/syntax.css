@@ -58,7 +58,7 @@ a.ext-decoration-none{text-decoration: none !important;}
 
 
 .dark{ 
-    --background:#23272c;
+    --background:#0d1117;
     --text:#8798a8;
     --bs-blue: #375a7f;
     --bs-indigo: #673ab7;
@@ -473,7 +473,8 @@ body.dark .btn-light:hover {
   border-color: #8b949e;
 }
 
-body.dark .bg-dark {background-color: #23272c !important;}
+body.dark .bg-dark {background-color: #161b22 !important;}
+body.dark .avbar-brand .text-secondary {color: #797e85 !important;}
 .toplamrepo {    font-size: .6rem;}
 .readme img {max-width: 100%;}
 .tag:last-child .ayir{display: none;}

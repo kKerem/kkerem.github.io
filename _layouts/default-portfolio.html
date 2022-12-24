@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% include structure/header.html %}
+
+<body data-bs-spy="scroll" data-bs-offset="30" data-bs-target="#collapseExample">
+
+
+{% include bars/nav.html %}
+
+{% capture col1 %}{% if page.narrow %}3{% else %}4{% endif %}{% endcapture %}
+
+{% capture col2 %}{% if page.narrow %}9{% else %}8{% endif %}{% endcapture %}
+
+<div class="container site-container" id="top" data-aos="fade">
+    {{ content }}
+    {% include bars/bottom.html %}
+</div>
+
+
+{% include structure/footer.html %}
+
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+current directory: C:/xampp/htdocs/github/kkerem.github.io/vendor/bundle/ruby/3.1.0/gems/posix-spawn-0.3.15/ext
+C:/Ruby31-x64/bin/ruby.exe -I C:/Ruby31-x64/lib/ruby/3.1.0 extconf.rb
+
+current directory: C:/xampp/htdocs/github/kkerem.github.io/vendor/bundle/ruby/3.1.0/gems/posix-spawn-0.3.15/ext
+make DESTDIR\= sitearchdir\=./.gem.20221218-11172-ph3qx2 sitelibdir\=./.gem.20221218-11172-ph3qx2 clean
+make: *** No rule to make target 'clean'.  Stop.
+
+current directory: C:/xampp/htdocs/github/kkerem.github.io/vendor/bundle/ruby/3.1.0/gems/posix-spawn-0.3.15/ext
+make DESTDIR\= sitearchdir\=./.gem.20221218-11172-ph3qx2 sitelibdir\=./.gem.20221218-11172-ph3qx2
+make: Nothing to be done for 'default'.
+
+current directory: C:/xampp/htdocs/github/kkerem.github.io/vendor/bundle/ruby/3.1.0/gems/posix-spawn-0.3.15/ext
+make DESTDIR\= sitearchdir\=./.gem.20221218-11172-ph3qx2 sitelibdir\=./.gem.20221218-11172-ph3qx2 install
+make: Nothing to be done for 'install'.

@@ -16,7 +16,7 @@ avatar:           /theme/img/logo.png   # Path to an avatar image
 # Use "" when runnign the site out of the root of a domain.
 
 # Add a directory to hold misc pages, just to keep the root directory clean.
-include: ["_pages", "_portfolio"]
+include: ["_pages"]
 
 # Wire in the SASS files in the theme directory.
 sass:
@@ -77,6 +77,7 @@ plugins:
   - jekyll-last-modified-at
   - jekyll-sitemap
   - jekyll-lazy-load-image
+  - jekyll-imagemagick
 
 # Optional. The default date format, used if none is specified in the tag.
 last-modified-at:
@@ -91,3 +92,30 @@ lazy_load_image:
     - "/*[@class='ignore-lazy-image-load']"
   additional_attrs: # [optional] if you want to add attributes, please add key value
     "data-size": auto
+
+
+imagemagick:
+  enabled: true
+  widths:
+    - 1024
+    - 512
+    - 0
+  input_directories:
+    - /uploads
+  input_formats:
+    - ".png"
+    - ".tiff"
+  output_formats:
+    jpg: "-quality 93% -define jpeg:dct-method=float -strip -interlace Plane"
+    webp: "-quality 100%"
+
+thumbnails:
+  preview:
+    width: 360
+    height: 220
+  sidebar:
+    width: 80
+    height: 80
+
+picture:
+  ignore_missing_images: true

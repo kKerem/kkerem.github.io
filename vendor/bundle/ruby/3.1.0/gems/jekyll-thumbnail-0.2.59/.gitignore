@@ -1,0 +1,4 @@
+/Gemfile.lock
+test/thumbs
+pkg/
+coverage/

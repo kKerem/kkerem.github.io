@@ -1,0 +1,105 @@
+name: Publish
+on:
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+env:
+  BUNDLE_RETRY: 3
+  BUNDLE_PATH: vendor/bundle
+  PUBLISH_RUBY_VERSION: "2.6"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    outputs:
+      publish: ${{ ! steps.publish.outputs.skip }}
+    steps:
+      - uses: actions/checkout@v2
+      - uses: kenchan0130/actions-system-info@v1.0.0
+        id: system-info
+      - name: Cache Ruby dependencies
+        uses: actions/cache@v2.1.4
+        with:
+          path: ${{ env.BUNDLE_PATH }}
+          key: cache-${{ runner.os }}-${{ steps.system-info.outputs.release }}-${{ env.PUBLISH_RUBY_VERSION }}-${{ github.sha }}
+          restore-keys: |
+            cache-${{ runner.os }}-${{ steps.system-info.outputs.release }}-${{ env.PUBLISH_RUBY_VERSION }}-
+      - name: Setup Ruby ${{ env.PUBLISH_RUBY_VERSION }}
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ env.PUBLISH_RUBY_VERSION }}
+      - name: Install ruby gems
+        run: |
+          bundle install --jobs=${{ steps.system-info.outputs.cpu-core }}
+      - name: Run lint
+        run: |
+          bundle exec rubocop
+      - name: Run test
+        run: |
+          bundle exec rake spec
+      - name: Get latest tag
+        id: latest-tag
+        uses: oprypin/find-latest-tag@v1
+        with:
+          repository: ${{ github.repository }}
+      - name: Check to skip publish
+        id: publish
+        run: |
+          if [[ "${{ steps.latest-tag.outputs.tag }}" = "v$(bundle exec rake version)" ]]; then
+            echo "::set-output name=skip::true"
+          else
+            echo "::set-output name=skip::false"
+          fi
+
+  publish:
+    needs: build
+    if: ${{ needs.build.outputs.publish }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: kenchan0130/actions-system-info@v1.0.0
+        id: system-info
+      - name: Cache Ruby dependencies
+        uses: actions/cache@v2.1.4
+        with:
+          path: ${{ env.BUNDLE_PATH }}
+          key: cache-${{ runner.os }}-${{ steps.system-info.outputs.release }}-${{ env.PUBLISH_RUBY_VERSION }}-${{ github.sha }}
+          restore-keys: |
+            cache-${{ runner.os }}-${{ steps.system-info.outputs.release }}-${{ env.PUBLISH_RUBY_VERSION }}-
+      - name: Setup Ruby ${{ env.PUBLISH_RUBY_VERSION }}
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: ${{ env.PUBLISH_RUBY_VERSION }}
+      - name: Install ruby gems
+        run: |
+          bundle install --jobs=${{ steps.system-info.outputs.cpu-core }}
+      - name: Set committer identity
+        run: |
+          git config --local user.name "${GITHUB_ACTOR}"
+          git config --local user.email "${GITHUB_ACTOR}@users.noreply.github.com"
+      - name: Create tag
+        run: |
+          bundle exec rake tag
+      - name: Publish to GPR
+        run: |
+          mkdir -p $HOME/.gem
+          touch $HOME/.gem/credentials
+          chmod 0600 $HOME/.gem/credentials
+          printf -- "---\n:github: Bearer ${GEM_HOST_API_KEY}\n" > $HOME/.gem/credentials
+          gem build *.gemspec
+          gem push --KEY github --host https://rubygems.pkg.github.com/${OWNER} *.gem
+        env:
+          GEM_HOST_API_KEY: ${{ secrets.GPR_AUTH_TOKEN }}
+          OWNER: kenchan0130
+      - name: Publish gem to rubygems
+        run: |
+          mkdir -p $HOME/.gem
+          touch $HOME/.gem/credentials
+          chmod 0600 $HOME/.gem/credentials
+          printf -- "---\n:rubygems_api_key: ${RUBYGEMS_API_KEY}\n" > $HOME/.gem/credentials
+          gem build *.gemspec
+          gem push *.gem
+        env:
+          RUBYGEMS_API_KEY: ${{ secrets.RUBYGEMS_API_KEY }}

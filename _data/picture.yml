@@ -1,0 +1,12 @@
+# _data/picture.yml
+
+media_queries:
+  mobile: 'max-width: 600px'
+
+presets:
+  default:
+    widths: [600]
+    formats: [webp, original]
+    sizes:
+      mobile: 80vw
+    size: 423.67px
