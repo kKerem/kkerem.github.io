@@ -136,7 +136,7 @@ DEPENDENCIES
   mini_magick
   rouge (~> 3.26)
   ruby-vips (~> 2.0.17)
-  sass-embedded (~> 1.57, >= 1.57.1)
+  sass-embedded (~> 1.56, >= 1.56.2)
   webrick (~> 1.7)
 
 BUNDLED WITH
