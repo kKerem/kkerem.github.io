@@ -8,9 +8,9 @@ gem "kramdown-parser-gfm", "~> 1.1"
 gem "jekyll", "~> 4.2"
 gem "jekyll-imagemagick"
 gem "mini_magick"
-gem "sass-embedded"
 gem "ruby-vips", '~> 2.0.17'
 group :jekyll_plugins do
+  gem 'sass-embedded'
   gem "jekyll-last-modified-at"
   gem "jekyll-date-localization"
   gem 'jekyll-sitemap'
