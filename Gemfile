@@ -9,7 +9,6 @@ gem "jekyll", "~> 4.2"
 gem "jekyll-imagemagick"
 gem "mini_magick"
 gem "ruby-vips", '~> 2.0.17'
-gem 'sass-embedded', '~> 1.56', '>= 1.56.1'
 
 group :jekyll_plugins do
   gem "jekyll-last-modified-at"
