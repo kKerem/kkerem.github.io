@@ -18,6 +18,7 @@ group :jekyll_plugins do
   gem 'jekyll-lazy-load-image', require: 'jekyll-lazy-load-image/auto-execution'
   gem 'jekyll-thumbnails', git: 'https://github.com/Emilostuff/jekyll-thumbnails'
   gem 'jekyll_picture_tag', '~> 2.0'
+  gem "jekyll-sass-converter", "~> 2.0"
 end
 
 group :development do
