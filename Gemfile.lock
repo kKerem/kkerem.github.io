@@ -124,7 +124,6 @@ DEPENDENCIES
   jekyll-watch (~> 2.2)
   jekyll_picture_tag (~> 2.0)
   kramdown-parser-gfm (~> 1.1)
-  mini_magick
   rouge (~> 3.26)
   webrick (~> 1.7)
 
