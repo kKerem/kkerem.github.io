@@ -9,6 +9,7 @@ gem "jekyll", "~> 4.2"
 gem "jekyll-imagemagick"
 gem "mini_magick"
 gem "ruby-vips", '~> 2.0.17'
+gem "jekyll-sass-converter", "~> 2.0"
 
 group :jekyll_plugins do
   gem "jekyll-last-modified-at"
@@ -18,7 +19,6 @@ group :jekyll_plugins do
   gem 'jekyll-lazy-load-image', require: 'jekyll-lazy-load-image/auto-execution'
   gem 'jekyll-thumbnails', git: 'https://github.com/Emilostuff/jekyll-thumbnails'
   gem 'jekyll_picture_tag', '~> 2.0'
-  gem "jekyll-sass-converter", "~> 2.0"
 end
 
 group :development do
