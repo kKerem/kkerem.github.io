@@ -107,7 +107,6 @@
     pointer-events: none;
     background-color: var(--#{$prefix}btn-disabled-bg);
     background-image: if($enable-gradients, none, null);
-    border-color: var(--#{$prefix}btn-disabled-border-color);
     opacity: var(--#{$prefix}btn-disabled-opacity);
     @include box-shadow(none);
   }

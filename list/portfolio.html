@@ -13,27 +13,19 @@ layout: default-portfolio
 
 <div class="mt-3 text-muted">This page shows at least my web design projects that I have screenshots of. It mostly relies on HTML/CSS templates and WordPress themes. Some can be downloaded as files. Unfortunately, this collage mostly contains old projects and not many of the projects I’ve done recently.</div>
 
-{% for tag in group_names %}
-    <a class="d-inline-block rounded small p-1 mr-1 mb-1 text-decoration-none tag tag-{{ tag | slugify }}"
-        href="#{{tag | slugify}}">
-        {{ tag | slugify }}
-    </a>
-{% endfor %}
-
-
 <div class="row my-4 text-center">
     <div class="col-2 d-none d-lg-block"> </div>
     <div class="col-md-12 col-lg-8 align-self-lg-center">
         <div id="filters" class="button-group">
-            <button class="btn btn-sm btn-link text-decoration is-checked" data-filter="*">Show all (<?php echo $toplam; ?>)</button>
+            <button class="btn btn-sm btn-link text-decoration is-checked" type="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false" data-filter="*">Show all ({{ site.portfolio | size }})</button>
             {% for tag in group_names %}
                 <button class="btn btn-sm btn-link text-decoration" data-filter=".{{ tag | slugify }}">{{ tag }}</button>
             {% endfor %}
         </div>
     </div>
     <div class="col-lg-2 align-self-lg-end text-right mt-3 mt-lg-0">
-        <div class="btn-group mr-md-1">
-            <button type="button " class="btn btn-sm dropdown-toggle portfolio_sort" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <div class="btn-group me-md-1">
+            <button type="button " class="btn btn-sm dropdown-toggle portfolio_sort" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Sort <i class="fad fa-sort-alt pl-1"></i>
             </button>
             <div id="sorts" class="dropdown-menu dropdown-menu-right">
@@ -48,7 +40,7 @@ layout: default-portfolio
 
 
 
-<div class="grid">
+<div class="grid mb-3">
     <div class="grid-sizer"></div>
     {% for post in site.portfolio %}
 

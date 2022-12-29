@@ -1,0 +1,52 @@
+<div class="related related-posts my-4">
+  <h6 class="heading small mb-3 text-body">Related</h6>
+  <div class="row">
+    
+    {% assign maxRelated = 6 %}
+    {% assign minCommonTags =  1 %}
+    {% assign maxRelatedCounter = 0 %}
+    {% for post in site.portfolio %}
+    
+        {% assign sameTagCount = 0 %}
+        {% assign commonTags = '' %}
+    
+        
+        {% for category in post.categories %}
+          {% if post.url != page.url %}
+            {% if page.categories contains category %}
+              {% assign sameTagCount = sameTagCount | plus: 1 %}
+              {% capture tagmarkup %} <span class="label label-default">{{ category }}</span> {% endcapture %}
+              {% assign commonTags = commonTags | append: tagmarkup %}
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+
+    
+        {% if sameTagCount >= minCommonTags %}
+          <div class="col-12 col-md-4 col-lg-4 mb-3">
+              <a rel="nofollow" class="text-primary img-hover text-decoration-none" href="{{ site.baseurl }}{{ post.url }}">
+                  <div class="card">
+                      <!-- {% picture thumbnail {{post.images}} %} -->
+                      <div class="card-body p-2 small bg-light rounded">
+                        {{ post.title }}
+                      </div>
+                  </div>
+              </a>
+          </div>
+          {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
+          {% if maxRelatedCounter >= maxRelated %}
+            {% break %}
+          {% endif %}
+        {% endif %}
+    
+      {% endfor %}
+
+      <div class="col-12 text-center">
+          <a class="text-primary text-decoration-none" href="{{ site.baseurl }}/portfolio">
+              View all projects
+              <i class="fas fa-angle-down d-block"></i>
+          </a>
+      </div>
+    
+  </div>
+</div>

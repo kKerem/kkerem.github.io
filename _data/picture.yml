@@ -1,12 +1,25 @@
 # _data/picture.yml
-
 media_queries:
-  mobile: 'max-width: 600px'
+  full_width: 'max-height: 201px'
+  tablet: 'max-height: 201px'
+  mobile: 'max-height: 200px'
 
 presets:
   default:
     widths: [600]
     formats: [webp, original]
     sizes:
-      mobile: 80vw
+      mobile: 100vw
     size: 423.67px
+  single_portfolio:
+    formats: [webp, original]
+    attributes:
+      img: 'class="mb-2 rounded shadow-sm"'
+    sizes:
+      mobile: 100vw
+  thumbnail:
+    formats: [webp, original]
+    # crop: 1:1
+    # base_width: 100
+    # pixel_ratios: [1, 1.5, 2]
+    # fallback_width: 100

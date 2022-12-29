@@ -1,28 +1,192 @@
 ---
 layout: default-portfolio
 ---
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
+<script>
+$(function() {
+    $('[data-toggle="tooltip"]').tooltip()
+})
+Fancybox.bind('[data-fancybox="gallery"]', {
+  groupAttr: null,
+  hideScrollbar: false,
+  closeButton: false,
+  showClass: "fancybox-zoomIn",
+  hideClass: "fancybox-zoomOut",
+});
+</script>
 
-<p class="meta mt-2 small">
-    <span class="text-secondary">Posted in {{ page.date | timeago }}</span>
-</p>
+<article id="post-">
+    <div class="row justify-content-center">
+        <div class="col-12 col-lg-8">
+            <div>
+                <div class="item single-post">
 
-<h1 class="mt-2 mt-lg-2 mb-4 mb-lg-4 fw-semibold fz-2rem">{{ page.title }}</h1>
+                    <header>
+                        <div class="info text-start mt-3 mt-lg-3 mb-4 mb-lg-4 text-center">
+                            <h1 class="mt-2 mt-lg-2 mb-4 mb-lg-4 fw-semibold fz-2rem">{{ page.title }}</h1>
+                        </div>
 
-{{ content }}
+                        {% if page.images != empty %}
+                        <a class="position-relative d-block no-hover" data-slug="cat" data-fancybox="gallery"
+                            href="{{ page.images }}"
+                            title="{{ page.title }}">
+                            <div class="position-absolute bottom-0 end-0 z-index1 text-secondary p-3">
+                                <div style="background:rgba(255,255,255,0.7)"
+                                    class="rounded row align-items-center justify-content-center m-1">
+                                    <div class="col-auto pl-2 pr-0"><i class="fas fa-expand-alt"></i></div>
+                                    <div class="col pr-2 pl-2 fz-12 opacity">Click to expand</div>
+                                </div>
+                            </div>
+                            {% picture single_portfolio {{page.images}} %}
+                        </a>
+                        {% endif %}
+                        
+                    </header>
+
+                    <div class="row text-secondary small mt-4" id="content" itemprop="articleBody">
+                        <div class="col">This project was published {{ page.date | timeago }}
+                        {% if page.madefor != empty %}
+                             {% if page.madefor contains '://' %}
+                                and made for <a href="{{ page.madefor }}" class="text-dark text-decoration-none text-decoration-underline-hover"><i class="fas fa-link pe-1"></i>{{ page.madefor }}</a>
+                            {% else %}
+                                and made for {{ page.madefor }}
+                            {% endif %}
+                        {% endif %}
+                        </div>
+                    </div>
+
+                    <div class="desc text-start mt-2 content">
+                        {{content}}
+                    </div>
 
 
-{% if post.tags != empty %}
-<div class="pr-1 text-muted mt-3 d-inline-block small">Tags:</div>
-{% endif %}
-{% for tag in page.tags %}
-<a class="d-inline-block rounded small me-1 text-decoration-none text-decoration-underline-hover tag tag-{{ tag | slugify }}"
-    href="{{ site.url }}/list/posts.html#{{tag | slugify}}">
-    {{ tag }}
-</a>
-{% endfor %}
+                    <div class="my-4">
+                        <h6 class="heading small mb-3 text-body">Archive</h6>
+                        <div class="row metadata-button">
+                            <div class="col-auto">
+                                <a class="btn btn-sm input-group btn-group p-0 rounded text-decoration" data-slug="cat"
+                                    data-fancybox="gallery"
+                                    href="{{ page.images }}">
+                                    <div class="input-group-text px-2"><i class="fas fa-image"></i></div>
+                                    <div class="bg-light border px-3 py-1 rounded-end fw-semibold">Screenshot</div>
+                                </a>
+                            </div>
+                            <div class="col-auto">
+                                {% if page.preview != empty %}
+                                    {% if page.preview.size == 1 %}
+                                        <a class="btn btn-sm input-group btn-group p-0 rounded text-decoration" target="_blank" href="{{ page.preview.url }}">
+                                            <div class="input-group-text px-2"><i class="fas fa-browser"></i></div>
+                                            <div class="bg-light border px-3 py-1 rounded-end fw-semibold">Preview</div>
+                                        </a>
+                                    {% elsif page.preview.size > 1 %}
+                                        <div class="btn btn-sm input-group btn-group p-0 rounded text-decoration meta_button_genel">
+                                            <div class="input-group-text px-2" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent"><i class="fas fa-browser"></i></div>
+                                            <div class="btn btn-sm bg-light px-3 py-1 border-top border-bottom rounded-0 fw-semibold border-start" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">Preview</div>
+                                            <div class="input-group-text btn-sm meta_button border-start dropdown-toggle dropdown-toggle-split rounded-start-0 border-top border-end border-bottom" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">
+                                                <span class="visually-hidden">Toggle Dropdown</span>
+                                            </div>
+                                            <div class="dropdown-menu p-0">
+                                                {% for previews in page.preview %}
+                                                    <a href="{{ previews.url }}" target="_blank" class="dropdown-item px-2">
+                                                        {% if previews.icon != empty %}<i class="{{ previews.icon }} pe-2"></i>{% endif %}
+                                                        {{ previews.label }}
+                                                    </a>
+                                                {% endfor %}
+                                            </div>
+                                        </div>
+                                    {% else %}
+                                    <a class="btn btn-sm input-group btn-group p-0 rounded text-decorationn disabled" data-toggle="tooltip" data-placement="top" data-html="true" title="<small class='fw-semibold'>not available</small>">
+                                        <div class="input-group-text px-2"><i class="fas fa-browser"></i></div>
+                                        <div class="bg-light border px-3 py-1 rounded-end fw-semibold">Preview</div>
+                                    </a>
+                                    {% endif %}
+
+                                {% endif %}
+                            </div>
+                            
+                            <div class="col-12 col-md-auto ms-auto mt-3 mt-md-0">
+                                {% if page.download != empty %}
+                                    {% if page.download.size == 1 %}
+                                        <a class="btn btn-sm input-group btn-group p-0 rounded text-decoration" target="_blank" href="{{ page.download.url }}">
+                                            <div class="input-group-text px-2"><i class="fas fa-browser"></i></div>
+                                            <div class="bg-light border px-3 py-1 rounded-end fw-semibold">Download</div>
+                                        </a>
+                                    {% elsif page.download.size > 1 %}
+                                        <div class="btn btn-sm input-group btn-group p-0 rounded text-decoration meta_button_genel">
+                                            <div class="input-group-text px-2" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent"><i class="fas fa-browser"></i></div>
+                                            <div class="btn btn-sm bg-light px-3 py-1 border-top border-bottom rounded-0 fw-semibold border-start" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">Download</div>
+                                            <div class="input-group-text btn-sm meta_button border-start dropdown-toggle dropdown-toggle-split rounded-start-0 border-top border-end border-bottom" data-bs-toggle="dropdown" aria-expanded="false" data-bs-reference="parent">
+                                                <span class="visually-hidden">Toggle Dropdown</span>
+                                            </div>
+                                            <div class="dropdown-menu p-0">
+                                                {% for downloads in page.download %}
+                                                    <a href="{{ downloads.url }}" target="_blank" class="dropdown-item px-2">
+                                                        {% if downloads.icon != empty %}<i class="{{ downloads.icon }} pe-2"></i>{% endif %}
+                                                        {{ downloads.label }}
+                                                    </a>
+                                                {% endfor %}
+                                            </div>
+                                        </div>
+                                    {% else %}
+                                        <a class="btn btn-sm input-group btn-group p-0 rounded text-decorationn disabled" data-toggle="tooltip" data-placement="top" data-html="true" title="<small class='fw-semibold'>not available</small>">
+                                            <div class="input-group-text px-2"><i class="fas fa-browser"></i></div>
+                                            <div class="bg-light border px-3 py-1 rounded-end fw-semibold">Download</div>
+                                        </a>
+                                    {% endif %}
+
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+
+
+                    {% if post.tags != empty %}
+                    <div class="my-4">
+                        <div class="pe-1 text-muted mt-3 d-inline-block small">Tags:</div>
+                        {% for tag in page.tags %}
+                            <a class="rounded-shape border py-1 px-2 mr-2 d-inline fz-12 text-primary text-decoration-none text-decoration-underline-hover tag tag-{{ tag | slugify }}"
+                                href="{{ site.url }}/list/posts.html#{{tag | slugify}}">
+                                {{ tag }}
+                            </a>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
+
+
+                </div>
+            </div>
+
+            {% include components/related-posts-portfolio.html %}
+            
+
+        </div>
+    </div>
+</article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 <div class="row text-muted mt-3 small">
     <div class="col-12 col-md text-center text-md-start">Published on {{ page.date | localize: '%d %b, %Y', 'en' }}</div>
     <div class="col-12 col-md text-center text-md-end">Last edit on {{ page.last_modified_at | localize: '%d %b, %Y', 'en' }}</div>
 </div>
+
+
+
+
+
+
+
