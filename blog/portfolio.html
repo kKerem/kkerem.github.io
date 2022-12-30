@@ -17,9 +17,22 @@ layout: default-portfolio
     <div class="col-2 d-none d-lg-block"> </div>
     <div class="col-md-12 col-lg-8 align-self-lg-center">
         <div id="filters" class="button-group">
-            <button class="btn btn-sm btn-link text-decoration is-checked" type="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false" data-filter="*">Show all ({{ site.portfolio | size }})</button>
+            
+            <button class="btn btn-sm btn-link text-decoration-none text-body is-checked p-2 me-md-3" type="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false" data-filter="*">
+                <div class="row align-items-center fw-semibold text-center">
+                    <div class="col-4"><i class="fas fa-window-restore px-1 fz-20"></i></div>
+                    <div class="col ps-0">Show All ({{ site.portfolio | size }})</div>
+                </div>
+                
+            </button>
             {% for tag in group_names %}
-                <button class="btn btn-sm btn-link text-decoration" data-filter=".{{ tag | slugify }}">{{ tag }}</button>
+                <button class="btn btn-sm btn-link text-decoration-none text-body" data-filter=".{{ tag | slugify }}">
+                    <div class="row align-items-center fw-semibold text-center">
+                        <div class="col-4"><i class="icon-{{tag | slugify}} px-1 {{tag}} fz-24"></i></div>
+                        <div class="col ps-0">{{ tag }}</div>
+                    </div>
+                    
+                </button>
             {% endfor %}
         </div>
     </div>

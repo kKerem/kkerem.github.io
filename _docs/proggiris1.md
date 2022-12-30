@@ -51,9 +51,9 @@ Aritmetik işlemlerde 2 farklı sonuç yorumlanır. <code class="fw-semibold">tr
     class="fw-semibold">false</code>(yanlış).<br><br>
 
 <div class="row">
-    <div class="col-5 col-lg-4">
-        <center class="fw-semibold pb-1 my-2 my-lg-0">Genel operatörler</center>
-        <table class="table table-bordered mb-0">
+    <div class="col-12 col-lg-4">
+        <div class="fw-semibold pb-1 mt-2 text-center mb-1">Genel operatörler</div>
+        <table class="table table-bordered mb-0 bg-white rounded shadow-sm shadow-hover">
             <tr>
                 <td>+</td>
                 <td>toplama</td>
@@ -80,9 +80,9 @@ Aritmetik işlemlerde 2 farklı sonuç yorumlanır. <code class="fw-semibold">tr
             </tr>
         </table>
     </div>
-    <div class="col-7 col-lg-4">
-        <center class="fw-semibold pb-1 my-2 my-lg-0">Sorgu operatörleri</center>
-        <table class="table table-bordered mb-0">
+    <div class="col-12 col-lg-4">
+        <div class="fw-semibold pb-1 mt-2 text-center mb-1">Sorgu operatörleri</div>
+        <table class="table table-bordered mb-0 bg-white rounded shadow-sm shadow-hover">
             <tr>
                 <td>&gt;</td>
                 <td>büyük ise</td>
@@ -110,51 +110,53 @@ Aritmetik işlemlerde 2 farklı sonuç yorumlanır. <code class="fw-semibold">tr
         </table>
     </div>
     <div class="col-12 col-lg-4 mt-3 mt-md-0">
-        <div class="row fw-semibold pb-1 my-2 my-md-0">
-            <div class="col text-center pe-5 me-4">Örnek sorgu</div>
-            <div class="col-auto me-5">Sonuç</div>
-        </div>
         <table class="table table-borderless">
+            <thead class="fw-semibold pb-1 my-2 my-md-0 text-center">
+                <tr>
+                    <td>Örnek</td>
+                    <td>Sonuç</td>
+                </tr>
+            </thead>
             <tr>
                 <td class="p-0">
                     <pre
                         class="mb-1"><code class="language-ruby d-block shadow-none p-2">if ( a=3 &gt; b=5 )</code></pre>
                 </td>
-                <td class="ps-5">false  </td>
+                <td class="text-center">false  </td>
             </tr>
             <tr>
                 <td class="p-0">
                     <pre
                         class="mb-1"><code class="language-ruby d-block shadow-none p-2">if ( a=3 &gt;= b=5 )</code></pre>
                 </td>
-                <td class="ps-5">false  </td>
+                <td class="text-center">false  </td>
             </tr>
             <tr>
                 <td class="p-0">
                     <pre
                         class="mb-1"><code class="language-ruby d-block shadow-none p-2">if ( a=3 &lt; b=5 )</code></pre>
                 </td>
-                <td class="ps-5">true  </td>
+                <td class="text-center">true  </td>
             </tr>
             <tr>
                 <td class="p-0">
                     <pre
                         class="mb-1"><code class="language-ruby d-block shadow-none p-2">if ( a=3 &lt;= b=5 )</code></pre>
                 </td>
-                <td class="ps-5">true  </td>
+                <td class="text-center">true  </td>
             </tr>
             <tr>
                 <td class="p-0">
                     <pre class="mb-1"><code class="language-ruby d-block shadow-none p-2">if ( a=3 == b=5 )</code></pre>
                 </td>
-                <td class="ps-5">false  </td>
+                <td class="text-center">false  </td>
             </tr>
             <tr>
                 <td class="p-0">
                     <pre
                         class="mb-1"><code class="language-ruby d-block shadow-none p-2">if ( a=3 <b>!=</b> b=5 )</code></pre>
                 </td>
-                <td class="ps-5">true  </td>
+                <td class="text-center">true  </td>
             </tr>
         </table>
     </div>

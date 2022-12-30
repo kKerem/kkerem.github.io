@@ -65,10 +65,10 @@ defaults:
       layout: defaults/docs
   -
     scope:
-      path: "list"
+      path: "blog"
     values:
       show_profile: false
-      layout: defaults/list
+      layout: defaults/blog
 
 
 url: "https://kkerem.github.io" # the base hostname & protocol for your site

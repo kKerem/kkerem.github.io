@@ -6,9 +6,11 @@ layout: default-post
     <span class="text-secondary">Posted in {{ page.date | timeago }}</span>
 </p>
 
-<h1 class="mt-2 mt-lg-2 mb-4 mb-lg-4 fw-semibold fz-2rem">{{ page.title }}</h1>
+<h1 class="mt-2 mt-lg-2 mb-3 fw-semibold fz-1rem bg-white2 p-3 shadow-sm rounded">{{ page.title }}</h1>
 
-{{ content }}
+{% if content != empty %}
+    {{ content }}
+{% endif %}
 
 
 {% if post.tags != empty %}
@@ -16,7 +18,7 @@ layout: default-post
 {% endif %}
 {% for tag in page.tags %}
 <a class="d-inline-block rounded small me-1 text-decoration-none text-decoration-underline-hover tag tag-{{ tag | slugify }}"
-    href="{{ site.url }}/list/posts.html#{{tag | slugify}}">
+    href="{{ site.url }}/blog/posts.html#{{tag | slugify}}">
     {{ tag }}
 </a>
 {% endfor %}

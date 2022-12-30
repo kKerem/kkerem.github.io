@@ -1,17 +1,16 @@
 {% if page.show_profile %}
-    {{site.author.name}}
-    {% include components/profile-avatar.html %}
-    {% include components/profile-body.html %}
+    <div class="shadow-sm bg-white2 p-3 rounded">
+        {{site.author.name}}
+        {% include components/profile-avatar.html %}
+        {% include components/profile-body.html %}
+    </div>
 {% endif %}
-
 {% if page.show_tags %}
     {% include components/all-tags.html %}
 {% endif %}
-
 {% if page.show_skills %}
     {% include components/all-skills.html %}
 {% endif %}
-
 {% if page.path contains '_docs' %}
     {% include components/docs-meta.html %}
 {% endif %}
@@ -19,4 +18,3 @@
 {% if page.path contains '_posts' %}
     {% include components/post-meta.html %}
 {% endif %}
-

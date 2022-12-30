@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<div class="border rounded p-3">
+    
     <div class="small mb-2">
         <a href="https://github.com/kKerem" target="_blank" class="text-decoration-none text-muted">{{ site.title }}</a>
          / 
@@ -11,9 +11,8 @@ layout: default
     <div class="readme">
         {{ content }}
     </div>
-</div>
 
-<h6 class="mt-5">Recent repositories</h6>
+<h6 class="mt-4">Recent repositories</h6>
         <div class="row justify-content-between small" id="Repositories"></div>
         <div class="text-center">
             <a href="{{ site.url }}/repositories.html">View All</a>
@@ -35,7 +34,7 @@ layout: default
         return 0
         }
 
-        var li = '<div class="col-12 col-md-6 my-3"><div class="rounded p-3 border">\
+        var li = '<div class="col-12 col-md-6 my-3"><div class="rounded p-3 bg-white rounded shadow-hover">\
             <i class="bi bi-journal-bookmark-fill pe-1"></i> <a href="[link]" class="text-decoration-none fw-semibold">[name]</a>\
             <div class="description text-muted my-2">[description]</div>\
             <div class="row small">\
@@ -49,7 +48,7 @@ layout: default
         data.sort(compare)
         data.every(v => {
             say++
-            if (say > 12) {
+            if (say > 6) {
                 return false; 
             }
 

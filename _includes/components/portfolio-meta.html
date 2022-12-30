@@ -7,12 +7,12 @@
         <h6 class="fw-normal text-muted">Tags</h6>
     </div>
     {% for tag in page.tags %}
-        <a href="{{ site.baseurl }}{% link list/posts.html %}#{{ tag | slugify }}"
+        <a href="{{ site.baseurl }}{% link blog/posts.html %}#{{ tag | slugify }}"
             class="d-inline-block rounded small p-1 mr-1 mb-1 text-decoration-none tag tag-{{ tag | slugify }}">
             {{ tag }}
         </a>
     {% endfor %}
     <div class="d-flex align-items-center mt-2">
-        <a href="{{ site.baseurl }}{% link list/posts.html %}" class="text-link text-decoration-none"><i class="bi bi-arrow-left-square pe-2"></i> Geri dön</a>
+        <a href="{{ site.baseurl }}{% link blog/posts.html %}" class="text-link text-decoration-none"><i class="bi bi-arrow-left-square pe-2"></i> Geri dön</a>
     </div>
 </div>

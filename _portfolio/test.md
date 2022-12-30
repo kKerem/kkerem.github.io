@@ -3,7 +3,7 @@ title: Programlama için en iyi 5 yazım editörü
 date: 28/12/2021
 categories: portfolio
 tags:
-  - HTML
+  - WordPress
   - PHP
 images: /uploads/screencapture-dnsins-thecode-tr-2022-08-13-02_01_50.jpg
 madefor: http://acasoy.com
