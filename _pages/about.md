@@ -25,7 +25,7 @@ I am the founder of TF2 Turkiye, which has close to **≈700.000** registered pl
         </a>
     </div>
     <div class="col-6 col-md-4 py-2 px-4">
-        <a href="{{site.url}}/blog.posts.html" class="text-decoration-none text-body">
+        <a href="{{site.url}}/blog/posts.html" class="text-decoration-none text-body">
             <div class="row align-items-center bg-white p-3 rounded shadow-hover">
                 <div class="col-3 text-center">
                     <i class="fad fa-pen-alt fa-2x text-primary"></i>

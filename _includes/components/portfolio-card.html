@@ -1,5 +1,5 @@
 
-<div class="element-item overflow-hidden rounded border{% for tag in post.tags %} {{ tag | slugify}}{% endfor %}" data-category="Portfolio">
+<div class="element-item overflow-hidden rounded border{% for tag in post.categories %} {{ tag | slugify}}{% endfor %}" data-category="Portfolio">
     <p class="timestamp d-none">{{ post.date | timeago }}</p>
 
     {% picture {{post.images}} %}

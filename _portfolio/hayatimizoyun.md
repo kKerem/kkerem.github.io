@@ -1,12 +1,10 @@
 ---
-title: Programlama için en iyi 5 yazım editörü
-date: 28/12/2021
-categories: portfolio
+title: Hayatımız Oyun FB Cover
+date: 01/04/2012
 tags:
-  - WordPress
-  - PHP
-images: /uploads/screencapture-dnsins-thecode-tr-2022-08-13-02_01_50.jpg
-madefor: http://acasoy.com
+  - PSD
+images: /uploads/20220328162118-4.png
+madefor: Hayatımız Oyun
 preview:
   - icon: fas fa-pager
     label: label

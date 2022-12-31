@@ -146,7 +146,7 @@ a.ext-decoration-none{text-decoration: none !important;}
     --bs-danger-rgb: 231, 76, 60;
     --bs-light-rgb: 158, 158, 158;
     --bs-dark-rgb: #23272c;
-    --bs-white-rgb: 250, 250, 250;
+    --bs-white-rgb: 57, 63, 71;
     --bs-black-rgb: 17, 17, 17;
     --bs-body-color-rgb: 225, 225, 225;
     --bs-body-bg-rgb: 34, 34, 34;
@@ -924,6 +924,9 @@ body.dark .bg-white{background-color: #1b222a !important;}
   --bs-bg-opacity: 1;
   background-color: rgba(var(--bs-white-rgb), var(--bs-bg-opacity)) !important;
   box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 2%) !important;
+}
+body.dark .is-checked {
+  
 }
 
 .alert {
