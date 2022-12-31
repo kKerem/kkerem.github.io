@@ -1,5 +1,4 @@
 # frozen_string_literal: true
-set :bundle_config, { deployment: false }
 
 source "https://rubygems.org"
 
