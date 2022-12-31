@@ -1,5 +1,4 @@
 # frozen_string_literal: true
-
 source "https://rubygems.org"
 
 gem "webrick", "~> 1.7"
@@ -9,6 +8,7 @@ gem "jekyll", "~> 4.2"
 gem "jekyll-imagemagick"
 gem "mini_magick"
 gem "jekyll-sass-converter", "~> 2.0"
+gem 'wdm', '>= 0.1.0' if Gem.win_platform?
 group :jekyll_plugins do
   gem "jekyll-last-modified-at"
   gem "jekyll-date-localization"
