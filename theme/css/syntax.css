@@ -41,7 +41,7 @@ html:focus-within {
 body{    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji" !important;background: rgba(243, 244, 246,0.8);}
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {background: none !important;color:#8b1104 !important}
 .baslik i {position: relative;top:-1px}
-pre code{border-radius: .25rem; font-weight: 400;  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;font-style: italic;}
+pre code{font-style: normal;font-family:monospace;border-radius: .25rem; font-weight: 400;  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;}
 .fz-10{font-size: 10px;}
 .fz-12{font-size: 12px;}
 .fz-14{font-size: 14px;}
@@ -932,3 +932,4 @@ body.dark .is-checked {
 .alert {
   box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 10%) !important;
 }
+

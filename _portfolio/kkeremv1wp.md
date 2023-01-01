@@ -1,11 +1,13 @@
 ---
 title: kKerem v1 WP Theme
 date: 26/06/2013
+categories: 
+  - WordPress Themes
 tags:
   - CSS
   - HTML
   - JavaScript
-images: /uploads/20220328043650-aronkisisel.png
+images: /assets/20220328043650-aronkisisel.png
 madefor: Personal website
 download:
   - icon: fab fa-wordpress

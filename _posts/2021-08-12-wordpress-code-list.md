@@ -9,7 +9,6 @@ tags:
 I collected the parameters I used while creating a WordPress theme on one page. This content contains codes suitable for general use and includes all the necessary general codes when creating a theme. To help others as a WordPress lover...
 
 &nbsp;
-
 <b class="small mt-3 d-block">Title parameter</b>
 <pre class="mb-0 mt-2"><code class="language-php d-block shadow-none">&lt;?php
     global $page, $paged;

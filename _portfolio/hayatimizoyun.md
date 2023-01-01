@@ -1,9 +1,11 @@
 ---
 title: Hayatımız Oyun FB Cover
 date: 01/04/2012
+categories:
+  - PSD
 tags:
   - PSD
-images: /uploads/20220328162118-4.png
+images: /assets/20220328162118-4.png
 madefor: Hayatımız Oyun
 preview:
   - icon: fas fa-pager

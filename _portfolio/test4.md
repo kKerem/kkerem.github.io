@@ -1,10 +1,12 @@
 ---
 title: Proasdasxx
 date: 18/05/2020
-categories: ["HTMLy Themes", "MyBB Themes"]
+categories: 
+  - HTMLy Themes
+  - MyBB Themes
 tags:
   - JavaScript
-images: /uploads/screencapture-thecultureambassadors-2022-06-14-11_10_34.jpg
+images: /assets/screencapture-thecultureambassadors-2022-06-14-11_10_34.jpg
 madefor: http://acasoy.com
 preview:
   - icon: fas fa-pager

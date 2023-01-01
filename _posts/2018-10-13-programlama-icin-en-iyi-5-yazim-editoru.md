@@ -3,7 +3,7 @@ title: Programlama için en iyi 5 yazım editörü
 ---
 
 <h4>1. Atom.io (<a class="px-1" href="http://atom.io">atom.io</a>)</h4>
-<img src="{{ site.baseurl }}/uploads/atom.png" alt="" />
+<img src="{{ site.baseurl }}/assets/atom.png" alt="" />
 Atom.io GitHub tarafından geliştirilen açık kaynak kodlu ve genel anlamda ortalama 2 yıllık deneyimlerime göre hem Windows hemde Mac üzerinde gayet stabil çalışan bir yazım editörü.
 <div class="row mt-4">
 <div class="col-sm">
@@ -29,7 +29,7 @@ Atom.io GitHub tarafından geliştirilen açık kaynak kodlu ve genel anlamda or
 <hr class="my-4" />
 
 <h4>2. Visual Studio Code (<a class="px-1" href="https://code.visualstudio.com/download">code.visualstudio.com</a>)</h4>
-<img src="{{ site.baseurl }}/uploads/vscode.png" alt="" />
+<img src="{{ site.baseurl }}/assets/vscode.png" alt="" />
 
 VS Code Windows tarafından geliştirilen açık kaynak kodlu, kendi içerisinde terminali bulunan ve Git yönetimini çok daha güzel hale getiren eklentilerle dolu bir yazım editörü. Özellikle kullandığı fontlar Mac'lerde harika gözüküyor.
 <div class="row mt-4">
@@ -59,7 +59,7 @@ VS Code Windows tarafından geliştirilen açık kaynak kodlu, kendi içerisinde
 <h4>3. Brackets (<a class="px-1" href="http://brackets.io/">brackets.io</a>)</h4>
 </div>
 </div>
-<img src="{{ site.baseurl }}/uploads/brackets.png" alt="" />
+<img src="{{ site.baseurl }}/assets/brackets.png" alt="" />
 
 Brackets web tasarımı ve frond-end işleri ile uğraşan geliştiricileri düşünülerek yapılmış açık kaynak kodlu bir editör. Hızlı ve sade çalışması amaçlandığı için diğer pek çok editörde olan özellikler Brackets'ta yok. Örneğin hemen hemen tüm yazım editörlerinde bulunan ve genellikle <kbd>⌘ + D</kbd> kısayoluna sahip olan çoklu düzenleme fonksiyonu Brackets'da şimdilik yok.
 <div class="row mt-4">
@@ -84,7 +84,7 @@ Brackets web tasarımı ve frond-end işleri ile uğraşan geliştiricileri dü�
 <hr class="my-4" />
 
 <h4>4. Sublime Text (<a class="px-1" href="https://www.sublimetext.com/">sublimetext.com</a>)</h4>
-<img src="{{ site.baseurl }}/uploads/st.png" alt="" />
+<img src="{{ site.baseurl }}/assets/st.png" alt="" />
 
 Sublime Text kendisini çoklu düzenleme fonksiyonuna sahip olmasıyla kendini pazarlıyor ancak günümüzde bu özelliğe sahip olmayan popüler bir yazım editörü yok denecek kadar az üstelik kendisi ücretli. Açık kaynak kodlu, ücretsiz düzinelerce alternatifi varken bir editöre çok sevilmediği sürece artık $80 vermek gereksiz bir hareket olarak görüldüğü için biraz fiyatını hakedip haketmediği tartışmalı durumda.
 <div class="row mt-4">
@@ -109,7 +109,7 @@ Sublime Text kendisini çoklu düzenleme fonksiyonuna sahip olmasıyla kendini p
 <hr class="my-4" />
 
 <h4>5. Vim (<a class="px-1" href="https://www.vim.org/">vim.org</a>)</h4>
-<img src="{{ site.baseurl }}/uploads/ui_sample.png" alt="" />
+<img src="{{ site.baseurl }}/assets/ui_sample.png" alt="" />
 
 Vim'i diğer yazım editörlerinden ayrı tutuyorum çünkü kendileri herhangi bir terminalden SSH ile uzak sunucuya bağlanılarak kullanılabilir.
 <div class="row mt-4">

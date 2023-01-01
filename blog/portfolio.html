@@ -4,7 +4,8 @@ show_tags: true
 permalink: portfolio.html
 layout: default-portfolio
 ---
-{% include utilities/group-by-array.html collection=site.portfolio field="tags" %}
+{% include utilities/group-by-array.html collection=site.portfolio field='categories' %}
+
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"/>
 <script src="https://npmcdn.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
@@ -12,9 +13,6 @@ layout: default-portfolio
 
 
 <div class="mt-3 text-muted">This page shows at least my web design projects that I have screenshots of. It mostly relies on HTML/CSS templates and WordPress themes. Some can be downloaded as files. Unfortunately, this collage mostly contains old projects and not many of the projects I’ve done recently.</div>
-
-{% include utilities/group-by-array.html collection=site.portfolio field='categories' %}
-
 
 <div class="my-4 text-center">
     <div id="filters" class="button-group align-self-lg-center row justify-content-between justify-content-lg-center">
@@ -26,33 +24,34 @@ layout: default-portfolio
         </div>
         <div class="col-auto d-flex d-lg-none">
             <button type="button " class="btn btn-sm dropdown-toggle portfolio_sort" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Sort <i class="fad fa-sort-alt pl-1"></i>
+                Sort <i class="fad fa-sort-alt ps-1"></i>
             </button>
-            <div id="sorts" class="dropdown-menu dropdown-menu-right">
-                <button class="dropdown-item is-checked font-weight-bold small" data-sort-by="original-order">Newest<i class="fad fa-sort-amount-up-alt float-right pt-1 pl-2"></i></button>
-                <button class="dropdown-item font-weight-bold small" data-sort-by="timestamp">Oldest<i class="fad fa-sort-amount-down float-right pt-1 pl-2"></i></button>
-                <button class="dropdown-item font-weight-bold small" data-sort-by="name">Sort by A-Z<i class="fad fa-sort-alpha-down-alt float-right pt-1 pl-2"></i></button>
+            <div id="sorts2" class="dropdown-menu dropdown-menu-right">
+                <button class="dropdown-item font-weight-bold small is-checked" data-sort-by="order">Newest<i class="fad fa-sort-amount-up-alt float-end pt-1 ps-2"></i></button>
+                <button class="dropdown-item font-weight-bold small" data-sort-by="oldest">Oldest<i class="fad fa-sort-amount-down float-end pt-1 ps-2"></i></button>
+                <button class="dropdown-item font-weight-bold small" data-sort-by="name">Sort by A-Z<i class="fad fa-sort-alpha-down-alt float-end pt-1 ps-2"></i></button>
             </div>
         </div>
         <div class="col-12 col-lg">
             <div class="row">
-            {% for tag in group_names %}
+            {% for categories in group_names %}
                 <div class="col-6 col-md-auto px-3">
-                    <button class="w-100 btn btn-sm btn-link text-decoration-none text-body p-2 fw-semibold" data-filter=".{{ tag | slugify }}">
-                        {{ tag }}
+                    <button class="w-100 btn btn-sm btn-link text-decoration-none text-body p-2 fw-semibold" data-filter=".{{ categories | slugify }}">
+                        {{ categories }}
                     </button>
                 </div>
             {% endfor %}
+
             </div>
         </div>
         <div class="col-lg-1 btn-group d-none d-lg-flex">
             <button type="button " class="btn btn-sm dropdown-toggle portfolio_sort" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Sort <i class="fad fa-sort-alt pl-1"></i>
+                Sort <i class="fad fa-sort-alt ps-1"></i>
             </button>
             <div id="sorts" class="dropdown-menu dropdown-menu-right">
-                <button class="dropdown-item is-checked font-weight-bold small" data-sort-by="original-order">Newest<i class="fad fa-sort-amount-up-alt float-right pt-1 pl-2"></i></button>
-                <button class="dropdown-item font-weight-bold small" data-sort-by="timestamp">Oldest<i class="fad fa-sort-amount-down float-right pt-1 pl-2"></i></button>
-                <button class="dropdown-item font-weight-bold small" data-sort-by="name">Sort by A-Z<i class="fad fa-sort-alpha-down-alt float-right pt-1 pl-2"></i></button>
+                <button class="dropdown-item font-weight-bold small is-checked" data-sort-by="order">Newest<i class="fad fa-sort-amount-up-alt float-end pt-1 ps-2"></i></button>
+                <button class="dropdown-item font-weight-bold small" data-sort-by="oldest">Oldest<i class="fad fa-sort-amount-down float-end pt-1 ps-2"></i></button>
+                <button class="dropdown-item font-weight-bold small" data-sort-by="name">Sort by A-Z<i class="fad fa-sort-alpha-up float-end pt-1 ps-2"></i></button>
             </div>
         </div>
     </div>
@@ -97,16 +96,29 @@ var $grid = $('.grid').isotope({
             stagger: 100,
             gutter: 10,
     },
-getSortData: {
-    name: '.grid__title',
-    timestamp: '.timestamp',
-    number: '.number parseInt',
-    category: '[data-category]',
-    weight: function( itemElem ) {
-    var weight = $( itemElem ).find('.weight').text();
-    return parseFloat( weight.replace( /[\(\)]/g, '') );
+    sortBy: 'order',
+    sortAscending: {
+        order: false,
+        name: true,
+        weight: false,
+        oldest: true,
+        number: false
+    },
+    getSortData: {
+        order: '[data-date]',
+        name: '.grid__title',
+        symbol: '.symbol',
+        oldest: '[data-date]',
+        weight: function( itemElem ) {
+        var weight = $( itemElem ).find('.weight').text();
+        return parseFloat( weight.replace( /[\(\)]/g, '') );
+        }
     }
-}
+});
+// sort items on button click
+$('.sort-by-button-group').on( 'click', 'button', function() {
+  var sortByValue = $(this).attr('data-sort-by');
+  $grid.isotope({ sortBy: sortByValue });
 });
 
 $grid.imagesLoaded().progress( function() {
@@ -151,6 +163,13 @@ if( getParameterByName('filter') ) {
 $('#sorts').on( 'click', 'button', function() {
 var sortByValue = $(this).attr('data-sort-by');
 $grid.isotope({ sortBy: sortByValue });
+console.log($grid.isotope({ sortBy: sortByValue }))
+});
+
+$('#sorts2').on( 'click', 'button', function() {
+var sortByValue = $(this).attr('data-sort-by');
+$grid.isotope({ sortBy: sortByValue });
+console.log($grid.isotope({ sortBy: sortByValue }))
 });
 
 $('.button-group').each( function( i, buttonGroup ) {

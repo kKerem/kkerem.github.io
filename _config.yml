@@ -119,3 +119,10 @@ thumbnails:
 
 picture:
   ignore_missing_images: true
+
+thumbnail_gallery:
+  width:  300
+  height: 180
+thumbnail_cover:
+  width:  200
+  height: 120

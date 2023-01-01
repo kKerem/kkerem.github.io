@@ -1,12 +1,14 @@
 ---
 title: Repro
 date: 26/06/2013
-categories: ["HTML Templates","WordPress Themes"]
+categories: 
+  - HTML Templates
+  - WordPress Themes
 tags:
   - CSS
   - HTML
   - JavaScript
-images: /uploads/20220328162507-screencapture-file-C-Users-kerem-Desktop-Web-Tasarimlar-Web-Tasarimlar-arondemo2-index-html-2022-03-28-16_24_33.jpg
+images: /assets/20220328162507-screencapture-file-C-Users-kerem-Desktop-Web-Tasarimlar-Web-Tasarimlar-arondemo2-index-html-2022-03-28-16_24_33.jpg
 madefor: Special request
 preview:
   - icon: fas fa-pager
