@@ -23,8 +23,8 @@ Fancybox.bind('[data-fancybox="gallery"]', {
                 <div class="item single-post">
 
                     <header>
-                        <div class="info text-start mt-3 mt-lg-3 mb-4 mb-lg-4 text-center">
-                            <h1 class="mt-2 mt-lg-2 mb-3 fw-semibold fz-1rem bg-white2 p-3 shadow-sm rounded">{{ page.title }}</h1>
+                        <div class="info text-start mt-lg-3 mb-4 mb-lg-4 text-center">
+                            <h1 class="mt-lg-2 mb-3 fw-semibold fz-1rem bg-white2 p-3 shadow-sm rounded">{{ page.title }}</h1>
                         </div>
 
                         {% if page.images != empty %}
@@ -145,7 +145,7 @@ Fancybox.bind('[data-fancybox="gallery"]', {
                     <div class="my-4">
                         <div class="pe-1 text-muted mt-3 d-inline-block small">Tags:</div>
                         {% for tag in page.tags %}
-                            <a class="rounded-shape border py-1 px-2 mr-2 d-inline fz-12 text-primary text-decoration-none text-decoration-underline-hover tag tag-{{ tag | slugify }}"
+                            <a class="rounded-shape border py-1 px-2 me-2 d-inline fz-12 text-primary text-decoration-none text-decoration-underline-hover tag tag-{{ tag | slugify }}"
                                 href="{{ site.url }}/blog/posts.html#{{tag | slugify}}">
                                 {{ tag }}
                             </a>

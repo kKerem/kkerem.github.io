@@ -17,7 +17,7 @@ I'm a 27-year-old computer engineering student who works as a freelancer as well
     <i class="icon-php-alt px-1 PHP" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="PHP"></i>
     <i class="icon-python px-1 Python" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Python"></i>
     <i class="icon-ruby px-1 Ruby" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Ruby"></i>
-    <i class="icon-cplusplus px-1 cpp" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="cplusplus"></i>
+    <i class="icon-cplusplus px-1 cpp" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="C++"></i>
 </div>
 
 <div class="row my-3 my-lg-4">

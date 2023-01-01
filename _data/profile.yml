@@ -1,7 +1,9 @@
-
+- caption: Turkey
+  icon: <i class="fas fa-map-marker-alt"></i>
+  
 - caption: Github
   href: https://github.com/kKerem
-  icon: <i class="bi bi-github"></i>
+  icon: <i class="fab fa-github"></i>
 
 - caption: Chess.com
   href: https://www.chess.com/member/Kerem_Er
@@ -9,8 +11,9 @@
 
 - caption: kkerem_er
   href: https://twitter.com/kkerem_er
-  icon: <i class="bi bi-twitter"></i>
+  icon: <i class="fab fa-twitter"></i>
 
-- caption: Turkey
-  icon: <i class="bi bi-geo-alt-fill"></i>
+- caption: kkerem.er
+  href: https://www.instagram.com/kkerem.er
+  icon: <i class="fab fa-instagram"></i>
 
