@@ -126,6 +126,7 @@ DEPENDENCIES
   kramdown-parser-gfm (~> 1.1)
   mini_magick
   rouge (~> 3.26)
+  ruby-vips
   webrick (~> 1.7)
 
 BUNDLED WITH
