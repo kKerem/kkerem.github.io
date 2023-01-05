@@ -904,6 +904,8 @@ a:not(.kg-btn):not(.kg-product-card-button):hover {
 .box-shadow{box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.05);}
 .shadow-hover{transition: .3s;}
 .shadow-hover:hover{box-shadow: rgb(0 0 0 / 5%) 0px 10px 15px -3px !important;}
+.bg-transparent2{background: rgba(255,255, 255, .5);}
+body.dark .bg-transparent2{background: rgba(255,255, 255, .05);}
 .bg-white2{background-color: rgba(255,255,255,0.75);}
 .bg-white2.border{border-color: #e5e9ed !important;}
 body.dark .bg-white2 { background-color: rgb(22 27 34); }
@@ -929,7 +931,4 @@ body.dark .is-checked {
   
 }
 
-.alert {
-  box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 10%) !important;
-}
 

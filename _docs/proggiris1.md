@@ -11,14 +11,17 @@ date: 23-11-2022
 
 ## Değişken tanımı
 <p>Kaydedilmesi istenen tüm veriler(anlık hesaplamalar hariç) doğru bir isime sahip olmak zorundadır.</p>
-<div class="alert alert-danger p-2 my-3">
-    <i class="bi bi-x-circle-fill text-danger p-2"></i> Değişken isimlerinde türkçe karakter, sembol, boşluk
-    <u>kullanılamaz</u> ve sayı ile <u>başlayamaz</u>.
+<div class="alert alert-danger p-1 my-3">
+    <div class="bg-transparent2 p-2 shadow-sm rounded fw-semibold small">
+        <i class="bi bi-x-circle-fill text-danger p-2"></i> Değişken isimlerinde türkçe karakter, sembol, boşluk <u>kullanılamaz</u> ve sayı ile <u>başlayamaz</u>.
+    </div>
     <pre class="mb-0 mt-2"><code class="language-plaintext d-block shadow-none">1.degişken = </code></pre>
 </div>
 
-<div class="alert alert-success p-2 my-3">
-    <i class="bi bi-check-circle-fill text-success p-2"></i> Doğru kullanım
+<div class="alert alert-success p-1 my-3">
+    <div class="bg-transparent2 p-2 shadow-sm rounded fw-semibold small">
+        <i class="bi bi-check-circle-fill text-success p-2"></i> Doğru kullanım
+    </div>
     <pre class="mb-0 mt-2"><code class="language-plaintext d-block shadow-none">birinci_degisken = </code></pre>
 </div>
 
@@ -212,8 +215,10 @@ end</code></pre>
 
                 <div class="row w-100 m-0">
                     <div class="col ps-0">
-                        <div class="alert alert-success p-2 mt-3 mb-0">
-                            <i class="bi bi-x-circle-fill text-success p-2"></i> Doğru kullanım
+                        <div class="alert alert-success p-1 mt-3 mb-0">
+                            <div class="bg-transparent2 p-2 shadow-sm rounded fw-semibold small">
+                                <i class="bi bi-x-circle-fill text-success p-2"></i> Doğru kullanım
+                            </div>
                             <pre class="mb-0 mt-2"><code class="language-ruby d-block shadow-none">if (a > b)
     ...
 elsif (a == b)
@@ -225,8 +230,10 @@ end</code></pre>
                     </div>
 
                     <div class="col pe-0">
-                        <div class="alert alert-danger p-2 mt-3 mb-0">
-                            <i class="bi bi-x-circle-fill text-danger p-2"></i> Yanlış kullanım
+                        <div class="alert alert-danger p-1 mt-3 mb-0">
+                            <div class="bg-transparent2 p-2 shadow-sm rounded fw-semibold small">
+                                <i class="bi bi-x-circle-fill text-danger p-2"></i> Yanlış kullanım
+                            </div>
                             <pre class="mb-0 mt-2"><code class="language-ruby d-block shadow-none">if (a > b)
     ...
 else
@@ -293,16 +300,20 @@ end</code></pre>
     <b><code>&&</code>(ve)</b>, <b><code>||</code>(veya)</b> operatörleri kullanılmalıdır. Sorguların bitişini
     belirtmek için sorgu sonucuna <code>end</code> girilmesi zorunludur.
 </p>
-<div class="alert alert-danger p-2 my-3">
-    <i class="bi bi-x-circle-fill text-danger p-2"></i> Yanlış kullanım
+<div class="alert alert-danger p-1 my-3">
+    <div class="bg-transparent2 p-2 shadow-sm rounded fw-semibold small">
+        <i class="bi bi-x-circle-fill text-danger p-2"></i> Yanlış kullanım
+    </div>
     <pre class="mb-0 mt-2"><code class="language-ruby d-block shadow-none">if (birinci_degisken > ikinci_degisken > ucuncu_degisken)
 ...
 end</code></pre>
     <div class="mt-2 small">1 bölümde(parantez içerisinde) 2'den fazla değişken <u>sorgulanamaz</u>.</div>
 </div>
 
-<div class="alert alert-success p-2 my-3">
-    <i class="bi bi-check-circle-fill text-success p-2"></i> Doğru kullanım
+<div class="alert alert-success p-1 my-3">
+    <div class="bg-transparent2 p-2 shadow-sm rounded fw-semibold small">
+        <i class="bi bi-check-circle-fill text-success p-2"></i> Doğru kullanım
+    </div>
     <pre class="mb-0 mt-2"><code class="language-ruby d-block shadow-none">if (birinci_degisken > ikinci_degisken)   &&   (ikinci_degisken > ucuncu_degisken)
 ...
 end</code></pre>
