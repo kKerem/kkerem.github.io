@@ -39,6 +39,7 @@ jobs:
           bundler: "Gemfile.lock"
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
           cache-version: 0 # Increment this number if you need to re-download cached gems
+          pre_build_commands: "pacman -S --noconfirm libvips lcms2 openjpeg2 libpng libwebp libheif imagemagick openslide libjxl poppler-glib"
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v2
@@ -62,6 +63,3 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v1
-
-with:
-    pre_build_commands: "pacman -S --noconfirm libvips lcms2 openjpeg2 libpng libwebp libheif imagemagick openslide libjxl poppler-glib"
