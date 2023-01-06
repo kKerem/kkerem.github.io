@@ -9,6 +9,7 @@ gem "jekyll-imagemagick"
 gem "mini_magick"
 gem "jekyll-sass-converter", "~> 2.0"
 gem "ruby-vips"
+gem 'ffi'
 group :jekyll_plugins do
   gem "jekyll-last-modified-at"
   gem "jekyll-date-localization"
