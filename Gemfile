@@ -16,7 +16,7 @@ group :jekyll_plugins do
   gem 'jekyll-timeago', '~> 0.14.0'
   gem 'jekyll-lazy-load-image', require: 'jekyll-lazy-load-image/auto-execution'
   gem 'jekyll-thumbnails', git: 'https://github.com/Emilostuff/jekyll-thumbnails'
-  gem 'jekyll_picture_tag', '~> 2.0'
+  gem 'jekyll_picture_tag', '~> 2.0.4'
 end
 
 group :development do
