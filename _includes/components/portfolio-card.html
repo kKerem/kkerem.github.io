@@ -1,5 +1,6 @@
 
 <div class="element-item overflow-hidden rounded border{% for tag in post.categories %} {{ tag | slugify}}{% endfor %}" data-date="{{ post.date | date: '%s' }}">
+    {% picture {{post.images}} %}
     
     <div class="grid__body">
         <div class="relative">
