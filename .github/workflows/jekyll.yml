@@ -43,12 +43,12 @@ jobs:
         id: pages
         uses: actions/configure-pages@v2
       - name: Build with Jekyll
-        with:
-          pre_build_commands: "pacman -S --noconfirm libvips lcms2 openjpeg2 libpng libwebp libheif imagemagick openslide libjxl poppler-glib"
         # Outputs to the './_site' directory by default
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
+        with:
+          pre_build_commands: "pacman -S --noconfirm libvips lcms2 openjpeg2 libpng libwebp libheif imagemagick openslide libjxl poppler-glib"
       - name: Upload artifact
         # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v1
