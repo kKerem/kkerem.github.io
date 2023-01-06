@@ -78,7 +78,6 @@ plugins:
   - jekyll-sitemap
   - jekyll-lazy-load-image
   - jekyll-imagemagick
-  - jekyll_picture_tag
 
 # Optional. The default date format, used if none is specified in the tag.
 last-modified-at:
