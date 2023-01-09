@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Je t'aime ma vie ::) -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Kerem">
+    <meta name="theme-color" content="#1f75d8">
+    
+    <title>
+        
+            WordPress Code List · kKerem
+        
+    </title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="/theme/css/site.css">
+    <link rel="stylesheet" href="/theme/css/syntax.css">
+    <link rel="stylesheet" href="/theme/css/aos.css">
+    <link rel="stylesheet" href="/theme/css/font-mfizz.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
+    <script src="/theme/js/lazysizes.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="/theme/css/atom-one-dark-reasonable.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" media="print" onload="this.media='all'">
+    <script>hljs.highlightAll();</script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8ZT6JVDZCK"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-8ZT6JVDZCK');
+    </script>
+</head>
+
+
+<body data-bs-spy="scroll" data-bs-offset="30" data-bs-target="#collapseExample">
+
+
+<nav class="navbar navbar-expand-lg fixed-top justify-content-between navbar-light bg-white shadow-sm">
+    <div class="container">
+        <div class="row align-items-center avbar-brand">
+            <div class="col-auto"><a href="/"><img data-src="/theme/img/logo.png" class="lazyload" data-size="auto"></a></div>
+            <div class="col ps-0">
+                <span class="fw-semibold">
+                    <span class="text-primary">@</span>kKerem<br>
+                </span>
+                <span class="small text-secondary">WordPress Code List</span>
+            </div>
+        </div>
+        <button class="navbar-toggler p-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-list"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav ms-auto">
+            
+                <li class="nav-item fw-semibold px-lg-2">
+                    <a href="/" class="nav-link position-relative">
+                        Anasayfa
+                    </a>
+                </li>
+            
+                <li class="nav-item fw-semibold px-lg-2">
+                    <a href="/repositories.html" class="nav-link position-relative">
+                        Repositories<span class="position-absolute top-5 toplamrepo start-100 translate-middle badge rounded-pill bg-primary d-none d-lg-inline-block" id="repos"></span>
+                    </a>
+                </li>
+            
+                <li class="nav-item fw-semibold px-lg-2">
+                    <a href="/about.html" class="nav-link position-relative">
+                        Hakkımda
+                    </a>
+                </li>
+            
+                <li class="nav-item fw-semibold px-lg-2">
+                    <a href="/blog/posts.html" class="nav-link position-relative">
+                        Yazılar
+                    </a>
+                </li>
+            
+                <li class="nav-item fw-semibold px-lg-2">
+                    <a href="/portfolio.html" class="nav-link position-relative">
+                        Portfolio
+                    </a>
+                </li>
+            
+                <li class="nav-item fw-semibold px-lg-2">
+                    <a href="/dokumanlar.html" class="nav-link position-relative">
+                        Dokümanlar
+                    </a>
+                </li>
+            
+                <li class="nav-item fw-semibold px-lg-2">
+                    <input type="checkbox" class="checkbox checkbox-darkmode" id="toggleBtn">
+                    <label class="switch switch-darkmode px-lg-2 py-2" for="toggleBtn">
+                        <i class="bi bi-moon-fill"></i>
+                        <span class="d-md-none ps-2">Dark Mode</span>
+                    </label>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+
+
+
+<div class="container site-container" id="top" data-aos="fade">
+    <div class="row align-items-center justify-content-center">
+        <div class="col-md-12 col-lg-8 pb-4 content px-lg-5">
+            <p class="meta mt-2 small">
+    <span class="text-secondary">Posted in 1 year and 5 months ago</span>
+</p>
+
+<h1 class="mt-2 mt-lg-2 mb-3 fw-semibold fz-1rem bg-white2 p-3 shadow-sm rounded">WordPress Code List</h1>
+
+
+    <p>I collected the parameters I used while creating a WordPress theme on one page. This content contains codes suitable for general use and includes all the necessary general codes when creating a theme. To help others as a WordPress lover…</p>
+
+<p> 
+<b class="small mt-3 d-block">Title parameter</b></p>
+<pre class="mb-0 mt-2"><code class="language-php d-block shadow-none">&lt;?php
+    global $page, $paged;
+    bloginfo( 'name' );
+    wp_title( '»', true, 'left' );
+    $site_description = get_bloginfo( 'description', 'display' );
+    if ( $site_description &amp;&amp; ( is_home() || is_front_page() ) )
+        echo " » $site_description";
+    if ( $paged --&gt;= 2 || $page &gt;= 2 )
+        echo ' » ' . sprintf( __( 'Page %s', 'twentyten' ), max( $paged, $page ) );
+?&gt;</code></pre>
+<p><b class="small mt-3 d-block">Blog name</b></p>
+<pre class="mb-0 mt-2"><code class="language-php d-block shadow-none">&lt;?php bloginfo('name'); ?&gt;</code></pre>
+<p><b class="small mt-3 d-block">Blog address</b></p>
+<pre class="mb-0 mt-2"><code class="language-php d-block shadow-none">&lt;?php bloginfo('url'); ?&gt;</code></pre>
+<p><b class="small mt-3 d-block">CSS file</b></p>
+<pre class="mb-0 mt-2"><code class="language-php d-block shadow-none">&lt;?php bloginfo('stylesheet_url'); ?&gt;</code></pre>
+<p><b class="small mt-3 d-block">Theme path</b></p>
+<pre class="mb-0 mt-2"><code class="language-php d-block shadow-none">&lt;?php bloginfo('template_url'); ?&gt;</code></pre>
+<p><b class="small mt-3 d-block">Call header.php</b></p>
+<pre class="mb-0 mt-2"><code class="language-php d-block shadow-none">&lt;?php get_header(''); ?&gt;</code></pre>
+<p><b class="small mt-3 d-block">Call sidebar.php</b></p>
+<pre class="mb-0 mt-2"><code class="language-php d-block shadow-none">&lt;?php get_sidebar(''); ?&gt;</code></pre>
+<p><b class="small mt-3 d-block">Call footer.php</b></p>
+<pre class="mb-0 mt-2"><code class="language-php d-block shadow-none">&lt;?php get_footer(''); ?&gt;</code></pre>
+<p><b class="small mt-3 d-block">Tag ends</b></p>
+<pre class="mb-0 mt-2"><code class="language-php d-block shadow-none">/*  before */
+&lt;?php wp_head(); ?&gt;
+
+/* to end  */
+&lt;?php wp_footer(); ?&gt;</code></pre>
+<p><b class="small mt-3 d-block">Page template</b></p>
+<pre class="mb-0 mt-2"><code class="language-php d-block shadow-none">&lt;?php /* Template Name: Page Name */ ?&gt;</code></pre>
+<p><b class="small mt-3 d-block">Theme style text</b></p>
+<pre class="mb-0 mt-2"><code class="language-php d-block shadow-none">/*
+Theme Name: 
+Theme URI: 
+Description: 
+Author: 
+Author URI: 
+Version: 1.0
+*/</code></pre>
+<h6 class="heading small pt-4 mb-3 mb-lg-3 text-body">Menu Contexts</h6>
+<p><b class="small mt-3 d-block">Lists pages</b></p>
+<pre class="mb-0 mt-2"><code class="language-php d-block shadow-none">&lt;?php wp_list_pages('title_li='); ?&gt;</code></pre>
+<p><b class="small mt-3 d-block">Removing certain pages from the menu</b></p>
+<pre class="mb-0 mt-2"><code class="language-php d-block shadow-none">&lt;?php wp_list_pages('exclude=id&amp;title_li='); ?&gt;</code></pre>
+<p><b class="small mt-3 d-block">Lists only pages with entered IDs</b></p>
+<pre class="mb-0 mt-2"><code class="language-php d-block shadow-none">&lt;?php wp_list_pages('include=id,id&amp;title_li='); ?&gt;</code></pre>
+<p><b class="small mt-3 d-block">List categories</b></p>
+<pre class="mb-0 mt-2"><code class="language-php d-block shadow-none">&lt;?php wp_list_cats('title_li='); ?&gt;</code></pre>
+<p><b class="small mt-3 d-block">Category listing (custom menu)</b></p>
+<pre class="mb-0 mt-2"><code class="language-php d-block shadow-none">&lt;?php 
+    $category_ids = get_all_category_ids();
+    foreach($category_ids as $cat_id) {
+        $cat_name = get_cat_name($cat_id);
+        $category_url = get_category_link($cat_id);
+        echo '&lt;a href="'.$category_url.'"&gt;&lt;li class="list-group-item"&gt;' . $cat_name . '&lt;/li&gt;&lt;/a&gt;';
+    }
+?&gt;</code></pre>
+<h6 class="heading small pt-4 mb-3 mb-lg-3 text-body">Content Contexts</h6>
+<p><b class="small mt-3 d-block">While loop</b></p>
+<pre class="mb-0 mt-2"><code class="language-php d-block shadow-none">&lt;?php while(have_posts()) the_post(); ?&gt;
+    //content
+&lt;?php endwhile; ?&gt;</code></pre>
+<p><b class="small mt-3 d-block">Category name on category page</b></p>
+<pre class="mb-0 mt-2"><code class="language-php d-block shadow-none">&lt;?php printf( __( '%s', 'solopine' ), single_cat_title( '', false ) ); ?&gt;</code></pre>
+<p><b class="small mt-3 d-block">Category description on category page</b></p>
+<pre class="mb-0 mt-2"><code class="language-php d-block shadow-none">&lt;?php echo category_description(); ?&gt;</code></pre>
+<p><b class="small mt-3 d-block">Image of the post (Adding a class to the post Thumbnail)</b></p>
+<pre class="mb-0 mt-2"><code class="language-php d-block shadow-none">&lt;?php echo get_the_post_thumbnail( $post_id, 'thumbnail', array('class' =&gt; 'img-responsive img-circle post-image')); ?&gt;</code></pre>
+<p><b class="small mt-3 d-block">List the articles belonging to the category</b></p>
+<pre class="mb-0 mt-2"><code class="language-php d-block shadow-none">&lt;?php if (have_posts()) ?&gt;
+&lt;?php $query = new WP_Query("cat=1&amp;showposts=10"); while($query-&gt;have_posts()) $query-&gt;the_post();?&gt; 
+//content
+&lt;?php endwhile; ?&gt;
+&lt;?php endif; ?&gt;</code></pre>
+<p><b class="small mt-3 d-block">Latest articles</b></p>
+<pre class="mb-0 mt-2"><code class="language-php d-block shadow-none">&lt;?php query_posts('showposts=10'); ?&gt;
+<b class="small mt-3 d-block">&lt;?php while (have_posts()) the_post();?&gt;
+// content
+&lt;?php endwhile;?&gt;
+&lt;?php wp_reset_query(); ?&gt;</b></code></pre>
+<p><b class="small mt-3 d-block">Post title</b></p>
+<pre class="mb-0 mt-2"><code class="language-php d-block shadow-none">&lt;?php the_title(''); ?&gt;</code></pre>
+<p><b class="small mt-3 d-block">Post address</b></p>
+<pre class="mb-0 mt-2"><code class="language-php d-block shadow-none">&lt;?php the_permalink('') ?&gt;</code></pre>
+<p><b class="small mt-3 d-block">Post category</b></p>
+<pre class="mb-0 mt-2"><code class="language-php d-block shadow-none">&lt;?php the_category(', ') ?&gt;</code></pre>
+<p><b class="small mt-3 d-block">Post category – HTML</b></p>
+<pre class="mb-0 mt-2"><code class="language-php d-block shadow-none">&lt;?php foreach((get_the_category()) as $category) { echo $category-&gt;cat_name . ', '; } ?&gt;</code></pre>
+<p><b class="small mt-3 d-block">Text content</b></p>
+<pre class="mb-0 mt-2"><code class="language-php d-block shadow-none">&lt;?php the_content(''); ?&gt;</code></pre>
+<p><b class="small mt-3 d-block">Text content limit</b></p>
+<pre class="mb-0 mt-2"><code class="language-php d-block shadow-none">&lt;?php echo wp_trim_words( get_the_content(), 40, '...' );?&gt;</code></pre>
+<p><b class="small mt-3 d-block">Posting Time of the Article</b></p>
+<pre class="mb-0 mt-2"><code class="language-php d-block shadow-none">&lt;?php the_time('H:i:s'); ?&gt;</code></pre>
+<p><b class="small mt-3 d-block">Number of comments on the article</b></p>
+<pre class="mb-0 mt-2"><code class="language-php d-block shadow-none">&lt;?php comments_popup_link(__('No comment'), __('1 comment'), __('% comments'), '', __('Comments closed')); ?&gt;</code></pre>
+<p><b class="small mt-3 d-block">Post read count (requires WP-PostViews plugin)</b></p>
+<pre class="mb-0 mt-2"><code class="language-php d-block shadow-none">&lt;?php if(function_exists('the_views')) { the_views(); } ?&gt;</code></pre>
+<p><b class="small mt-3 d-block">Text ID</b></p>
+<pre class="mb-0 mt-2"><code class="language-php d-block shadow-none">&lt;?php the_ID(); ?&gt;</code></pre>
+<p><b class="small mt-3 d-block">Post edit link</b></p>
+<pre class="mb-0 mt-2"><code class="language-php d-block shadow-none">&lt;?php edit_post_link(); ?&gt;</code></pre>
+<p><b class="small mt-3 d-block">Comment template</b></p>
+<pre class="mb-0 mt-2"><code class="language-php d-block shadow-none">&lt;?php comments_template(); ?&gt;</code></pre>
+<h6 class="heading small pt-4 mb-3 mb-lg-3 text-body">Author contexts</h6>
+<p><b class="small mt-3 d-block">Author name</b></p>
+<pre class="mb-0 mt-2"><code class="language-php d-block shadow-none">&lt;?php the_author(''); ?&gt;</code></pre>
+<p><b class="small mt-3 d-block">About the author</b></p>
+<pre class="mb-0 mt-2"><code class="language-php d-block shadow-none">&lt;?php the_author_description(''); ?&gt;</code></pre>
+<p><b class="small mt-3 d-block">Author name</b></p>
+<pre class="mb-0 mt-2"><code class="language-php d-block shadow-none">&lt;?php the_author_firstname(''); ?&gt;</code></pre>
+<p><b class="small mt-3 d-block">Author surname</b></p>
+<pre class="mb-0 mt-2"><code class="language-php d-block shadow-none">&lt;?php the_author_lastname(''); ?&gt;</code></pre>
+<p><b class="small mt-3 d-block">Number of articles by the author</b></p>
+<pre class="mb-0 mt-2"><code class="language-php d-block shadow-none">&lt;?php the_author_posts('');?&gt;</code></pre>
+<p><b class="small mt-3 d-block">Author page link</b></p>
+<pre class="mb-0 mt-2"><code class="language-php d-block shadow-none">&lt;?php the_author_link('');?&gt;</code></pre>
+<p><b class="small mt-3 d-block">Author’s website</b></p>
+<pre class="mb-0 mt-2"><code class="language-php d-block shadow-none">&lt;?php the_author_url(''); ?&gt;</code></pre>
+<p><b class="small mt-3 d-block">Author’s e-mail address</b></p>
+<pre class="mb-0 mt-2"><code class="language-php d-block shadow-none">&lt;?php the_author_email('');?&gt;</code></pre>
+<h6 class="heading small pt-4 mb-3 mb-lg-3 text-body">Extra contexts</h6>
+<p><b class="small mt-3 d-block">Special menu</b></p>
+<pre class="mb-0 mt-2"><code class="language-php d-block shadow-none">// Functions
+add_action('init', 'theme_menus');
+function theme_menus() {
+    register_nav_menus(
+        array(
+        'anamenu' =&gt; __('Primary Menu'),
+        'sagmenu' =&gt; __('Side Menu')
+        )
+    );
+}
+// Calling menu
+wp_nav_menu( array( 'container_id' =&gt; 'submenu', 'theme_location' =&gt; 'anamenu','menu_class'=&gt;'sf-menu','fallback_cb'=&gt; 'fallbackmenu' ) );</code></pre>
+<p><b class="small mt-3 d-block">Adding elements to the beginning or end of a custom menu</b></p>
+<pre class="mb-0 mt-2"><code class="language-php d-block shadow-none">// Add the Homepage link to the beginning of the menu elements
+function menu_ekleme($content) {
+    $content = '&lt;li class="current colordefault home_class"glt;&lt;a href="index.html"glt;&lt;i class="icon-home"glt;&lt;/iglt;&lt;/aglt;&lt;/liglt;' . $content;
+    return $content;
+}
+add_filter('wp_nav_menu_anamenu_items', 'menu_ekleme');</code></pre>
+<p><b class="small mt-3 d-block">Calling the photo uploaded specifically to the ID</b></p>
+<pre class="mb-0 mt-2"><code class="language-php d-block shadow-none">function valuePhoto($photoID){
+    $imageSrc = $photoID;
+    if (is_numeric($photoID)) {
+        $imageAttachment = wp_get_attachment_image_src($photoID,'full');
+        $imageSrc = $imageAttachment[0];
+        return $imageSrc;
+    }
+}</code></pre>
+<p><b class="small mt-3 d-block">Uninstalling the WordPress toolbar (functions.php)</b></p>
+<pre class="mb-0 mt-2"><code class="language-php d-block shadow-none">/* Disable the admin bar feature */
+    add_filter( 'show_admin_bar', '__return_false' );
+      
+    /* Remove Admin Bar options from user profile */
+    remove_action( 'personal_options', '_admin_bar_preferences' );</code></pre>
+<p><b class="small mt-3 d-block">Calling custom field tag to page</b></p>
+<pre class="mb-0 mt-2"><code class="language-php d-block shadow-none">&lt;?php echo get_post_meta($post-&gt;ID, "ozel_alan_etiketi", true); ?&gt;</code></pre>
+<p><b class="small mt-3 d-block">Next post</b></p>
+<pre class="mb-0 mt-2"><code class="language-php d-block shadow-none">&lt;?php next_post_link('') ?&gt;</code></pre>
+<p><b class="small mt-3 d-block">Front text</b></p>
+<pre class="mb-0 mt-2"><code class="language-php d-block shadow-none">&lt;?php previous_post_link('') ?&gt;</code></pre>
+<p><b class="small mt-3 d-block">Featured image use</b></p>
+<pre class="mb-0 mt-2"><code class="language-php d-block shadow-none">/* Inside the while loop */
+    &lt;?php if ( has_post_thumbnail() ) {the_post_thumbnail();} else {}?&gt;
+  
+/* will be added in funtions.php */
+    add_theme_support( 'post-thumbnails' );
+    set_post_thumbnail_size( 125, 125 );</code></pre>
+<p><b class="small mt-3 d-block">Quoting part – using the expert</b></p>
+<pre class="mb-0 mt-2"><code class="language-php d-block shadow-none">/* Inside While Loop */
+    &lt;?php the_excerpt(''); ?&gt;
+  
+    /* will be added in functions.php */
+    function new_excerpt_length($length) {
+    return 12;
+    }
+    add_filter('excerpt_length', 'new_excerpt_length');</code></pre>
+<p><b class="small mt-3 d-block">Search form</b></p>
+<pre class="mb-0 mt-2"><code class="language-php d-block shadow-none">&lt;form method="get" id="searchform" action="&lt;?php bloginfo('url'); ?&gt;"&gt;
+    &lt;input class="searchbg" type="text" name="s" id="s" onfocus="if (this.value == 'Ara ...') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Ara ...';}"&gt;
+    &lt;input class="button" type="button" value=""&gt;
+&lt;/form&gt;</code></pre>
+<p><b class="small mt-3 d-block">Pagination (Pagenavi plugin)</b></p>
+<pre class="mb-0 mt-2"><code class="language-php d-block shadow-none">&lt;?php wp_pagenavi(); ?&gt;</code></pre>
+
+
+
+
+
+<div class="pr-1 text-muted mt-3 d-inline-block small">Tags:</div>
+
+
+<a class="d-inline-block rounded small me-1 text-decoration-none text-decoration-underline-hover tag tag-html" href="https://kkerem.github.io/blog/posts.html#html">
+    HTML
+</a>
+
+<a class="d-inline-block rounded small me-1 text-decoration-none text-decoration-underline-hover tag tag-php" href="https://kkerem.github.io/blog/posts.html#php">
+    PHP
+</a>
+
+
+
+<div class="row text-muted mt-3 small">
+    <div class="col-12 col-md text-center text-md-start">Published on 12 Aug, 2021</div>
+    <div class="col-12 col-md text-center text-md-end">Last edit on 09 Jan, 2023</div>
+</div>
+
+        </div>
+        <div class="col-md-12 d-lg-none bottom">
+            
+
+        </div>
+    </div>
+</div>
+
+
+
+<div class="container">
+    <footer class="flex-wrap justify-content-end align-items-center text-center mt-3">
+        <div class="py-2 my-2">
+            <div class="row align-items-center">
+                <div class="col text-start text-muted fz-12">
+                    <span class="pageload"></span>
+                </div>
+                <div class="col-auto">
+                    <a href="/" class="text-center link-dark text-decoration-none d-inline-block"><img width="15px" data-src="/theme/img/logo_footer2.png" class="lazyload" data-size="auto"></a>
+                </div>
+                <div class="col text-end">
+                    <a href="#"><i class="bi bi-arrow-up-square-fill fz-20 text-primary"></i></a>
+                </div>
+            </div>
+            
+            
+        </div>
+    </footer>
+</div>
+
+
+<script src="/theme/js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<script src="/theme/js/aos.js"></script>
+<script>AOS.init();
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+</script>
+
+</body>
+
+</html>
