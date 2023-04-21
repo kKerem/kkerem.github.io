@@ -1,19 +1,19 @@
-- title: Anasayfa
+- title: Home
   href: 
 
 - title: Repositories<span class="position-absolute top-5 toplamrepo start-100 translate-middle badge rounded-pill bg-primary d-none d-lg-inline-block" id="repos"></span>
   href: repositories.html
 
-- title: Hakkımda
+- title: About Me
   href: about.html
 
 - title: Yazılar
   href: blog/posts.html
 
-- title: Portfolio
+- title: Portfolio<span class="position-absolute top-5 toplamrepo start-100 translate-middle badge rounded-pill bg-primary d-none d-lg-inline-block" id="portfolio_count"></span>
   href: portfolio.html
 
-- title: Dokümanlar
+- title: Documents
   href: dokumanlar.html
 
 

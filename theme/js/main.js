@@ -14,7 +14,7 @@ window.onload = function () {
     }
 $.getJSON('https://api.github.com/users/kkerem', function(data) {
 
-        $("#follow").append("<a href='https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2FkKerem' target='_blank' class='btn btn-light border my-3 d-block text-center fw-semibold btn-sm py-2' role='button'>Takip Et</a>")
+        $("#follow").append("<a href='https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2FkKerem' target='_blank' class='btn btn-light border my-3 d-block text-center fw-semibold btn-sm py-2' role='button'>Follow</a>")
 
        $("#takipci").text(data.followers)
        $("#takipedilen").text(data.following)
