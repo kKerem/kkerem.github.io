@@ -1,11 +1,13 @@
 ---
-title: Proasdasxx
+title: Acasoy WP
 date: 18/05/2020
 categories: 
-  - HTMLy Themes
-  - MyBB Themes
+  - WordPress Themes
 tags:
+  - HTML
+  - CSS
   - JavaScript
+  - PHP
 images: /assets/screencapture-thecultureambassadors-2022-06-14-11_10_34.jpg
 madefor: http://acasoy.com
 preview:

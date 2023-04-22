@@ -2,7 +2,6 @@
 title: Csarj WordPress Theme
 date: 08/06/2022
 categories: 
-  - HTML Themes
   - WordPress Themes
 tags:
   - HTML

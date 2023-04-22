@@ -7,3 +7,5 @@ vendor/bundle/ruby/3.1.0/bundler/gems/jekyll-thumbnails-1039967e05c7
 .gitignore
 vendor/bundle/ruby/3.1.0/bundler/gems/jekyll-thumbnails-1039967e05c7
 vendor/bundle/ruby/3.1.0/bundler/gems/jekyll-assets-056d2c88719e
+*.scss
+*.sass

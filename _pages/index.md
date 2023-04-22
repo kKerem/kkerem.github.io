@@ -2,7 +2,7 @@
 layout: defaults/anasayfa
 permalink: index.html
 narrow: true
-title: Kişisel internet sitesi
+title: Personal website
 ---
 
 #### Hi there 👋

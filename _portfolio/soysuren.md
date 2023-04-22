@@ -2,7 +2,7 @@
 title: Soysuren WP Theme
 date: 15/05/2021
 categories: 
-  - HTML Themes
+  - WordPress Themes
 tags:
   - HTML
   - CSS

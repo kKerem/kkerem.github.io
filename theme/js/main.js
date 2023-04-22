@@ -31,10 +31,10 @@ const darkTheme = "dark";
     const darkThemeSetUp = () => {
         if (getCurrentTheme() === "dark") {
             document.getElementById("toggleBtn").checked = true;
-            $(".switch").html('<i class="bi bi-sun-fill"></i><span class="d-md-none ps-2">Light Mode</span>')
+            $(".switch").html('<i class="fas fa-sun"></i><span class="d-md-none ps-2">Light Mode</span>')
         } else {
             document.getElementById("toggleBtn").checked = false;
-            $(".switch").html('<i class="bi bi-moon-fill"></i><span class="d-md-none ps-2">Dark Mode</span>')
+            $(".switch").html('<i class="fas fa-moon"></i><span class="d-md-none ps-2">Dark Mode</span>')
         }
     };
 

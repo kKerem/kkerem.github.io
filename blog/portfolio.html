@@ -34,13 +34,16 @@ layout: default-portfolio
         </div>
         <div class="col-12 col-lg">
             <div class="row">
-            {% for categories in group_names %}
-                <div class="col-6 col-md-auto px-3">
-                    <button class="w-100 btn btn-sm btn-link text-decoration-none text-body p-2 fw-semibold" data-filter=".{{ categories | slugify }}">
-                        {{ categories }}
-                    </button>
-                </div>
-            {% endfor %}
+                {% assign sorted_categories = group_names | sort | reverse %}
+                {% for categories in sorted_categories %}
+                    {% assign category_items = site.portfolio | where: "categories", categories %}
+                    {% assign category_item_count = category_items | size %}
+                    <div class="col-6 col-md-auto px-3">
+                        <button class="w-100 btn btn-sm btn-link text-decoration-none text-body p-2 fw-semibold" data-filter=".{{ categories | slugify }}">
+                            {{ categories }} ({{ category_item_count }})
+                        </button>
+                    </div>
+                {% endfor %}
 
             </div>
         </div>
