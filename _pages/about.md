@@ -21,7 +21,7 @@ I'm a 27-year-old computer engineering student who works as a freelancer as well
 </div>
 
 <div class="row my-3 my-lg-4">
-    <div class="col-6 col-md-4 px-4">
+    <div class="col-12 col-md-4 px-4 py-2 py-md-0">
         <a href="{{site.url}}/repositories.html" class="text-decoration-none text-body">
             <div class="row align-items-center bg-white p-3 rounded shadow-hover">
                 <div class="col-3 text-center">
@@ -34,7 +34,7 @@ I'm a 27-year-old computer engineering student who works as a freelancer as well
             </div>
         </a>
     </div>
-    <div class="col-6 col-md-4 px-4">
+    <div class="col-12 col-md-4 px-4 py-2 py-md-0">
         <a href="{{site.url}}/blog/posts.html" class="text-decoration-none text-body">
             <div class="row align-items-center bg-white p-3 rounded shadow-hover">
                 <div class="col-3 text-center">
@@ -47,7 +47,7 @@ I'm a 27-year-old computer engineering student who works as a freelancer as well
             </div>
         </a>
     </div>
-    <div class="col-6 col-md-4 px-4">
+    <div class="col-12 col-md-4 px-4 py-2 py-md-0">
         <a href="{{site.url}}/portfolio.html" class="text-decoration-none text-body">
             <div class="row align-items-center bg-white p-3 rounded shadow-hover">
                 <div class="col-3 text-center">

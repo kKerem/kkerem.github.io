@@ -18,7 +18,9 @@ presets:
     sizes:
       mobile: 100vw
   thumbnail:
+    # widths: [300]
     formats: [webp, original]
+    # size: 300px
     # crop: 1:1
     # base_width: 100
     # pixel_ratios: [1, 1.5, 2]

@@ -38,7 +38,7 @@ html:focus-within {
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
  }
-body{    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji" !important;background: rgba(243, 244, 246,0.8);}
+body{    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji" !important;background: rgba(243, 244, 246,0.6);}
 .nav-pills .nav-link.active, .nav-pills .show>.nav-link {background: none !important;color:#8b1104 !important}
 .baslik i {position: relative;top:-1px}
 pre code{font-style: normal;font-family:monospace;border-radius: .25rem; font-weight: 400;  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;}
@@ -216,7 +216,7 @@ a.ext-decoration-none{text-decoration: none !important;}
     
 
 
-.dark {background-color: var(--background);color:var(--text);}
+.dark {background-color: var(--background);color:var(--text);transition: none;}
 .dark .list-group .list-group-item {color:var(--text)}
 .dark .list-group-item-action span:hover {color:var(--background)}
 

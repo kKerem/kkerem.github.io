@@ -1,68 +1,95 @@
 ---
 layout: default
 ---
-test
-    
+
+<script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"/>
+<script src="https://npmcdn.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
+<script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
+
+
     <div class="small mb-2">
-        <a href="https://github.com/kKerem" target="_blank" class="text-decoration-none text-muted">{{ site.title }}</a>
+        <span class="text-muted">{{ site.title }}</span>
          / 
-        README<span class="text-muted">.md</span>
+         <a href="{{ site.url }}/about.html" class="text-decoration-none text-decoration-underline-hover text-body">README<span class="text-muted">.md</span></a>
     </div>
     <div class="readme">
         {{ content }}
     </div>
 
-<h6 class="mt-4">Recent repositories</h6>
-        <div class="row justify-content-between small" id="Repositories"></div>
-        <div class="text-center">
-            <a href="{{ site.url }}/repositories.html">View All</a>
-        </div>
-<script>
-    apirepo = `https://api.github.com/users/kkerem`
-    $.getJSON(apirepo + '/repos', function (data) {
 
-        $("#repocount").html(data.length)
+    <div class="small mt-3 mt-md-5 mb-2">
+        <span class="text-muted">kKerem</span>
+         / 
+        <a href="{{ site.url }}/portfolio.html" class="text-decoration-none text-decoration-underline-hover text-body">portfolio<span class="text-muted">.md</a></span>
+    </div>
+    <h6>Recent web projects</h6>
+    <div class="row">
+    {% assign sorted_portfolio = site.portfolio | sort: 'date' | reverse %}
+        {% for post in sorted_portfolio limit: 6 %}
+        {% include components/portfolio-card-index.html %}
+        {% endfor %}
+    </div>
+    <div class="text-center">
+        <a href="{{ site.url }}/portfolio.html" class="text-decoration-none text-decoration-underline-hover">View All</a>
+    </div>
+    
+    <div class="small mt-3 mt-md-5 mb-2">
+        <span class="text-muted">kKerem</span>
+        / 
+        <a href="{{ site.url }}/repositories.html" class="text-decoration-none text-decoration-underline-hover text-body">repositories<span class="text-muted">.md</a></span>
+    </div>
+    <h6>Recent projects</h6>
+    <div class="row justify-content-between small" id="Repositories"></div>
+    <div class="text-center">
+        <a href="{{ site.url }}/repositories.html" class="text-decoration-none text-decoration-underline-hover">View All</a>
+    </div>
+    <script>
+        apirepo = `https://api.github.com/users/kkerem`
+        $.getJSON(apirepo + '/repos', function (data) {
 
-        function compare(a, b) {
-        if (a.updated_at > b.updated_at) {
-            return -1
-        }
-        if (a.updated_at < b.updated_at) {
-            return 1
-        }
-        return 0
-        }
+            $("#repocount").html(data.length)
 
-        var li = '<div class="col-12 col-md-6 my-3"><div class="rounded p-3 bg-white rounded shadow-hover">\
-            <a href="[link]" class="text-decoration-none fw-semibold">[name]</a>\
-            <div class="description text-muted my-2">[description]</div>\
-            <div class="row small">\
-                <div class="col-4"><i class="fas fa-circle pe-1 [language]"></i><span class="text-muted">[language_text]</span></div>\
-                <div class="col-auto"><i class="far fa-star pe-1"></i><span class="text-muted">[star]</span></div>\
-                <div class="col-auto"><i class="far fa-project-diagram pe-1"></i><span class="text-muted">[fork]</span></div>\
-            </div>\
-        </div></div>'
-
-        var say =0
-        data.sort(compare)
-        data.every(v => {
-            say++
-            if (say > 6) {
-                return false; 
+            function compare(a, b) {
+            if (a.updated_at > b.updated_at) {
+                return -1
+            }
+            if (a.updated_at < b.updated_at) {
+                return 1
+            }
+            return 0
             }
 
-            var exec = li.replace("[name]", v.name)
-                        .replace("[link]", v.html_url)
-                        .replace("[description]", v.description)
-                        .replace("[language]", v.language)
-                        .replace("[language_text]", v.language)
-                        .replace("[star]", v.stargazers_count)
-                        .replace("[fork]", v.forks)
-            $('#Repositories').append(exec)
-            return true;
+            var li = '<div class="col-12 col-md-6 my-3"><div class="rounded p-3 bg-white rounded shadow-hover">\
+                <a href="[link]" class="text-decoration-none text-decoration-underline-hover fw-semibold">[name]</a>\
+                <div class="description text-muted my-2">[description]</div>\
+                <div class="row small">\
+                    <div class="col-4"><i class="fas fa-circle pe-1 [language]"></i><span class="text-muted">[language_text]</span></div>\
+                    <div class="col-auto"><i class="far fa-star pe-1"></i><span class="text-muted">[star]</span></div>\
+                    <div class="col-auto"><i class="far fa-project-diagram pe-1"></i><span class="text-muted">[fork]</span></div>\
+                </div>\
+            </div></div>'
+
+            var say =0
+            data.sort(compare)
+            data.every(v => {
+                say++
+                if (say > 6) {
+                    return false; 
+                }
+
+                var exec = li.replace("[name]", v.name)
+                            .replace("[link]", v.html_url)
+                            .replace("[description]", v.description)
+                            .replace("[language]", v.language)
+                            .replace("[language_text]", v.language)
+                            .replace("[star]", v.stargazers_count)
+                            .replace("[fork]", v.forks)
+                $('#Repositories').append(exec)
+                return true;
+            })
         })
-    })
-</script>
+    </script>
 
 
 
