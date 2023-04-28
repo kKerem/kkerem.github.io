@@ -17,7 +17,7 @@ layout: default-portfolio
 <div class="my-4 text-center">
     <div id="filters" class="button-group align-self-lg-center row justify-content-between justify-content-lg-center">
         
-        <div class="col-9 col-lg-2 mb-3 mb-lg-0">
+        <div class="col-8 col-lg-2">
             <button class="w-100 btn btn-sm btn-link text-decoration-none text-body is-checked p-2 fw-semibold shadow-hover bg-white2 shadow-sm" type="button" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false" data-filter="*">
                 <i class="fas fa-window-restore px-1"></i>Show All ({{ site.portfolio | size }})
             </button>
@@ -33,14 +33,14 @@ layout: default-portfolio
             </div>
         </div>
         <div class="col-12 col-lg">
-            <div class="row">
+            <div class="row mx-0">
                 {% assign sorted_categories = group_names | sort | reverse %}
                 {% for categories in sorted_categories %}
                     {% assign category_items = site.portfolio | where: "categories", categories %}
                     {% assign category_item_count = category_items | size %}
-                    <div class="col-6 col-md-auto px-3">
-                        <button class="w-100 btn btn-sm btn-link text-decoration-none text-body p-2 fw-semibold" data-filter=".{{ categories | slugify }}">
-                            {{ categories }} ({{ category_item_count }})
+                    <div class="col-6 col-lg-auto px-0 px-md-3 my-1 my-md-0">
+                        <button class="w-100 btn btn-sm btn-link text-decoration-none text-body px-0 px-md-2 py-md-2 text-justify text-lg-center" data-filter=".{{ categories | slugify }}">
+                            {{ categories }} <span class="text-muted">({{ category_item_count }})</span>
                         </button>
                     </div>
                 {% endfor %}

@@ -12,10 +12,10 @@
             </div>
         </div>
         <button class="navbar-toggler p-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="bi bi-list"></i>
+            <i class="fas fa-bars"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarContent">
-            <ul class="navbar-nav ms-auto">
+            <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
             {% for item in site.data.nav %}
                 <li class="nav-item fw-semibold px-lg-2">
                     <a href='{% if item.href contains ":" %}{% else %}{{ site.baseurl }}/{% endif %}{{ item.href }}'
@@ -26,8 +26,8 @@
             {% endfor %}
                 <li class="nav-item fw-semibold px-lg-2">
                     <input type="checkbox" class="checkbox checkbox-darkmode" id="toggleBtn" />
-                    <label class="switch switch-darkmode px-lg-2 py-2" for="toggleBtn">
-                        <i class="fas fa-moon"></i>
+                    <label class="switch switch-darkmode px-2 py-2 small" for="toggleBtn">
+                        <i class="fas fa-moon fa-sm"></i>
                         <span class="d-md-none ps-2">Dark Mode</span>
                     </label>
                 </li>

@@ -152,8 +152,8 @@ a.ext-decoration-none{text-decoration: none !important;}
     --bs-body-bg-rgb: 34, 34, 34;
     --bs-body-color: #e1e1e1;
     --bs-body-bg: #222;
-    --bs-border-color: #393f47;
-    --bs-table-border-color1: #393f47;
+    --bs-border-color: #96989b;
+    --bs-table-border-color1: #96989b;
 }
 
 .dark .offcanvas {
@@ -932,3 +932,8 @@ body.dark .is-checked {
 }
 
 
+
+
+@media only screen and (max-width:760px) {
+  nav.navbar{    border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;;}
+}

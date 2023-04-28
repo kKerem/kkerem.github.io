@@ -26,6 +26,4 @@
 <script>AOS.init();
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
-var portfolioCount = {{ site.portfolio | size }};
-document.getElementById('portfolio_count').innerHTML = portfolioCount;
 </script>

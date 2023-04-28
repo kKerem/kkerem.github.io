@@ -2,7 +2,7 @@
 <div class="col-12 col-md-6{% for tag in post.categories %} {{ tag | slugify}}{% endfor %}" data-date="{{ post.date | date: '%s' }}">
     <!-- {% picture {{post.images}} %} -->
 
-    <div class="bg-white my-3 p-3 rounded shadow-hover">
+    <div class="bg-white my-2 my-lg-3 p-3 rounded shadow-hover">
         <h3 class="small fw-semibold mb-1">
             {{ post.title }}
         </h3>

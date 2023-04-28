@@ -11,21 +11,21 @@
                 <span class='pe-2'><i class='fas fa-circle pe-2 {{ tag }}'></i> {{ tag }}</span>
                 {% endfor %}
             </div>
-                <center><a class='text-link mt-3 mb-2 btn btn-link text-white text-decoration' href='{{ post.url }}'>See More</a></center>" data-slug="cat" data-fancybox="gallery"></a>
+                <center><a class='text-link mt-3 mb-2 btn btn-link text-light text-decoration' href='{{ post.url }}'>See More</a></center>" data-slug="cat" data-fancybox="gallery"></a>
             <div class="row justify-content-end grid__author cursor-default">
                 <div class="col-auto">
-                    <span class="date text-white bg-dark py-1 px-2 fw-semibold small" style="opacity:.8;border-radius: 32px;">{{ post.date | timeago }}</span>
+                    <span class="date text-light bg-dark p-2 fw-semibold small rounded" style="opacity:.8;">{{ post.date | timeago }}</span>
                 </div>
             </div>
         </div>
         <div class="mt-auto">
-            <h3 class="grid__title small fw-semibold text-white d-inline-block bg-dark py-1 px-2"><a href="{{ post.url }}" class="text-decoration-none text-white link_a ">{{ post.title }}</a></h3>
+            <h3 class="grid__title small fw-semibold text-light d-inline-block bg-dark py-1 px-2 rounded"><a href="{{ post.url }}" class="text-decoration-none text-light link_a ">{{ post.title }}</a></h3>
             <p class="number d-none">{{ post.date | date: '%s' }}</p>
             
                 <h1 class="grid__tag small text-muted fw-semibold">
                     <div class="post_tags">
                     {% for tag in post.tags %}
-                        <a href='#{{ tag | slugify}}' title='{{ tag }}' class='text-white bg-dark py-1 px-2 link_a me-2 text-decoration-none' style='opacity:.8;border-radius: 32px;'>
+                        <a href='#{{ tag | slugify}}' title='{{ tag }}' class='text-light bg-dark py-1 px-2 link_a me-2 text-decoration-none rounded' style='opacity:.8;'>
                             <i class='fas fa-circle pe-2 {{ tag }}'></i>
                             {{ tag }}
                         </a>
