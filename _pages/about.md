@@ -6,7 +6,7 @@ title: About Me
 ---
 
 
-I'm a 27-year-old computer engineering student who works as a freelancer as well. I especially enjoy making web projects.
+I'm a computer engineering student who works as a freelancer as well. I especially enjoy making web projects.
 
 <h6 class="mt-4">Languages I use</h6>
 <div class="fz-36">
