@@ -1,5 +1,5 @@
 ---
-title: Mevzu WP
+title: Karabuk Postası
 date: 02/08/2023
 categories: 
   - WordPress Themes
