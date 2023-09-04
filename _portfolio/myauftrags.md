@@ -9,6 +9,7 @@ tags:
   - JavaScript
   - PHP
 images: assets/screencapture-localhost-2023-07-03-03_38_16.png
+logo: /assets/logo/myauftrags.png
 madefor: https://myauftrags.com/
 preview:
   - icon: fas fa-pager

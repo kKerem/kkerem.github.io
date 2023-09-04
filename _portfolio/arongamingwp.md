@@ -9,5 +9,6 @@ tags:
   - JavaScript
   - PHP
 images: /assets/AronG.jpg
+logo: /assets/logo/arongaming.png
 madefor: https://arongaming.com
 ---

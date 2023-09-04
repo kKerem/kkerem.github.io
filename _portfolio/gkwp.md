@@ -9,6 +9,7 @@ tags:
   - JavaScript
   - PHP
 images: /assets/20220328171649-screencapture-file-C-Users-kerem-Desktop-gk-gk-index-html-2022-03-28-17_16_06.jpg
+logo: /assets/logo/gk.png
 madefor: https://www.gokhankara.net
 preview:
   - icon: fas fa-archive

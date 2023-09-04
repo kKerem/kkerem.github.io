@@ -9,6 +9,7 @@ tags:
   - JavaScript
   - PHP
 images: /assets/screencapture-kkerem-2022-04-07-04_35_10.jpg
+logo: /assets/logo/kkeremv4.png
 madefor: myself
 preview:
   - icon: fas fa-pager

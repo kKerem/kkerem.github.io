@@ -10,5 +10,6 @@ tags:
   - JavaScript
   - PHP
 images: /assets/screencapture-demo-kkerem-2022-06-17-17_14_41.jpg
+logo: /assets/logo/linda.png
 madefor: special request
 ---

@@ -9,6 +9,7 @@ tags:
   - JavaScript
   - PHP
 images: /assets/ekilelektrk.jpg
+logo: /assets/logo/ekilelektrik.png
 madefor: https://ekilelektrik.com
 preview:
   - icon: fas fa-pager

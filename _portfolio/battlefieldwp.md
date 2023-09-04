@@ -9,6 +9,7 @@ tags:
   - JavaScript
   - PHP
 images: /assets/20220328170805-screencapture-file-C-Users-kerem-Desktop-Web-Tasarimlar-htdocs-oyun-index-html-2022-03-28-17_07_41.jpg
+logo: /assets/logo/battlefield.png
 madefor: Special request
 preview:
   - icon: fas fa-pager

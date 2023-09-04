@@ -1,34 +1,29 @@
-
+{% if post.madefor != 'myself' %}
 <div class="col-12 col-md-6{% for tag in post.categories %} {{ tag | slugify}}{% endfor %}" data-date="{{ post.date | date: '%s' }}">
     <!-- {% picture {{post.images}} %} -->
 
-    <div class="bg-white my-2 my-lg-3 p-3 rounded shadow-hover">
+    <div class="bg-white my-2 my-lg-3 pt-3 px-3 rounded shadow-hover">
         <h3 class="small fw-semibold mb-1">
-            {{ post.title }}
+            <a href="{{ post.url }}" class="portfolio-site">{{ post.title }}</a>
         </h3>
-        
-        <div class="small mb-2 text-secondary">
-            {% for category in post.categories %}
-                <span>
-                    {{ category }}
-                </span>{% if forloop.last == false %}, {% endif %}
-            {% endfor %}
-        </div>
-
-        <a class="text-decoration-none fw-semibold small" target="_blank" href="{{site.url}}/{{ post.images }}" data-fancybox data-thumb="{{site.url}}/{{ post.images }}">
-            <i class="fas fa-search-plus me-2 text-primary"></i>Preview
-        </a>
-        
-        <div class="small mt-2" style="opacity:.8">
+        <div class="small mt-2 mb-3" style="opacity:.8">
             {% if post.madefor != empty %}
-                    {% if post.madefor contains '://' %}
-                    <a href="{{ post.madefor }}" class="text-dark text-decoration-none text-decoration-underline-hover"><i class="fas fa-link me-2 fa-fw fa-sm text-muted" style="opacity:.5"></i>{{ post.madefor }}</a>
+                {% if post.madefor contains '://' %}
+                    <a href="{{ post.madefor }}" target="_blank" class="text-dark text-decoration-none text-decoration-underline-hover"><i class="fas fa-link me-2 fa-fw fa-sm text-muted" style="opacity:.5"></i>{{ post.madefor }}</a>
                 {% else %}
                     <i class="fas fa-unlink me-2 fa-fw fa-sm text-muted" style="opacity:.5"></i>{{ post.madefor }}
                 {% endif %}
             {% endif %}
         </div>
+        
+
+        <a class="text-decoration-none fw-semibold small portfolio-logo" target="_blank" href="{{site.url}}/{{ post.images }}" data-fancybox data-thumb="{{site.url}}/{{ post.images }}">
+            <img src="{{site.url}}/{{ post.logo }}" alt="{{ post.title }}">
+        </a>
+        
+        
     </div>
     
 </div>
 
+{% endif %}

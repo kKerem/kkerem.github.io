@@ -9,6 +9,7 @@ tags:
   - JavaScript
   - PHP
 images: /assets/screencapture-bolgeninsesicom.png
+logo: /assets/logo/bolgeninsesi.png
 madefor: https://bolgeninsesigazetesi.com
 preview:
   - icon: fas fa-pager

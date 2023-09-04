@@ -937,3 +937,8 @@ body.dark .is-checked {
 @media only screen and (max-width:760px) {
   nav.navbar{    border-bottom: var(--bs-border-width) var(--bs-border-style) var(--bs-border-color) !important;;}
 }
+
+.portfolio-site {color: currentColor;text-decoration: none;}
+.portfolio-site:hover {text-decoration: underline;}
+.portfolio-logo {height: 100px;padding: .5rem 2rem 1rem 2rem;display: flex;}
+.portfolio-logo img {width: auto;margin: 0 auto;place-self: center;max-height: 100%;}

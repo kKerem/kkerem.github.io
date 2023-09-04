@@ -9,6 +9,7 @@ tags:
   - JavaScript
   - PHP
 images: /assets/screencapture-file-C-Users-kerem-Desktop-HTML-Kisisel-v2-master-HTML-Kisisel-v2-master-index-html-2022-04-03-04_25_12.jpg
+logo: /assets/logo/kisiselv2.png
 madefor: myself
 preview:
   - icon: fas fa-pager

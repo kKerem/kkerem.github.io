@@ -2,7 +2,7 @@
 layout: default-nolayout
 permalink: contact.html
 narrow: true
-title: Contact Me
+title: İletişim
 ---
 
 
@@ -17,8 +17,13 @@ title: Contact Me
             <i class="fab fa-github fa-fw me-2 text-muted"></i>/kKerem
         </a>
     </li>
+    <li class="my-2">
+        <a href="https://api.whatsapp.com/send?phone=+905362599399&text=Merhaba;" target="_blank" class="text-decoration-none text-decoration-underline-hover text-body">
+            <i class="fas fa-phone fa-fw me-2 text-muted"></i>+90 536 259 93 99
+        </a>
+    </li>
     <li class="my-2 small text-muted">
-        or you can reach me at the following email address
+        ya da bana aşağıdaki e-posta adresinden ulaşabilirsiniz
     </li>
     <li class="my-2">
         <span class="text-body">

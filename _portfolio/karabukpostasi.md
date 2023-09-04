@@ -9,6 +9,7 @@ tags:
   - JavaScript
   - PHP
 images: /assets/screencapture-karabukpostasi.png
+logo: /assets/logo/karabukpostasi.png
 madefor: https://karabukpostasi.com/
 preview:
   - icon: fas fa-pager

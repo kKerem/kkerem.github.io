@@ -16,22 +16,23 @@ layout: default
     <div class="readme">
         {{ content }}
     </div>
+    
 
 
-    <div class="small mt-3 mt-md-5 mb-2">
-        <span class="text-muted">kKerem</span>
-         / 
-        <a href="{{ site.url }}/portfolio.html" class="text-decoration-none text-decoration-underline-hover text-body">portfolio<span class="text-muted">.md</a></span>
-    </div>
-    <h6>Recent web projects</h6>
+<div class="small mt-3 mt-md-5 mb-2">
+    <span class="text-muted">kKerem</span>
+     / 
+    <a href="{{ site.url }}/portfolio.html" class="text-decoration-none text-decoration-underline-hover text-body">portfolio<span class="text-muted">.md</a></span>
+</div>
+<h6>Son web projeleri</h6>
     <div class="row">
     {% assign sorted_portfolio = site.portfolio | sort: 'date' | reverse %}
-        {% for post in sorted_portfolio limit: 6 %}
+        {% for post in sorted_portfolio limit: 14 %}
         {% include components/portfolio-card-index.html %}
         {% endfor %}
     </div>
     <div class="text-center">
-        <a href="{{ site.url }}/portfolio.html" class="text-decoration-none text-decoration-underline-hover">View All</a>
+        <a href="{{ site.url }}/portfolio.html" class="text-decoration-none text-decoration-underline-hover">Tümünü Görüntüle ({{ site.portfolio | size }})</a>
     </div>
     
     <div class="small mt-3 mt-md-5 mb-2">
@@ -39,10 +40,10 @@ layout: default
         / 
         <a href="{{ site.url }}/repositories.html" class="text-decoration-none text-decoration-underline-hover text-body">repositories<span class="text-muted">.md</a></span>
     </div>
-    <h6>Recent projects</h6>
+    <h6>Diğer projeler</h6>
     <div class="row justify-content-between small" id="Repositories"></div>
     <div class="text-center">
-        <a href="{{ site.url }}/repositories.html" class="text-decoration-none text-decoration-underline-hover">View All</a>
+        <a href="{{ site.url }}/repositories.html" class="text-decoration-none text-decoration-underline-hover">Tümünü Görüntüle</a>
     </div>
     <script>
         apirepo = `https://api.github.com/users/kkerem`

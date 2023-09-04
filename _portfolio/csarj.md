@@ -9,5 +9,6 @@ tags:
   - JavaScript
   - PHP
 images: /assets/Untitled.png
+logo: /assets/logo/csarj.png
 madefor: https://csarj.net
 ---

@@ -9,6 +9,7 @@ tags:
   - JavaScript
   - PHP
 images: /assets/20220328164106-d7kmrmu-7e498bca-1db2-4fce-848a-e74db5127b80.png
+logo: /assets/logo/kodalani.png
 madefor: https://kodalani.com
 preview:
   - icon: fas fa-pager

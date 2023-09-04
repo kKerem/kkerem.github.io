@@ -9,6 +9,7 @@ tags:
   - JavaScript
   - PHP
 images: /assets/20220328163925-d7k3p39-953695e0-7866-4298-8205-685ee5779c2b.png
+logo: /assets/logo/anka.png
 madefor: https://ankaninyuvasi.com
 preview:
   - icon: fas fa-archive
