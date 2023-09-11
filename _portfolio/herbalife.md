@@ -1,5 +1,5 @@
 ---
-title: HerbaLife WordPress Theme
+title: HerbaLife
 date: 14/06/2023
 categories: 
   - WordPress Themes

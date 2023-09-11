@@ -1,5 +1,5 @@
 ---
-title: The Culture Ambassadors WP
+title: The Culture Ambassadors
 date: 14/06/2022
 categories: 
   - WordPress Themes

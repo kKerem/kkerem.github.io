@@ -1,5 +1,5 @@
 ---
-title: Bostami WordPress Theme
+title: Bostami
 date: 13/07/2022
 categories: 
   - WordPress Themes

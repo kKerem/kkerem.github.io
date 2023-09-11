@@ -1,5 +1,5 @@
 ---
-title: kKerem v4 WordPress Theme
+title: kKerem v4
 date: 02/04/2022
 categories: 
   - WordPress Themes

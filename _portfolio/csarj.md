@@ -1,5 +1,5 @@
 ---
-title: Csarj WordPress Theme
+title: Csarj
 date: 08/06/2022
 categories: 
   - WordPress Themes

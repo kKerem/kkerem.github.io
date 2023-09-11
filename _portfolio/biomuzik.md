@@ -1,5 +1,5 @@
 ---
-title: BioMuzik WP Theme
+title: BioMuzik
 date: 25/11/2013
 categories: 
   - WordPress Themes

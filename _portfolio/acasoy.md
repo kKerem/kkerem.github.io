@@ -1,5 +1,5 @@
 ---
-title: Acasoy WP Theme
+title: Acaso
 date: 28/03/2021
 categories: 
   - WordPress Themes

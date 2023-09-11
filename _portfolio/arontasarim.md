@@ -1,5 +1,5 @@
 ---
-title: Aron Tasarim
+title: Aron Tasarım
 date: 12/05/2011
 categories: 
   - HTML Templates

@@ -1,5 +1,5 @@
 ---
-title: GK Personal WP Theme
+title: GK Personal
 date: 06/01/2015
 categories: 
   - WordPress Themes

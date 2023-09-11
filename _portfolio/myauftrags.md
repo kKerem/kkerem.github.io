@@ -1,5 +1,5 @@
 ---
-title: MyAuftrags WP
+title: MyAuftrags
 date: 03/07/2023
 categories: 
   - WordPress Themes

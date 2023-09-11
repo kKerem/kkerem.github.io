@@ -1,5 +1,5 @@
 ---
-title: Soysuren WP Theme
+title: Soysuren
 date: 15/05/2021
 categories: 
   - WordPress Themes

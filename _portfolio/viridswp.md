@@ -1,5 +1,5 @@
 ---
-title: Virids WP Theme
+title: Belgesel Günlüğü
 date: 24/03/2015
 categories: 
   - WordPress Themes

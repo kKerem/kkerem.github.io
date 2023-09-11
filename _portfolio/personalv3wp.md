@@ -1,5 +1,5 @@
 ---
-title: Personal v3 WP Theme
+title: Personal v3
 date: 20/03/2015
 categories: 
   - WordPress Themes

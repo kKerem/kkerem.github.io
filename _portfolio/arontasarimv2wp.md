@@ -1,5 +1,5 @@
 ---
-title: AronTasarim v2 WP Theme
+title: AronTasarım v2
 date: 24/02/2014
 categories: 
   - WordPress Themes

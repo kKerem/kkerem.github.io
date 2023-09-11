@@ -1,5 +1,5 @@
 ---
-title: Aron Tasarim v3 WP Theme
+title: Aron Tasarım v3
 date: 06/06/2017
 categories: 
   - WordPress Themes

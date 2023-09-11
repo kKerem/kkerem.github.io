@@ -1,5 +1,5 @@
 ---
-title: TF2 Turkiye v1 MyBB Theme
+title: TF2 Turkiye v1
 date: 19/10/2015
 categories: 
   - MyBB Themes

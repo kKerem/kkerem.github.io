@@ -1,5 +1,5 @@
 ---
-title: kKerem v1 WP Theme
+title: kKerem v1
 date: 26/06/2013
 categories: 
   - WordPress Themes

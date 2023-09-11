@@ -1,5 +1,5 @@
 ---
-title: Ekil Elektrik WordPress Theme
+title: Ekil Elektrik
 date: 30/06/2022
 categories: 
   - WordPress Themes

@@ -1,5 +1,5 @@
 ---
-title: Curse WP Theme
+title: Curse
 date: 26/10/2014
 categories: 
   - WordPress Themes

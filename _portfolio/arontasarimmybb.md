@@ -1,5 +1,5 @@
 ---
-title: AronTasarim MyBB Theme
+title: AronTasarım
 date: 19/08/2013
 categories: 
   - MyBB Themes

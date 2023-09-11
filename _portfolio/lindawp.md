@@ -1,5 +1,5 @@
 ---
-title: Linda WordPress Theme
+title: Linda
 date: 18/06/2022
 categories: 
   - WordPress Themes

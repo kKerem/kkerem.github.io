@@ -1,5 +1,5 @@
 ---
-title: HandewerkerPortal WP
+title: HandewerkerPortal
 date: 21/04/2023
 categories: 
   - WordPress Themes

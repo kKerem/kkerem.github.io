@@ -1,5 +1,5 @@
 ---
-title: KodAlani v3 WP Theme
+title: KodAlani v3
 date: 21/02/2014
 categories: 
   - WordPress Themes

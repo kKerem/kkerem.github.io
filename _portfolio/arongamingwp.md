@@ -1,5 +1,5 @@
 ---
-title: AronGaming WP Theme
+title: AronGaming
 date: 19/05/2015
 categories: 
   - WordPress Themes

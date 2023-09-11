@@ -1,5 +1,5 @@
 ---
-title: KodAlani v2 WordPress Theme
+title: KodAlani v2
 date: 13/08/2014
 categories: 
   - WordPress Themes

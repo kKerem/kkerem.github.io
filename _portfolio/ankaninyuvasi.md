@@ -1,5 +1,5 @@
 ---
-title: Ankanın Yuvası WP Theme
+title: Ankanın Yuvası
 date: 28/04/2014
 categories: 
   - WordPress Themes

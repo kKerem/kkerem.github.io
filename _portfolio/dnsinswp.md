@@ -1,5 +1,5 @@
 ---
-title: DNS Insaat WordPress Theme
+title: DNS Insaat
 date: 13/08/2022 10:10
 categories: 
   - WordPress Themes

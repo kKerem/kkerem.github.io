@@ -1,5 +1,5 @@
 ---
-title: Battlefield WP Theme
+title: Battlefield
 date: 11/12/2013
 categories: 
   - WordPress Themes

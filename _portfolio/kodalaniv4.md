@@ -1,5 +1,5 @@
 ---
-title: Kod Alani v4 WP Theme
+title: Kod Alani v4
 date: 01/07/2014
 categories: 
   - WordPress Themes
