@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Je t'aime ma vie ::) -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Personal website where I share my projects and work.">
+    <meta name="author" content="Kerem">
+    <meta name="theme-color" content="#1f75d8">
+    
+    <title>
+        
+            Programlamaya Giriş I (Ruby) · kKerem
+        
+    </title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="/theme/css/site.css">
+    <link rel="stylesheet" href="/theme/css/syntax.css">
+    <link rel="stylesheet" href="/theme/css/aos.css">
+    <link rel="stylesheet" href="/theme/css/font-mfizz.css">
+    <link rel="stylesheet" href="/theme/css/default.min.css">
+    <script async src="/theme/js/lazysizes.min.js"></script>
+    <script src="/theme/js/highlight.min.js"></script>
+    <link rel="stylesheet" href="/theme/css/atom-one-dark-reasonable.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+    <script>hljs.highlightAll();;</script>
+    <script async src="https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js" integrity="sha512-jNDtFf7qgU0eH/+Z42FG4fw3w7DM/9zbgNPe3wfJlCylVDTT3IgKW5r92Vy9IHa6U50vyMz5gRByIu4YIXFtaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8ZT6JVDZCK"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-8ZT6JVDZCK');
+    </script>
+</head>
+
+
+<body data-bs-spy="scroll" data-bs-offset="30" data-bs-target="#collapseExample">
+
+
+<nav class="navbar navbar-expand-lg fixed-top justify-content-between navbar-light bg-white shadow-sm">
+    <div class="container">
+        <div class="row align-items-center avbar-brand d-flex">
+            <div class="col-auto"><a href="/" style="width:40px;height:54px" class="d-block">
+                <svg class="rounded w-100" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" viewbox="0 0 198 268" enable-background="new 0 0 198 268" xml:space="preserve"> <path fill="#1F75D8" opacity="1.000000" stroke="none" d=" M123.000000,269.000000 C82.021736,269.000000 41.543472,269.000000 1.032603,269.000000 C1.032603,179.736359 1.032603,90.472694 1.032603,1.104518 C66.894753,1.104518 132.789734,1.104518 198.842346,1.104518 C198.842346,90.333107 198.842346,179.666534 198.842346,269.000000 C173.806259,269.000000 148.653137,269.000000 123.000000,269.000000 M127.915985,199.576767 C131.604767,202.948166 135.126358,206.530106 139.030396,209.630478 C142.770325,212.600555 148.031311,212.129120 150.919937,209.100342 C153.968094,205.904327 153.918381,200.538132 150.734879,196.792084 C149.876678,195.782227 148.836731,194.924576 147.862885,194.015640 C135.439331,182.420258 122.979492,170.863174 110.644501,159.174362 C109.564735,158.151154 109.299133,156.268768 108.655365,154.785461 C110.171173,154.157455 111.678001,153.012222 113.204262,152.985703 C122.865059,152.817902 132.530960,152.972961 142.193527,152.868179 C148.159378,152.803482 152.196869,149.071655 152.175690,143.973846 C152.155731,139.171722 148.207947,135.395859 142.541290,135.154892 C137.885254,134.956924 133.213074,135.146561 128.548050,135.150955 C121.451691,135.157639 114.355324,135.152710 107.234421,135.152710 C107.234421,132.387390 107.234421,130.275391 107.234421,128.020340 C120.597626,125.831551 130.387573,119.329460 134.441528,106.021530 C136.922043,97.878769 137.004547,89.549171 134.748688,81.366531 C132.798294,74.291931 129.275604,68.092720 122.413727,64.547379 C119.455055,63.018715 116.150444,62.190514 113.860992,65.419937 C111.694595,68.475792 112.303612,71.589783 114.842041,74.498306 C117.568512,77.622269 120.444374,80.760605 122.437721,84.346947 C125.720299,90.252831 125.816757,96.565208 122.045113,102.384560 C118.403290,108.003609 112.847198,110.137535 105.627083,110.194397 C105.627083,107.929253 105.646667,105.982201 105.623810,104.035652 C105.500572,93.544098 105.686371,83.035873 105.136353,72.566467 C104.690155,64.073410 100.631714,61.259174 92.130211,62.421837 C77.777977,64.384628 67.358658,75.049812 66.016113,89.152168 C64.274376,107.447708 71.759727,120.802765 86.704788,125.970520 C89.030548,126.774727 91.429375,127.367615 93.780296,128.054108 C93.780296,130.431198 93.780296,132.541672 93.780296,134.971817 C91.969803,135.057938 90.350029,135.203094 88.730453,135.200851 C78.733856,135.187027 68.736885,135.069168 58.740879,135.128647 C51.955532,135.169006 47.393436,139.114456 47.486042,144.578796 C47.578186,150.015930 51.732002,153.211151 58.709610,153.128342 C68.038811,153.017593 77.367729,152.770981 86.695984,152.803772 C88.216171,152.809097 89.732346,153.954620 91.250374,154.573151 C90.571861,156.188126 90.313347,158.245331 89.150215,159.350037 C76.828491,171.052597 64.359688,182.600250 51.942299,194.202240 C50.849934,195.222839 49.706543,196.228317 48.807266,197.408737 C46.090977,200.974197 46.116852,205.963028 48.948837,208.907654 C52.182655,212.270172 56.059692,212.289246 59.927887,210.257294 C61.657413,209.348785 63.130417,207.886383 64.585152,206.530807 C75.311516,196.535431 85.998924,186.498245 96.714668,176.491425 C97.768829,175.507019 98.931099,174.638367 100.192421,173.592209 C109.432152,182.250473 118.417747,190.670609 127.915985,199.576767 z"></path> <path fill="#FBFDFE" opacity="1.000000" stroke="none" d=" M127.659668,199.333755 C118.417747,190.670609 109.432152,182.250473 100.192421,173.592209 C98.931099,174.638367 97.768829,175.507019 96.714668,176.491425 C85.998924,186.498245 75.311516,196.535431 64.585152,206.530807 C63.130417,207.886383 61.657413,209.348785 59.927887,210.257294 C56.059692,212.289246 52.182655,212.270172 48.948837,208.907654 C46.116852,205.963028 46.090977,200.974197 48.807266,197.408737 C49.706543,196.228317 50.849934,195.222839 51.942299,194.202240 C64.359688,182.600250 76.828491,171.052597 89.150215,159.350037 C90.313347,158.245331 90.571861,156.188126 91.250374,154.573151 C89.732346,153.954620 88.216171,152.809097 86.695984,152.803772 C77.367729,152.770981 68.038811,153.017593 58.709610,153.128342 C51.732002,153.211151 47.578186,150.015930 47.486042,144.578796 C47.393436,139.114456 51.955532,135.169006 58.740879,135.128647 C68.736885,135.069168 78.733856,135.187027 88.730453,135.200851 C90.350029,135.203094 91.969803,135.057938 93.780296,134.971817 C93.780296,132.541672 93.780296,130.431198 93.780296,128.054108 C91.429375,127.367615 89.030548,126.774727 86.704788,125.970520 C71.759727,120.802765 64.274376,107.447708 66.016113,89.152168 C67.358658,75.049812 77.777977,64.384628 92.130211,62.421837 C100.631714,61.259174 104.690155,64.073410 105.136353,72.566467 C105.686371,83.035873 105.500572,93.544098 105.623810,104.035652 C105.646667,105.982201 105.627083,107.929253 105.627083,110.194397 C112.847198,110.137535 118.403290,108.003609 122.045113,102.384560 C125.816757,96.565208 125.720299,90.252831 122.437721,84.346947 C120.444374,80.760605 117.568512,77.622269 114.842041,74.498306 C112.303612,71.589783 111.694595,68.475792 113.860992,65.419937 C116.150444,62.190514 119.455055,63.018715 122.413727,64.547379 C129.275604,68.092720 132.798294,74.291931 134.748688,81.366531 C137.004547,89.549171 136.922043,97.878769 134.441528,106.021530 C130.387573,119.329460 120.597626,125.831551 107.234421,128.020340 C107.234421,130.275391 107.234421,132.387390 107.234421,135.152710 C114.355324,135.152710 121.451691,135.157639 128.548050,135.150955 C133.213074,135.146561 137.885254,134.956924 142.541290,135.154892 C148.207947,135.395859 152.155731,139.171722 152.175690,143.973846 C152.196869,149.071655 148.159378,152.803482 142.193527,152.868179 C132.530960,152.972961 122.865059,152.817902 113.204262,152.985703 C111.678001,153.012222 110.171173,154.157455 108.655365,154.785461 C109.299133,156.268768 109.564735,158.151154 110.644501,159.174362 C122.979492,170.863174 135.439331,182.420258 147.862885,194.015640 C148.836731,194.924576 149.876678,195.782227 150.734879,196.792084 C153.918381,200.538132 153.968094,205.904327 150.919937,209.100342 C148.031311,212.129120 142.770325,212.600555 139.030396,209.630478 C135.126358,206.530106 131.604767,202.948166 127.659668,199.333755 M78.080482,92.867668 C78.008026,103.795929 85.392021,110.998657 95.148209,109.525146 C95.148209,99.509651 95.148209,89.494156 95.148209,79.466789 C85.133125,80.021477 80.725502,83.357674 78.080482,92.867668 z"></path> <path fill="#2A7CDA" opacity="1.000000" stroke="none" d=" M78.128799,92.455498 C80.725502,83.357674 85.133125,80.021477 95.148209,79.466789 C95.148209,89.494156 95.148209,99.509651 95.154503,109.526909 C85.392021,110.998657 78.008026,103.795929 78.128799,92.455498 z"></path> </svg>
+            </a></div>
+            <div class="col ps-0">
+                <span class="fw-semibold">
+                    <span class="text-primary">@</span>kKerem<br>
+                </span>
+                <small class="small text-secondary">Programlamaya Giriş I (Ruby)</small>
+            </div>
+        </div>
+        <button class="navbar-toggler p-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarContent">
+            <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+            
+                <li class="nav-item fw-semibold px-lg-2">
+                    <a href="/portfolio.html" class="nav-link position-relative rounded small px-2 mx-lg-1">
+                        <i class="fad fa-window-restore me-2"></i>Portfolio
+                    </a>
+                </li>
+            
+                <li class="nav-item fw-semibold px-lg-2">
+                    <a href="/repositories.html" class="nav-link position-relative rounded small px-2 mx-lg-1">
+                        <i class="fad fa-bookmark me-2"></i>Repositories
+                    </a>
+                </li>
+            
+                <li class="nav-item fw-semibold px-lg-2">
+                    <a href="/about.html" class="nav-link position-relative rounded small px-2 mx-lg-1">
+                        <i class="fad fa-book-user me-2"></i>About
+                    </a>
+                </li>
+            
+                <li class="nav-item fw-semibold px-lg-2">
+                    <a href="/contact.html" class="nav-link position-relative rounded small px-2 mx-lg-1">
+                        <i class="fad fa-envelope me-2"></i>Contact
+                    </a>
+                </li>
+            
+                <li class="nav-item fw-semibold px-lg-2">
+                    <a href="/blog/posts.html" class="nav-link position-relative rounded small px-2 mx-lg-1">
+                        <i class="fad fa-blog me-2"></i>Blog
+                    </a>
+                </li>
+            
+                <li class="nav-item fw-semibold px-lg-2">
+                    <input type="checkbox" class="checkbox checkbox-darkmode" id="toggleBtn">
+                    <label class="switch switch-darkmode px-2 py-2 small" for="toggleBtn">
+                        <i class="fas fa-moon fa-sm"></i>
+                        <span class="d-md-none ps-2">Dark Mode</span>
+                    </label>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+
+
+
+<div class="container site-container" id="top" data-aos="fade">
+    <div class="row justify-content-center">
+        <!-- <div class="d-none d-lg-block col-lg-4 col-xl-3 side">
+            <div class="sticky-top space-before row-offcanvas row-offcanvas-left">
+                <div id="sidebar" class="mb-3 space-before sidebar-offcanvas">
+                    <div class="list-group fixed-top">
+                        
+
+
+
+    
+
+<div class="bg-white2 shadow-sm p-3 rounded">
+    <a class="ps-lg-0 pt-0 list-group-item list-group-item-action text-muted" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+        2022 Güz Dönemi, <b>Vize</b>
+    </a>
+    <ol class="header-list" id="collapseExample">
+    </ol>
+    <div class="d-flex align-items-center mt-2">
+        <a href="/dokumanlar.html" class="text-link text-decoration-none ms-3"><i class="bi bi-arrow-left-square pe-2"></i> Geri dön</a>
+    </div>
+</div>
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        <!-- <div class="col-md-12 col-lg-8 pb-4 content px-lg-5"> -->
+        <div class="col-md-12 col-lg-8 pb-4 content px-lg-5">
+            <script>
+    $(".navbar-toggler").before('<button class="nav-link navbar-toggler p-2 offcanvasbutton d-lg-none col-auto justify-content-end align-self-center offset-md-6" id="OpenMenu"><i class="fas fa-ellipsis-v"></i></button>')
+</script>
+
+
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="true" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasExampleLabel">2022 Güz Dönemi, <b>Vize</b>
+</h5>
+        <button type="button" class="btn-close fs-2" data-bs-dismiss="offcanvas" aria-label="Close"><i class="bi bi-x"></i></button>
+    </div>
+    <div class="offcanvas-body">
+        <div class="bg-white2 shadow-sm p-3">
+            <a class="ps-lg-0 pt-0 list-group-item list-group-item-action text-muted d-none d-md-inline-block" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                2022 Güz Dönemi, <b>Vize</b>
+            </a>
+            <ol class="header-list" id="collapseExample">
+            </ol>
+            <div class="d-flex align-items-center mt-2">
+                <a href="/dokumanlar.html" class="text-link text-decoration-none ms-3"><i class="bi bi-arrow-left-square pe-2"></i> Geri dön</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div data-bs-spy="scroll" data-bs-target="#collapseExample" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+<h2 id="değişken-tanımı">Değişken tanımı</h2>
+<p>Kaydedilmesi istenen tüm veriler(anlık hesaplamalar hariç) doğru bir isime sahip olmak zorundadır.</p>
+<div class="alert alert-danger p-1 my-3">
+    <div class="bg-transparent2 p-2 shadow-sm rounded fw-semibold small">
+        <i class="bi bi-x-circle-fill text-danger p-2"></i> Değişken isimlerinde türkçe karakter, sembol, boşluk <u>kullanılamaz</u> ve sayı ile <u>başlayamaz</u>.
+    </div>
+    <pre class="mb-0 mt-2"><code class="language-plaintext d-block shadow-none">1.degişken = </code></pre>
+</div>
+
+<div class="alert alert-success p-1 my-3">
+    <div class="bg-transparent2 p-2 shadow-sm rounded fw-semibold small">
+        <i class="bi bi-check-circle-fill text-success p-2"></i> Doğru kullanım
+    </div>
+    <pre class="mb-0 mt-2"><code class="language-plaintext d-block shadow-none">birinci_degisken = </code></pre>
+</div>
+
+<h2 id="değişken-içeriği">Değişken içeriği</h2>
+<p>
+    Değişken içeriğine metin girilmesi gerekiyorsa tırnak işaretleri( <code>"..."</code> ) içerisinde olmak zorundadır.
+    Aksi halde değişken içeriği bir metin olarak değil başka bir içeriğin adı olarak yorumlanır.
+</p>
+<div class="row align-items-center justify-content-center">
+    <div class="col-12 col-lg-12">
+        <pre class="mb-0 mt-2"><code class="language-ruby d-block shadow-none">birinci_degisken = "kerem"</code></pre>
+    </div>
+    <div class="col fw-semibold pt-2">
+        <i class="bi bi-check-circle-fill text-success p-2"></i>Sonuç<br><span class="small">kerem</span>
+    </div>
+</div>
+<div class="row align-items-center justify-content-center">
+    <div class="col-12 col-lg-12 mt-3 mt-md-0">
+        <pre class="mb-0 mt-2"><code class="language-ruby d-block shadow-none">birinci_degisken = kerem</code></pre>
+    </div>
+    <div class="col fw-semibold pt-2">
+        <i class="bi bi-x-circle-fill text-danger p-2"></i>Sonuç<br><span class="small text-muted">Metin olarak değil
+            bir değişken adı olarak yorumladı ve <b>kerem</b> diye bir değişken olmadığı için hata verdi.</span>
+    </div>
+</div>
+
+<h2 id="aritmetik-operatörler">Aritmetik Operatörler</h2>
+
+<p>Aritmetik işlemlerde 2 farklı sonuç yorumlanır. <code class="fw-semibold">true</code>(doğru) yada <code class="fw-semibold">false</code>(yanlış).<br><br></p>
+
+<div class="row">
+    <div class="col-12 col-lg-4">
+        <div class="fw-semibold pb-1 mt-2 text-center mb-1">Genel operatörler</div>
+        <table class="table table-bordered mb-0 bg-white rounded shadow-sm shadow-hover">
+            <tr>
+                <td>+</td>
+                <td>toplama</td>
+            </tr>
+            <tr>
+                <td>-</td>
+                <td>çıkarma</td>
+            </tr>
+            <tr>
+                <td>*</td>
+                <td>çarpma</td>
+            </tr>
+            <tr>
+                <td>/</td>
+                <td>bölme</td>
+            </tr>
+            <tr>
+                <td>**</td>
+                <td>kuvvet</td>
+            </tr>
+            <tr>
+                <td>%</td>
+                <td>mod alma</td>
+            </tr>
+        </table>
+    </div>
+    <div class="col-12 col-lg-4">
+        <div class="fw-semibold pb-1 mt-2 text-center mb-1">Sorgu operatörleri</div>
+        <table class="table table-bordered mb-0 bg-white rounded shadow-sm shadow-hover">
+            <tr>
+                <td>&gt;</td>
+                <td>büyük ise</td>
+            </tr>
+            <tr>
+                <td>&gt;=</td>
+                <td>eşit veya büyük ise</td>
+            </tr>
+            <tr>
+                <td>&lt;</td>
+                <td>küçük ise</td>
+            </tr>
+            <tr>
+                <td>&lt;=</td>
+                <td>eşit veya küçük ise</td>
+            </tr>
+            <tr>
+                <td>==</td>
+                <td>eşit ise</td>
+            </tr>
+            <tr>
+                <td><b>!=</b></td>
+                <td>eşit <u>değil</u> ise</td>
+            </tr>
+        </table>
+    </div>
+    <div class="col-12 col-lg-4 mt-3 mt-md-0">
+        <table class="table table-borderless">
+            <thead class="fw-semibold pb-1 my-2 my-md-0 text-center">
+                <tr>
+                    <td>Örnek</td>
+                    <td>Sonuç</td>
+                </tr>
+            </thead>
+            <tr>
+                <td class="p-0">
+                    <pre class="mb-1"><code class="language-ruby d-block shadow-none p-2">if ( a=3 &gt; b=5 )</code></pre>
+                </td>
+                <td class="text-center">false  </td>
+            </tr>
+            <tr>
+                <td class="p-0">
+                    <pre class="mb-1"><code class="language-ruby d-block shadow-none p-2">if ( a=3 &gt;= b=5 )</code></pre>
+                </td>
+                <td class="text-center">false  </td>
+            </tr>
+            <tr>
+                <td class="p-0">
+                    <pre class="mb-1"><code class="language-ruby d-block shadow-none p-2">if ( a=3 &lt; b=5 )</code></pre>
+                </td>
+                <td class="text-center">true  </td>
+            </tr>
+            <tr>
+                <td class="p-0">
+                    <pre class="mb-1"><code class="language-ruby d-block shadow-none p-2">if ( a=3 &lt;= b=5 )</code></pre>
+                </td>
+                <td class="text-center">true  </td>
+            </tr>
+            <tr>
+                <td class="p-0">
+                    <pre class="mb-1"><code class="language-ruby d-block shadow-none p-2">if ( a=3 == b=5 )</code></pre>
+                </td>
+                <td class="text-center">false  </td>
+            </tr>
+            <tr>
+                <td class="p-0">
+                    <pre class="mb-1"><code class="language-ruby d-block shadow-none p-2">if ( a=3 <b>!=</b> b=5 )</code></pre>
+                </td>
+                <td class="text-center">true  </td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<h2 id="if-else-elsif-sorguları">If-Else-Elsif sorguları</h2>
+
+<p>if ifadesi <b>eğer</b> anlamına gelir. <code>if</code>'ten sonra sorgulama başlatılır. Sorgulama sonuna her zaman
+    <code>end</code> yazılmalıdır.
+
+    </p>
+<h6 class="fw-semibold">Kullanım şekli;</h6> Eğer belirttiğim koşul yerine geliyorsa şunları(<code>if</code>),
+    gelmiyorsa bunları yap demektir(<code>elsif</code>). Tüm koşullarda yerine gelmiyorsa (<code>else</code>) yapılacak
+    işlemi belirtir.
+
+<ol>
+    <li>
+        Eğer tek şartlı bir sonuç isteniyorsa sadece <code>if</code>(eğer) ile sorgu bitirilebilir.
+        <pre class="mb-0 mt-2"><code class="language-ruby d-block shadow-none">if (a &gt; b)
+    puts "a değişkeni b değişkeninden büyüktür."
+end</code></pre>
+<br>
+    </li>
+    <li>Eğer 2 şartlı bir sonuç isteniyorsa ilk sorgulama aşamasından sonra <code>else</code>(değil ise) başlatılır.
+        <pre class="mb-0 mt-2"><code class="language-ruby d-block shadow-none">if (a &gt; b)
+    puts "a değişkeni b değişkeninden büyüktür."
+else
+    puts "a değişkeni b değişkeninden küçüktür."
+end</code></pre>
+<br>
+    </li>
+    <li>Eğer 2'den fazla şartlı bir sonuç isteniyorsa <code>else</code>'den önce <code>elsif</code>(yada) sorgusu
+        başlatılmalıdır.
+        <pre class="mb-0 mt-2"><code class="language-ruby d-block shadow-none">if (a &gt; b)
+    puts "a değişkeni b değişkeninden büyüktür."
+elsif (a == b)
+    puts "a değişkeni b değişkeniyle eşittir."
+else
+    puts "a değişkeni b değişkeninden küçüktür."
+end</code></pre>
+        <div class="alert alert-info p-2 mt-3">
+            <div class="row">
+                <div class="col-12 col-md">
+                    <i class="bi bi-info-circle-fill pe-2"></i>Birden fazla koşul varsa <code>else</code> daima en sonda
+                    kullanılır.
+                </div>
+                <div class="col-12 col-md-auto text-md-end">
+                    <a class="btn btn-link btn-sm m-0 p-0 text-decoration-none d-inline-block" data-bs-toggle="collapse" href="#ornek-1" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <i class="bi bi-file-code-fill pe-2"></i>Örneği göster
+                    </a>
+                </div>
+            </div>
+
+            <div class="collapse" id="ornek-1">
+
+                <div class="row w-100 m-0">
+                    <div class="col ps-0">
+                        <div class="alert alert-success p-1 mt-3 mb-0">
+                            <div class="bg-transparent2 p-2 shadow-sm rounded fw-semibold small">
+                                <i class="bi bi-x-circle-fill text-success p-2"></i> Doğru kullanım
+                            </div>
+                            <pre class="mb-0 mt-2"><code class="language-ruby d-block shadow-none">if (a &gt; b)
+    ...
+elsif (a == b)
+    ...
+else
+    ...
+end</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="col pe-0">
+                        <div class="alert alert-danger p-1 mt-3 mb-0">
+                            <div class="bg-transparent2 p-2 shadow-sm rounded fw-semibold small">
+                                <i class="bi bi-x-circle-fill text-danger p-2"></i> Yanlış kullanım
+                            </div>
+                            <pre class="mb-0 mt-2"><code class="language-ruby d-block shadow-none">if (a &gt; b)
+    ...
+else
+    ...
+elsif (a == b)
+    ...
+end</code></pre>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="alert alert-info p-2 mt-3">
+
+            <div class="row">
+                <div class="col-12 col-md">
+                    <i class="bi bi-info-circle-fill pe-2"></i><code>if</code> ve <code>else</code> <u>bir kez</u>
+                    kullanılabilirken <code>elsif</code> istenildiği kadar kullanılabilir.
+                </div>
+                <div class="col-12 col-md-auto text-md-end">
+                    <a class="btn btn-link btn-sm m-0 p-0 text-decoration-none d-inline-block" data-bs-toggle="collapse" href="#ornek-2" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <i class="bi bi-file-code-fill pe-2"></i>Örneği göster
+                    </a>
+                </div>
+            </div>
+
+            <div class="collapse" id="ornek-2">
+                <pre class="mb-0 mt-2"><code class="language-ruby d-block shadow-none">if (a &gt; b)
+    ...
+elsif (a == b)
+    ...
+elsif (b == c)
+    ...
+elsif (c == d)
+    ...
+elsif (d == e)
+    ...
+else
+    ...
+end</code></pre>
+            </div>
+
+
+        </div>
+
+        <div class="alert alert-warning p-2 mt-3">
+            <i class="bi bi-exclamation-triangle-fill pe-2"></i><code>elsif</code> <b>yada</b> anlamına geldiği için
+            kullanıldığında ne sorgulamak istendiğide <b>belirtilmek zorundadır</b>.
+        </div>
+    </li>
+</ol>
+
+<h3 id="ifeğer-sorgusu">
+<code class="fw-bold">if</code>(eğer) Sorgusu</h3>
+
+<p>
+    <code>if</code> içerisinde bir bölümde aynı anda en fazla 2 şeyin karşılaştırması yapılabilir. Daha fazlası için
+    <b><code>&amp;&amp;</code>(ve)</b>, <b><code>||</code>(veya)</b> operatörleri kullanılmalıdır. Sorguların bitişini
+    belirtmek için sorgu sonucuna <code>end</code> girilmesi zorunludur.
+</p>
+<div class="alert alert-danger p-1 my-3">
+    <div class="bg-transparent2 p-2 shadow-sm rounded fw-semibold small">
+        <i class="bi bi-x-circle-fill text-danger p-2"></i> Yanlış kullanım
+    </div>
+    <pre class="mb-0 mt-2"><code class="language-ruby d-block shadow-none">if (birinci_degisken &gt; ikinci_degisken &gt; ucuncu_degisken)
+...
+end</code></pre>
+    <div class="mt-2 small">1 bölümde(parantez içerisinde) 2'den fazla değişken <u>sorgulanamaz</u>.</div>
+</div>
+
+<div class="alert alert-success p-1 my-3">
+    <div class="bg-transparent2 p-2 shadow-sm rounded fw-semibold small">
+        <i class="bi bi-check-circle-fill text-success p-2"></i> Doğru kullanım
+    </div>
+    <pre class="mb-0 mt-2"><code class="language-ruby d-block shadow-none">if (birinci_degisken &gt; ikinci_degisken)   &amp;&amp;   (ikinci_degisken &gt; ucuncu_degisken)
+...
+end</code></pre>
+    <pre class="mb-0 mt-2"><code class="language-ruby d-block shadow-none">if (birinci_degisken &gt; ikinci_degisken)   ||   (ikinci_degisken &gt; ucuncu_degisken)
+...
+end</code></pre>
+    <div class="mt-2 small">3 farklı değişkende sorgulanmak istendiği için 2 bölüme ayırılarak sorgulama
+        yapılabilir.</div>
+</div>
+
+<h3 id="elsedeğil-ise-sorgusu">
+<code class="fw-bold">Else</code>(değil ise) Sorgusu</h3>
+<p><small>else ile iki sonuçlu sorgulama yapma</small></p>
+
+<p>Birinci koşul sağlanamıyorsa <code>else</code> ile değilse sorgu sonucu yazdırılabilir.</p>
+<pre class="mb-0 mt-2"><code class="language-ruby d-block shadow-none">a= 3, b= 5
+
+if (a &gt;= b )
+puts true
+else
+puts false
+end</code></pre>
+<p>Sonuç:</p>
+<pre><code class="language-ruby d-block shadow-none p-2">false</code></pre>
+
+
+</div>
+
+<div class="row text-muted mt-5 small">
+    <div class="col-12 col-md text-center text-md-start">Yayınlanma: <span class="fw-semibold">23 Kas, 2022</span>
+</div>
+    <div class="col-12 col-md text-center text-md-end">Son Düzenleme: <span class="fw-semibold">15 Ara, 2023</span>
+</div>
+</div>
+
+
+
+<script type="text/javascript">
+
+    $(document).ready(function() {
+        var slug = function(str) {
+            str = str.replace(/^\s+|\s+$/g, ''); // trim
+            str = str.toLowerCase();
+
+            // remove accents, swap ñ for n, etc
+            var from = "ãàáäâẽèéëêìíïîõòóöôùúüûñğçşüöı·/_,:;";
+            var to   = "aaaaaeeeeeiiiiooooouuuungcsuoi------";
+            for (var i = 0, l = from.length; i < l; i++) {
+                str = str.replace(new RegExp(from.charAt(i), 'g'), to.charAt(i));
+            }
+
+            str = str.replace(/[^a-z0-9 -]/g, '') // remove invalid chars
+                    .replace(/\s+/g, '-') // collapse whitespace and replace by -
+                    .replace(/-+/g, '-'); // collapse dashes
+
+            return str;
+        };
+
+        var tpl = 
+            "<li class='nav-item'>\
+                <a class='nav-link list-group-item list-group-item-action py-2' href='#[idx]'><span class='p-2'>[name]</span></a>\
+            </li>"
+
+
+        var tpl2 = 
+            "<li class='nav-item nav-item2'>\
+                <a class='nav-link list-group-item list-group-item-action py-2 text-muted small' href='#[idx2]'><span class='p-2'>[name]</span></a>\
+            </li>"
+        var say = 0
+        var temp = ""
+        $("h2,h3").each(function(idx, h2) {
+            if($(this).is('h3')) {
+                var name = $(this).text().trim()
+                console.log($('h3').length)
+                var dom_string = tpl2.replace("[name]", name).replace("[idx2]", slug(name))
+                var header = $(dom_string)[0].innerHTML
+                $(this).attr("id", slug(name))
+                $(".header-list").append(header)
+            }
+            else {
+                var name = $(h2).text().trim()
+                var dom_string = tpl.replace("[name]", name).replace("[idx]", slug(name))
+                
+                var header = $(dom_string)
+                $(h2).attr("id", slug(name))
+                $(".header-list").append(header)
+            }
+        })
+        if($(this).is('h3')) {
+            temp += "</ol>"
+        }
+
+        navlist = [];
+    $("#collapseExample a").each(function(i) {
+        var thisLink = $(this);
+        var thisId = thisLink.attr('href');
+        var thisTarget = $(thisId);
+        navlist.push({
+            'anchor': thisLink,
+            'id': thisId,
+            'target': thisTarget
+        });
+        thisLink.on('click', function(e) {
+            e.preventDefault();
+            $('html, body').animate({
+                scrollTop: thisTarget.offset().top
+            }, 0);
+        });
+    });
+    $(window).on('scroll resize', function(e) {
+        $.each(navlist, function(e, elem) {
+            var placement = elem.target[0].getBoundingClientRect();
+            if( placement.top<window.innerHeight && placement.bottom>0 ) {
+                history.pushState({}, '', elem.id);
+                console.log('Hash: ' + elem.id);
+                return false;
+            };
+        });
+    });
+    })
+
+    
+</script>
+
+<script type="text/javascript">
+    /*!
+     * IE10 viewport hack for Surface/desktop Windows 8 bug
+     * Copyright 2014-2017 The Bootstrap Authors
+     * Copyright 2014-2017 Twitter, Inc.
+     * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+     */
+    
+    // See the Getting Started docs for more information:
+    // https://getbootstrap.com/getting-started/#support-ie10-width
+    
+    (function () {
+        'use strict'
+    
+        if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+            var msViewportStyle = document.createElement('style')
+            msViewportStyle.appendChild(
+                document.createTextNode(
+                    '@-ms-viewport{width:auto!important}'
+                )
+            )
+            document.head.appendChild(msViewportStyle)
+        }
+    }())
+    </script>
+    <script>
+    $(document).ready(function() {
+    $('[data-toggle=offcanvas]').click(function() {
+    $('.row-offcanvas').toggleClass('active');
+    });
+    });
+    
+    function themeToggle() {
+    let element = document.body;
+    element.classList.toggle("dark");
+    
+    let theme = localStorage.getItem("theme");
+    if (theme && theme === "dark") {
+    localStorage.setItem("theme", "");
+    } else {
+    localStorage.setItem("theme", "dark");
+    }
+    
+    document.getElementById("theme").textContent = localStorage.getItem("theme");
+    
+    $('head').append('<meta http-equiv="X-UA-CompatibleFFF" content="IssE=Edge" />');
+    
+    }
+    
+    </script>
+        </div>
+        
+    </div>
+</div>
+
+
+
+<div class="container">
+    <footer class="flex-wrap justify-content-end align-items-center text-center mt-3">
+        <div class="py-2 my-2">
+            <div class="row align-items-center">
+                <div class="col text-start text-muted fz-12">
+                    <span class="pageload"></span>
+                </div>
+                <div class="col-auto">
+                    <a href="/" class="text-center link-dark text-decoration-none d-inline-block"><img width="15px" data-src="/theme/img/logo_footer2.png" class="lazyload" data-size="auto"></a>
+                </div>
+                <div class="col text-end">
+                    <a href="#"><i class="bi bi-arrow-up-square-fill fz-20 text-primary"></i></a>
+                </div>
+            </div>
+            
+            
+        </div>
+    </footer>
+</div>
+
+
+<script src="/theme/js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<script src="/theme/js/aos.js"></script>
+<script>AOS.init();
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+</script>
+
+</body>
+
+</html>
