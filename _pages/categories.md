@@ -1,7 +1,7 @@
 ---
 layout: default
 permalink: /categories/
-title: Kategoriler
+title: Categories
 ---
 
 <div id="archives">

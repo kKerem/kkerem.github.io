@@ -1,18 +1,18 @@
 # - title: <i class="fad fa-home me-2"></i>Home
 #   href: 
 
-- title: <i class="fad fa-window-restore me-2"></i>Portfolyo
+- title: <i class="fad fa-window-restore me-2"></i>Portfolio
 # - title: <i class="fad fa-pager me-2"></i>Portfolio<span class="position-absolute top-1 toplamrepo start-100 translate-middle badge rounded-pill bg-danger" id="portfolio_count">0</span>
   href: portfolio.html
 
-- title: <i class="fad fa-bookmark me-2"></i>Repolar
+- title: <i class="fad fa-bookmark me-2"></i>Repositories
 # - title: <i class="fad fa-bookmark me-2"></i>Repositories<span class="position-absolute top-1 toplamrepo start-100 translate-middle badge rounded-pill bg-danger" id="repos">0</span>
   href: repositories.html
 
-- title: <i class="fad fa-book-user me-2"></i>Hakkımda
+- title: <i class="fad fa-book-user me-2"></i>About
   href: about.html
 
-- title: <i class="fad fa-envelope me-2"></i>İletişim
+- title: <i class="fad fa-envelope me-2"></i>Contact
   href: contact.html
 
 - title: <i class="fad fa-blog me-2"></i>Blog

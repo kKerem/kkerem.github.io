@@ -2,7 +2,7 @@
 title: SMM Panel
 date: 16/06/2017
 categories: 
-  - HTML Themes
+  - HTML Templates
 tags:
   - HTML
   - CSS

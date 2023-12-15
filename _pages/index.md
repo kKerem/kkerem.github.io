@@ -2,14 +2,14 @@
 layout: defaults/anasayfa
 permalink: index.html
 narrow: true
-title: Web Geliştirici
+title: Web Developer
 ---
 
 #### Merhaba 👋
 <div class="bg-white p-3 rounded shadow-sm">
-Herkesin kolayca kullanabileceği Web üzerine projeler geliştiriyorum.
+I develop projects on the Web that everyone can easily use.
 
-<h6 class="mt-4">Kullandığım diller</h6>
+<h6 class="mt-4">Languages I use</h6>
 <div class="fz-36">
     <i class="icon-html px-1 HTML" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="HTML5"></i>
     <i class="icon-css px-1 CSS" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="CSS3"></i>

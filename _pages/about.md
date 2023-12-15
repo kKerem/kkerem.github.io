@@ -2,7 +2,7 @@
 layout: default-nolayout
 permalink: about.html
 narrow: true
-title: Hakkımda
+title: About
 ---
 
 

@@ -2,7 +2,7 @@
 layout: default-nolayout
 permalink: contact.html
 narrow: true
-title: İletişim
+title: Contact
 ---
 
 
@@ -23,7 +23,7 @@ title: İletişim
         </a>
     </li>
     <li class="my-2 small text-muted">
-        ya da bana aşağıdaki e-posta adresinden ulaşabilirsiniz
+        or you can contact me at the following e-mail address
     </li>
     <li class="my-2">
         <span class="text-body">

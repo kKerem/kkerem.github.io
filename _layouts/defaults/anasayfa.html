@@ -8,23 +8,23 @@ layout: default
 <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.min.js"></script>
 
 
-    <div class="small mb-2">
+    <!-- <div class="small mb-2">
         <span class="text-muted">{{ site.title }}</span>
          / 
          <a href="{{ site.url }}/about.html" class="text-decoration-none text-decoration-underline-hover text-body">README<span class="text-muted">.md</span></a>
     </div>
     <div class="readme">
         {{ content }}
-    </div>
+    </div> -->
     
 
 
-<div class="small mt-3 mt-md-5 mb-2">
+<div class="small mb-2">
     <span class="text-muted">kKerem</span>
      / 
     <a href="{{ site.url }}/portfolio.html" class="text-decoration-none text-decoration-underline-hover text-body">portfolio<span class="text-muted">.md</a></span>
 </div>
-<h6>Son web projeleri</h6>
+<h6>Recent web projects</h6>
     <div class="row">
     {% assign sorted_portfolio = site.portfolio | sort: 'date' | reverse %}
         {% for post in sorted_portfolio limit: 14 %}
@@ -32,10 +32,10 @@ layout: default
         {% endfor %}
     </div>
     <div class="text-center">
-        <a href="{{ site.url }}/portfolio.html" class="text-decoration-none text-decoration-underline-hover">Tümünü Görüntüle ({{ site.portfolio | size }})</a>
+        <a href="{{ site.url }}/portfolio.html" class="text-decoration-none text-decoration-underline-hover">Show all ({{ site.portfolio | size }})</a>
     </div>
     
-    <div class="small mt-3 mt-md-5 mb-2">
+    <!-- <div class="small mt-3 mt-md-5 mb-2">
         <span class="text-muted">kKerem</span>
         / 
         <a href="{{ site.url }}/repositories.html" class="text-decoration-none text-decoration-underline-hover text-body">repositories<span class="text-muted">.md</a></span>
@@ -43,7 +43,7 @@ layout: default
     <h6>Diğer projeler</h6>
     <div class="row justify-content-between small" id="Repositories"></div>
     <div class="text-center">
-        <a href="{{ site.url }}/repositories.html" class="text-decoration-none text-decoration-underline-hover">Tümünü Görüntüle</a>
+        <a href="{{ site.url }}/repositories.html" class="text-decoration-none text-decoration-underline-hover">Show all</a>
     </div>
     <script>
         apirepo = `https://api.github.com/users/kkerem`
@@ -90,7 +90,7 @@ layout: default
                 return true;
             })
         })
-    </script>
+    </script> -->
 
 
 
